@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-export default function index() {
+export default function Cursor() {
   const dot = useRef(null);
   const dotOutLine = useRef(null);
 
@@ -34,7 +34,7 @@ export default function index() {
 
       cancelAnimationFrame(requestRef.current);
     };
-  }, []);
+  }, );
 
   const toggleCursorVisibility = () => {
     if (cursorVisible.current) {
