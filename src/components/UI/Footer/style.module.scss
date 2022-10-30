@@ -1,0 +1,18 @@
+.footer {
+  width: 100%;
+  height: 200px;
+  background-color: #f6f6f6;
+  padding: 40px 0;
+  .box {
+    display: flex;
+    .logo {
+      margin-right: 40px;
+    }
+    ul {
+      list-style: none;
+      row-gap: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

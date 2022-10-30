@@ -1,0 +1,25 @@
+@import 'styles/unit.scss';
+
+.main {
+  min-height: 80vh;
+  &.active {
+    min-height: 50vh;
+  }
+  .banner {
+    height: rem(400);
+    position: relative;
+    .text {
+      position: absolute;
+      top: rem(300);
+      left: rem(200);
+      font-size: rem(28);
+      font-weight: 600;
+      z-index: 9;
+      color: #fff;
+    }
+  }
+
+  .img {
+    width: 50%;
+  }
+}

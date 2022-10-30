@@ -1,0 +1,39 @@
+@import 'styles/unit.scss';
+.header {
+  background-color: #f6f6f6;
+  height: rem(80);
+  display: flex;
+  align-items: center;
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .langs {
+      ul {
+        list-style: none;
+        display: flex;
+        column-gap: rem(40);
+        a {
+          font-size: rem(16);
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .logo {
+      margin-right: rem(40);
+      color: var(--secondary-color);
+    }
+    nav {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        column-gap: 20px;
+        align-items: center;
+      }
+    }
+  }
+}
