@@ -48,31 +48,42 @@ a {
 }
 
 //cursor
-.cursor-dot,.cursor-dot-outline {
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.cursor {
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.cursor-dot {
-  width: 15px;
-  height: 15px;
-  background-color: #1c1c1c28;
-}
-
-.cursor-dot-outline {
-  width: 10px;
-  height: 10px;
-  background-color: #1c1c1c;
-}
-
-@media (max-width: 600px) {
-  .cursor-dot,.cursor-dot-outline  {
-    display: none;
+  position: absolute;
+  pointer-events: none;
+  }
+  .cursor::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: rgba(35, 35, 35, 0.6) ;
+  border-radius: 50%;
+  opacity: .5;
+  top: -10px;
+  left: -12px;
+  }
+@keyframes cursorAnim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2.5);
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: center;
   }
 }
+.expand {
+  animation: cursorAnim 0.3s forwards;
+}
+
+// @media (max-width: 600px) {
+//   .cursor-dot,.cursor-dot-outline  {
+//     display: none;
+//   }
+// }
