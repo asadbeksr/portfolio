@@ -1,13 +1,21 @@
 @import 'styles/unit.scss';
 .header {
-  background-color: #f6f6f6;
-  height: rem(80);
+  background-color: #ffffff;
+  height: rem(60);
   display: flex;
   align-items: center;
+  border-bottom: rgba(124, 124, 124, 0.5) 1px solid;
   .box {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    .logo {
+      color: var(--t-main);
+      span {
+        font-size: rem(24);
+        font-weight: 400;
+      }
+    }
     .langs {
       ul {
         list-style: none;
@@ -20,11 +28,7 @@
           }
         }
       }
-    }
-    .logo {
-      margin-right: rem(40);
-      color: var(--secondary-color);
-    }
+    }    
     nav {
       ul {
         margin: 0;
@@ -37,3 +41,12 @@
     }
   }
 }
+ @media (max-width: 600px) {
+  .header {
+    .box {
+      nav {
+        display: none;
+      }
+    }
+  }
+ }

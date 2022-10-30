@@ -1,10 +1,14 @@
 @import 'unit';
 @import '../../public/fonts/font.css';
+@import './links.scss';
 
 :root {
-  --primary-color: #51267d;
+  --primary-color: #fbdf07;
   --secondary-color: #fdc100;
   --text-color: #696969;
+
+  --t-main: #1c1c1c;
+  --t-secndary: #9b9b9b;
 }
 
 html,
@@ -19,12 +23,56 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: none;
 }
 
 * {
   box-sizing: border-box;
 }
 
-header {
-  height: rem(80) !important;
+//scroll bar
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 7px;
+  border-radius: 10px;
+  background-color: rgba(83, 82, 82, 0.5);
+}
+
+//cursor
+.cursor-dot,.cursor-dot-outline {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cursor-dot {
+  width: 15px;
+  height: 15px;
+  background-color: #1c1c1c28;
+}
+
+.cursor-dot-outline {
+  width: 10px;
+  height: 10px;
+  background-color: #1c1c1c;
+}
+
+@media (max-width: 600px) {
+  .cursor-dot,.cursor-dot-outline  {
+    display: none;
+  }
 }
