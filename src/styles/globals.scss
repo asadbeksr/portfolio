@@ -2,10 +2,19 @@
 @import '../../public/fonts/font.css';
 @import './links.scss';
 
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
 :root {
   --primary-color: #fbdf07;
   --secondary-color: #fdc100;
   --text-color: #696969;
+
+  --bg-primary: #f8ecde;
+	--bg-secondary: #b19e7f;
 
   --t-main: #1c1c1c;
   --t-secndary: #9b9b9b;
@@ -18,6 +27,56 @@ body {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
+  background-color: var(--bg-primary);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+/* Grainy texture animation by Geoff Graham https://css-tricks.com/snippets/css/animated-grainy-texture/ */
+
+body::before {
+  animation: grain 8s steps(10) infinite;
+  background-image: url(../../public/images/noise.png);
+  content: '';
+  height: 300%;
+  left: -50%;
+  opacity: 0.6;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
 }
 
 a {
@@ -54,18 +113,18 @@ a {
   border-radius: 50%;
   position: absolute;
   pointer-events: none;
-  }
-  .cursor::after {
-  content: "";
+}
+.cursor::after {
+  content: '';
   width: 30px;
   height: 30px;
   position: absolute;
-  background: rgba(35, 35, 35, 0.6) ;
+  background: rgba(35, 35, 35, 0.6);
   border-radius: 50%;
-  opacity: .5;
+  opacity: 0.5;
   top: -10px;
   left: -12px;
-  }
+}
 @keyframes cursorAnim {
   0% {
     transform: scale(1);

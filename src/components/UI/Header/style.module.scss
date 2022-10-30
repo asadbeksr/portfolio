@@ -1,10 +1,10 @@
 @import 'styles/unit.scss';
 .header {
-  background-color: #ffffff;
   height: rem(60);
   display: flex;
   align-items: center;
   border-bottom: rgba(124, 124, 124, 0.5) 1px solid;
+  
   .box {
     display: flex;
     align-items: center;

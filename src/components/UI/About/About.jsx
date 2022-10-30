@@ -5,10 +5,12 @@ import styles from './style.module.scss'
 export function About() {
   const { t } = useTranslation('about')
   return (
+    <main>
     <Container>
       <div className={styles.about}>
         <h1>{t('about')}</h1>
       </div>
     </Container>
+    </main>
   )
 }

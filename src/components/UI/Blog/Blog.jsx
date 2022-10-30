@@ -4,6 +4,7 @@ import styles from './style.module.scss'
 
 export function BlogList() {
   return (
+    <main>
     <Container>
       <div className={styles.blog}>
         <Link href='/blog/1'>
@@ -14,5 +15,6 @@ export function BlogList() {
         </Link>
       </div>
     </Container>
+    </main>
   )
 }
