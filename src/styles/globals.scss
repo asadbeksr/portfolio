@@ -82,8 +82,8 @@ a {
   animation: cursorAnim 0.3s forwards;
 }
 
-// @media (max-width: 600px) {
-//   .cursor-dot,.cursor-dot-outline  {
-//     display: none;
-//   }
-// }
+@media (max-width: 700px) {
+  .cursor {
+    display: none;
+  }
+}
