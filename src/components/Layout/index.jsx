@@ -10,7 +10,7 @@ const Cursor = dynamic(
 export default function Layout({ children }) {
   return (
     <>
-      <Cursor />
+      {/* <Cursor /> */}
       <Header />
       {children}
       {/* <Footer /> */}
