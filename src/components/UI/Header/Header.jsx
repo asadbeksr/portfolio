@@ -1,6 +1,7 @@
 import { Container } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import styles from './style.module.scss';
 
@@ -67,11 +68,14 @@ export function Header() {
                 <li>
                   <a
                     target='_blank'
+                    rel="noreferrer" 
                     href='https://github.com/asadbeksr'
                     className='link link--metis'
                   >
-                    <img
-                      width='30px'
+                    <Image
+                      width={30}
+                      height={30}
+                      alt='github'
                       src='https://img.icons8.com/sf-regular-filled/96/ffffff/github.png'
                     />
                   </a>
@@ -79,11 +83,14 @@ export function Header() {
                 <li>
                   <a
                     target='_blank'
+                    rel="noreferrer" 
                     href='https://www.instagram.com/asadbeksr/'
                     className='link link--metis'
                   >
-                    <img
-                      width='30px'
+                    <Image
+                      width={30}
+                      height={30}
+                      alt='instagram'
                       src='https://img.icons8.com/sf-regular-filled/96/ffffff/linkedin.png'
                     />
                   </a>
@@ -91,12 +98,14 @@ export function Header() {
                 <li>
                   <a
                     target='_blank'
+                    rel="noreferrer" 
                     href='https://www.linkedin.com/in/asadbeksr/'
                     className='link link--metis'
                   >
-                    <img
-                      style={{ cusror: 'pointer !important' }}
-                      width='30px'
+                    <Image
+                      width={30}
+                      height={30}
+                      alt='linkedin'
                       src='https://img.icons8.com/sf-regular-filled/96/ffffff/instagram-new.png'
                     />
                   </a>
