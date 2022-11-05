@@ -4,7 +4,10 @@
   display: flex;
   align-items: center;
   border-bottom: rgba(124, 124, 124, 0.5) 1px solid;
-  
+  .container {
+    // margin-top: 40px;
+    // padding-bottom: 20px;
+  }
   .box {
     display: flex;
     align-items: center;
@@ -37,6 +40,9 @@
         display: flex;
         column-gap: 20px;
         align-items: center;
+      }
+      .navlinks {
+        padding: 8px
       }
     }
   }

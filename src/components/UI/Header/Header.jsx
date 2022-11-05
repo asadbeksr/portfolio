@@ -21,9 +21,8 @@ export function Header() {
 
   return (
     <header className={styles.header}>
-      <Container maxWidth='xl'>
+      <Container maxWidth='xl' className={styles.container}>
         <div className={styles.box}>
-
           <Link href='/'>
             <a className='link link--elara'>
               <span>Asadbek Savronov</span>
@@ -43,21 +42,66 @@ export function Header() {
           </div> */}
           <nav>
             <ul>
-              <li >
+              <li>
                 <Link href='/work'>
-                  <a className='link link--metis'>{t('work')}</a>
+                  <a className={`${styles.navlinks} link link--metis  `}>
+                    {t('work')}
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href='/blog'>
-                  <a className='link link--metis'>{t('blog')}</a>
+                  <a className={`${styles.navlinks} link link--metis  `}>
+                    {t('blog')}
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href='/about'>
-                  <a className='link link--metis'>{t('about')}</a>
+                  <a className={`${styles.navlinks} link link--metis  `}>
+                    {t('about')}
+                  </a>
                 </Link>
               </li>
+              <span style={{ display: 'flex', gap: '8px' }}>
+                <li>
+                  <a
+                    target='_blank'
+                    href='https://github.com/asadbeksr'
+                    className='link link--metis'
+                  >
+                    <img
+                      width='30px'
+                      src='https://img.icons8.com/sf-regular-filled/96/ffffff/github.png'
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    target='_blank'
+                    href='https://www.instagram.com/asadbeksr/'
+                    className='link link--metis'
+                  >
+                    <img
+                      width='30px'
+                      src='https://img.icons8.com/sf-regular-filled/96/ffffff/linkedin.png'
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    target='_blank'
+                    href='https://www.linkedin.com/in/asadbeksr/'
+                    className='link link--metis'
+                  >
+                    <img
+                      style={{ cusror: 'pointer !important' }}
+                      width='30px'
+                      src='https://img.icons8.com/sf-regular-filled/96/ffffff/instagram-new.png'
+                    />
+                  </a>
+                </li>
+              </span>
             </ul>
           </nav>
         </div>
