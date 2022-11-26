@@ -1,3 +1,4 @@
+@import './vars.scss';
 // usage 
 // link link--metis
 // link link--io
@@ -53,7 +54,7 @@ a:focus-visible {
   font-size: 18px;
   position: relative;
   white-space: nowrap;
-  color: var(--color-text);
+  color: $main;
 }
 
 .link::before,
