@@ -1,5 +1,6 @@
 import { Footer } from 'components/UI/Footer/Footer';
 import { Header } from 'components/UI/Header/Header';
+import MobileHeader from 'components/UI/Header/MobileHeader';
 // import dynamic from 'next/dynamic';
 
 // const Cursor = dynamic(
@@ -11,7 +12,8 @@ export default function Layout({ children }) {
   return (
     <>
       {/* <Cursor /> */}
-      <Header />
+      {/* <Header /> */}
+      <MobileHeader />
       {children}
       {/* <Footer /> */}
     </>
