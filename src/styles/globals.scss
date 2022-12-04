@@ -245,21 +245,6 @@ a {
         background: $black;
         height: 100%;
         overflow: hidden;
-        .menu-city-background {
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          opacity: 0;
-          background-size: cover;
-          background-repeat: no-repeat;
-          animation-name: backgroundEffect;
-          animation-duration: 30s;
-          animation-iteration-count: infinite;
-        }
         .wrapper {
           position: relative;
           .menu-links {
@@ -369,6 +354,7 @@ a {
           nav {
             ul {
               li {
+                overflow: hidden !important;
                 font-size: 3rem !important;
                 max-width: 300px !important;
                 min-width: 100px !important;
@@ -389,3 +375,36 @@ a {
   }
   
 }
+
+
+.menu-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 100px;
+  nav {
+    display: block;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        font-size: 6rem;
+        font-weight: 700;
+        cursor: pointer;
+        height: 135px;
+        overflow: hidden;
+        position: relative;
+        width: 2000px;
+        a {
+          position: absolute;
+          color: $white;
+          text-decoration: none;
+          &:hover {
+            color: $main;
+          }
+        }
+      }
+    }
+  }}

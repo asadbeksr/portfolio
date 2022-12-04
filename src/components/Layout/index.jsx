@@ -13,7 +13,7 @@ export default function Layout({ children }) {
     <>
       {/* <Cursor /> */}
       {/* <Header /> */}
-      <MobileHeader />
+      {/* <MobileHeader /> */}
       {children}
       {/* <Footer /> */}
     </>

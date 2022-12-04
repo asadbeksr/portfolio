@@ -43,7 +43,7 @@ const Hamburger = ({ state }) => {
   }, [state]);
 
   return (
-    <div className='mobileHeader'>
+    <div className='mobile-header'>
     <div ref={(el) => (menuLayer = el)} className='hamburger-menu'>
       <div
         ref={(el) => (reveal1 = el)}

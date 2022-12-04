@@ -67,3 +67,13 @@ export const handleHoverExit = (e) => {
     ease: 'power1.inOut',
   });
 };
+
+// CHARACTER ANIMATION
+export const charStagger = (arr, delay) => {
+  gsap.to([...arr], {
+    y: 0,
+    duration: 0.1,
+    delay: delay !== 0 ? delay : 0.2,
+    stagger:0.05
+  });
+};
