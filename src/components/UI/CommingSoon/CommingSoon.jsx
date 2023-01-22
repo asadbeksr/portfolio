@@ -6,7 +6,7 @@ export function CommingSoon() {
   return (
     <Container>
       <div className={cls.wrapper}>
-        <AText text='COMMING SOON' variant='h1' dir='up' />
+        <AText text='COMING SOON' variant='h1' dir='up' />
       </div>
     </Container>
   );
