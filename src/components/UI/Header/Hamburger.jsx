@@ -63,7 +63,7 @@ const Hamburger = ({ state }) => {
                           onMouseEnter={(e) => handleHover(e)}
                           onMouseOut={(e) => handleHoverExit(e)}
                         >
-                          Works
+                          Works ✌️
                         </a>
                       </Link>
                     </li>
@@ -74,7 +74,7 @@ const Hamburger = ({ state }) => {
                           onMouseOut={(e) => handleHoverExit(e)}
                           ref={(el) => (line2 = el)}
                         >
-                          Blog
+                          Blog ✍️
                         </a>
                       </Link>
                     </li>
@@ -86,7 +86,7 @@ const Hamburger = ({ state }) => {
                           onMouseOut={(e) => handleHoverExit(e)}
                           ref={(el) => (line3 = el)}
                         >
-                          About
+                          About 👨‍💻
                         </a>
                       </Link>
                     </li>
@@ -97,7 +97,7 @@ const Hamburger = ({ state }) => {
                           onMouseOut={(e) => handleHoverExit(e)}
                           ref={(el) => (line4 = el)}
                         >
-                          Contact
+                          Contact 👋
                         </a>
                       </Link>
                     </li>

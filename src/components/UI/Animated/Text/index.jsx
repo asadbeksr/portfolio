@@ -1,4 +1,3 @@
-import { Typography } from '@mui/material';
 import { useEffect, useRef } from 'react';
 import { charStagger } from 'utils/animations';
 
@@ -10,11 +9,12 @@ export default function AText({
   font = 'Clash Display',
   fontStyle = 'normal',
   fontWeight = '700',
-  outlined = false
+  outlined = false,
+  end = '',
 }) {
   text = text.split('');
   let textRefs = useRef([]);
-
+  console.log(end);
   useEffect(() => {
     charStagger(textRefs.current, delay);
   }, []);
@@ -38,7 +38,9 @@ export default function AText({
     fontStyle: fontStyle,
     lineHeight: 1,
     color: 'transparent',
-    webkitTextFillColor: !outlined ? 'white' : 'transparent',/* Will override color (regardless of order) */
+    webkitTextFillColor: !outlined
+      ? 'white'
+      : 'transparent' /* Will override color (regardless of order) */,
     webkitTextStrokeWidth: outlined ? '1px' : 'unset',
     webkitTextStrokeColor: outlined ? 'white' : 'unset',
   };
@@ -60,6 +62,7 @@ export default function AText({
           ref={(el) => (textRefs.current[index] = el)}
         >
           {char === ' ' ? <span>&nbsp;</span> : char}
+          {index + 1 === text.length ? end : ''}
         </div>
       ))}
     </div>
