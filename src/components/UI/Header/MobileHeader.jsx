@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Hamburger from './Hamburger';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { Container } from '@mui/material';
 
 const MobileHeader = () => {
   const router = useRouter();
@@ -50,9 +51,8 @@ const MobileHeader = () => {
 
   return (
     <div className='mobile-header'>
+      <Container>
       <header className='header'>
-        <div className='container'>
-          <div className='wrapper'>
             <div className='inner-header'>
               <div className='logo'>
                 <Link href='/'>
@@ -67,10 +67,9 @@ const MobileHeader = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
         <Hamburger state={state} />
       </header>
+      </Container>
     </div>
   );
 };

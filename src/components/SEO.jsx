@@ -34,7 +34,7 @@ export default function SEO({ title }) {
       />
       <meta name='twitter:card' content='summary' />
       <meta name='twitter:title' content={title || "Asadbek's Portfolio"} />
-      <meta name='twitter:description' content='Next js' />
+      <meta name='twitter:description' content='Asadbek"s Portfolio' />
       <meta name='twitter:site' content={title || "Asadbek's Portfolio"} />
       <meta name='twitter:creator' content='Asadbek Savronov' />
       <meta
@@ -49,6 +49,7 @@ export default function SEO({ title }) {
       <link rel='manifest' href='/images/favicons/site.webmanifest' />
       <link rel='android-chrome' sizes='192x192' href='/images/favicons/android-chrome-192x192.png' />
       <link rel='android-chrome' sizes='512x512' href='/images/favicons/android-chrome-512x512.png' />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"></link>
       {/* <link
         href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;600;700&display=swap'
         rel='stylesheet'

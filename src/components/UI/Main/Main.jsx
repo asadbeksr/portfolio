@@ -6,11 +6,52 @@ export function Main() {
   return (
     <Container>
       <div style={{ marginTop: '150px' }}>
-        <AText text='Asadbek Savronov' variant='h3' dir='up' />
-        <AText text='Creative' variant='h3' dir='up' delay='1' />
-        <AText text='Front-end Developer' variant='h3' dir='up' delay='1.5' />
-        <AText text='based in Tashkent' variant='h3' dir='up' delay='2.3' />
-        <AText text='Uzbekistan' variant='h3' dir='up' delay='3' />
+        <AText text='Asadbek Savronov' variant='h2' dir='up' />
+        <AText text='Creative' variant='h2' dir='up' delay='1' outlined />
+        <AText text='Front-end Developer' variant='h2' dir='up' delay='1.5' />
+        <AText text='based in Tashkent' variant='h2' dir='up' delay='2.3' />
+        <AText text='Uzbekistan' variant='h2' dir='up' delay='3'outlined />
+      </div>
+
+      <div style={{ marginTop: '150px' }}>
+        <h6>SCROLL</h6>
+      </div>
+      <div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
+      </div><div style={{ marginTop: '150px' }}>
+        <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
       </div>
 
       <Spline

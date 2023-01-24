@@ -11,6 +11,7 @@ import {
   staggerRevealClose,
   fadeInUp,
 } from 'utils/animations';
+import { Container } from '@mui/material';
 
 const Hamburger = ({ state }) => {
   let menuLayer = useRef(null);
@@ -44,119 +45,121 @@ const Hamburger = ({ state }) => {
 
   return (
     <div className='mobile-header'>
-    <div ref={(el) => (menuLayer = el)} className='hamburger-menu'>
-      <div
-        ref={(el) => (reveal1 = el)}
-        className='menu-secondary-background-color'
-      ></div>
-      <div ref={(el) => (reveal2 = el)} className='menu-layer'>
-        <div className='container'>
-          <div className='wrapper'>
-            <div className='menu-links'>
-              <nav>
-                <ul>
-                  <li>
-                    <Link href='/works'>
-                      <a
-                        ref={(el) => (line1 = el)}
-                        onMouseEnter={(e) => handleHover(e)}
-                        onMouseOut={(e) => handleHoverExit(e)}
-                      >
-                        Works
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href='/blog'>
-                      <a
-                        onMouseEnter={(e) => handleHover(e)}
-                        onMouseOut={(e) => handleHoverExit(e)}
-                        ref={(el) => (line2 = el)}
-                      >
-                        Blog
-                      </a>
-                    </Link>
-                  </li>
+      <div ref={(el) => (menuLayer = el)} className='hamburger-menu'>
+        <div
+          ref={(el) => (reveal1 = el)}
+          className='menu-secondary-background-color'
+        ></div>
+        <div ref={(el) => (reveal2 = el)} className='menu-layer'>
+          <Container>
+            <div className='wrapper'>
+              <div className='menu-links'>
+                <nav>
+                  <ul>
+                    <li>
+                      <Link href='/works'>
+                        <a
+                          ref={(el) => (line1 = el)}
+                          onMouseEnter={(e) => handleHover(e)}
+                          onMouseOut={(e) => handleHoverExit(e)}
+                        >
+                          Works
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href='/blog'>
+                        <a
+                          onMouseEnter={(e) => handleHover(e)}
+                          onMouseOut={(e) => handleHoverExit(e)}
+                          ref={(el) => (line2 = el)}
+                        >
+                          Blog
+                        </a>
+                      </Link>
+                    </li>
 
-                  <li>
-                    <Link href='/about'>
-                      <a
-                        onMouseEnter={(e) => handleHover(e)}
-                        onMouseOut={(e) => handleHoverExit(e)}
-                        ref={(el) => (line3 = el)}
-                      >
-                        About
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href='/contact'>
-                      <a 
-                        onMouseEnter={(e) => handleHover(e)}
-                        onMouseOut={(e) => handleHoverExit(e)}
-                        ref={(el) => (line4 = el)}
-                      >
-                        Contact 
-                      </a>
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-              <div ref={(el) => (info = el)} className='info'>
-                <h3>Asadbek Savronov</h3>
-                <p>
-                  Creative Front-end Developer based in Tashkent, Uzbekistan.
-                </p>
-                <span style={{ display: 'flex', gap: '8px', marginTop: '10px' }}>
-                  <a
-                    target='_blank'
-                    rel="noreferrer" 
-                    href='https://github.com/asadbeksr'
-                    className='link link--metis'
+                    <li>
+                      <Link href='/about'>
+                        <a
+                          onMouseEnter={(e) => handleHover(e)}
+                          onMouseOut={(e) => handleHoverExit(e)}
+                          ref={(el) => (line3 = el)}
+                        >
+                          About
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href='/contact'>
+                        <a
+                          onMouseEnter={(e) => handleHover(e)}
+                          onMouseOut={(e) => handleHoverExit(e)}
+                          ref={(el) => (line4 = el)}
+                        >
+                          Contact
+                        </a>
+                      </Link>
+                    </li>
+                  </ul>
+                </nav>
+                <div ref={(el) => (info = el)} className='info'>
+                  <h3>Asadbek Savronov</h3>
+                  <p>
+                    Creative Front-end Developer based in Tashkent, Uzbekistan.
+                  </p>
+                  <span
+                    style={{ display: 'flex', gap: '8px', marginTop: '10px' }}
                   >
-                    github
-                    {/* <Image
+                    <a
+                      target='_blank'
+                      rel='noreferrer'
+                      href='https://github.com/asadbeksr'
+                      className='link link--metis'
+                    >
+                      github
+                      {/* <Image
                       width={50}
                       height={50}
                       alt='github'
                       src='https://img.icons8.com/sf-regular-filled/96/ffffff/github.png'
                     /> */}
-                  </a>
-                  <a
-                    target='_blank'
-                    rel="noreferrer" 
-                    href='https://www.instagram.com/asadbeksr/'
-                    className='link link--metis'
-                  >
-                    instagram
-                    {/* <Image
+                    </a>
+                    <a
+                      target='_blank'
+                      rel='noreferrer'
+                      href='https://www.instagram.com/asadbeksr/'
+                      className='link link--metis'
+                    >
+                      instagram
+                      {/* <Image
                       width={50}
                       height={50}
                       alt='instagram'
                       src='https://img.icons8.com/sf-regular-filled/96/ffffff/linkedin.png'
                     /> */}
-                  </a>
-                  <a
-                    target='_blank'
-                    rel="noreferrer" 
-                    href='https://www.linkedin.com/in/asadbeksr/'
-                    className='link link--metis'
-                  >
-                    linkedin
-                    {/* <Image
+                    </a>
+                    <a
+                      target='_blank'
+                      rel='noreferrer'
+                      href='https://www.linkedin.com/in/asadbeksr/'
+                      className='link link--metis'
+                    >
+                      linkedin
+                      {/* <Image
                       width={50}
                       height={50}
                       alt='linkedin'
                       src='https://img.icons8.com/sf-regular-filled/96/ffffff/instagram-new.png'
                     /> */}
-                  </a>
-              </span>
+                    </a>
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
+          </Container>
         </div>
       </div>
-    </div>
     </div>
   );
 };
