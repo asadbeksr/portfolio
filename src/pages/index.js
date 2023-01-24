@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <>
       <SEO />
-      <CommingSoon />
-      {/* <Main /> */}
+      {/* <CommingSoon /> */}
+      <Main />
     </>
   );
 }

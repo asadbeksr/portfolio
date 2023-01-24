@@ -114,12 +114,13 @@ const Hamburger = ({ state }) => {
                     href='https://github.com/asadbeksr'
                     className='link link--metis'
                   >
-                    <Image
+                    github
+                    {/* <Image
                       width={50}
                       height={50}
                       alt='github'
                       src='https://img.icons8.com/sf-regular-filled/96/ffffff/github.png'
-                    />
+                    /> */}
                   </a>
                   <a
                     target='_blank'
@@ -127,12 +128,13 @@ const Hamburger = ({ state }) => {
                     href='https://www.instagram.com/asadbeksr/'
                     className='link link--metis'
                   >
-                    <Image
+                    instagram
+                    {/* <Image
                       width={50}
                       height={50}
                       alt='instagram'
                       src='https://img.icons8.com/sf-regular-filled/96/ffffff/linkedin.png'
-                    />
+                    /> */}
                   </a>
                   <a
                     target='_blank'
@@ -140,12 +142,13 @@ const Hamburger = ({ state }) => {
                     href='https://www.linkedin.com/in/asadbeksr/'
                     className='link link--metis'
                   >
-                    <Image
+                    linkedin
+                    {/* <Image
                       width={50}
                       height={50}
                       alt='linkedin'
                       src='https://img.icons8.com/sf-regular-filled/96/ffffff/instagram-new.png'
-                    />
+                    /> */}
                   </a>
               </span>
               </div>
