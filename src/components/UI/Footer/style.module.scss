@@ -1,18 +1,46 @@
+@import '../../../styles/vars.scss';
+
 .footer {
   width: 100%;
-  height: 200px;
-  background-color: #f6f6f6;
-  padding: 40px 0;
+  position: absolute;
+  bottom: 0;
   .box {
+    height: 100px;
     display: flex;
-    .logo {
-      margin-right: 40px;
-    }
-    ul {
-      list-style: none;
-      row-gap: 20px;
+    color: $main;
+    .nav {
+      width: 100%;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .ul {
+        all: unset;
+        list-style: none;
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
+      }
+    }
+   
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    .box {
+      height: 200px;
+      .nav {
+        justify-content: start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap:200px;
+        .ul {
+          flex-direction: column;
+          justify-content: start;
+          align-items: flex-start;
+        }
+      }
+      
     }
   }
 }

@@ -13,7 +13,7 @@ export function Main() {
         <AText text='Uzbekistan ' variant='h2' dir='up' delay='3'outlined end="🇺🇿" />
       </div>
 
-      {/* <div style={{ marginTop: '150px' }}>
+      <div style={{ marginTop: '150px' }}>
         <h6>SCROLL</h6>
       </div>
       <div style={{ marginTop: '150px' }}>
@@ -52,7 +52,7 @@ export function Main() {
         <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
       </div><div style={{ marginTop: '150px' }}>
         <h6>DAMN YOU REALLY LIKE TO SCROLL</h6>
-      </div> */}
+      </div>
 
       <Spline
         id='hero-sphere'
