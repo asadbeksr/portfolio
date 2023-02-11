@@ -10,7 +10,7 @@ const nextTranslate = require('next-translate')
 const nextConfig = nextTranslate({
   reactStrictMode: true,
   images: {
-    domains: ['asadbek.me','test.cdn.rasta.app','img.icons8.com'],
+    domains: ['asadbek.me','test.cdn.rasta.app','img.icons8.com', 'images.unsplash.com'],
   },
   // env: {
   //   BASE_URL: baseUrl,

@@ -1,0 +1,15 @@
+@import '../../../styles/vars.scss';
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .left {
+    font-weight: 600;
+    font-size: 36px;
+  }
+  .right {
+    font-weight: 300;
+    font-size: 36px;
+  }
+}
