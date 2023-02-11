@@ -25,7 +25,7 @@ function Loading() {
     const handleComplete = (url) =>
     setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 200);
     
     if (loading) handleComplete()
 
@@ -40,9 +40,10 @@ function Loading() {
     };
   }, []);
 
-  if (loading) {
-    return <Loader />;
-  } else return <></>;
+  // if (loading) {
+  //   return <Loader />;
+  // } else
+   return <></>;
 }
 
 function MyApp({ Component, pageProps }) {

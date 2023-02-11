@@ -7,7 +7,7 @@ export default function Loader() {
         position: 'absolute',
         height: '100vh',
         width: '100%', 
-        zIndex: 9, 
+        zIndex: 11, 
         backgroundColor: "#123e4e",
         display: 'flex',
         alignItems: 'center', 

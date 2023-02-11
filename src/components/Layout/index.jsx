@@ -15,7 +15,7 @@ export default function Layout({ children }) {
       {/* <Header /> */}
       <MobileHeader />
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

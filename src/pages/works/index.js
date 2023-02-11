@@ -1,11 +1,11 @@
-import { BlogList } from 'components/UI/Blog/Blog'
-import SEO from 'components/SEO'
+import SEO from 'components/SEO';
+import { Works } from 'components/UI/Works/Works';
 
-export default function Blog() {
+export default function WorksPage() {
   return (
     <>
       <SEO />
-      <BlogList />
+      <Works />
     </>
-  )
+  );
 }

@@ -10,11 +10,11 @@ export function Footer() {
           <div className={styles.box}>
             <nav className={styles.nav}>
               <ul className={styles.ul}>
-                <li>
+                {/* <li>
                   <Link href='/'>
                     <a>BEK.</a>
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href='/works'>
                     <a>Works</a>
@@ -36,7 +36,7 @@ export function Footer() {
                   </Link>
                 </li>
               </ul>
-              <span>© 2023 BEK. All rights reserved.</span>
+              <span>© 2023 BEK. All rights reserved</span>
             </nav>
           </div>
         </Container>
