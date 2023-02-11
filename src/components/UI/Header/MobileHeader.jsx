@@ -61,7 +61,7 @@ const MobileHeader = () => {
             </div>
             <div className='menu'>
               <div className='logo'>
-                <a onClick={() => (!disabled ? handleMenu() : null)}>
+                <a href='#' onClick={() => (!disabled ? handleMenu() : null)}>
                   {state.menuName}
                 </a>
               </div>
