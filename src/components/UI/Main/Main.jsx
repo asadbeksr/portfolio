@@ -44,23 +44,23 @@ export function Main() {
       </div>
 
       <div
-        class='c-header_heading'
+        className='c-header_heading'
         data-scroll
         data-scroll-speed='-5'
         data-scroll-position='top'
         data-scroll-target='#header'
         data-scroll-repeat
       >
-        <div class='o-layout'>
+        <div className='o-layout'>
           <div
-            class='o-layout_item u-1/2'
+            className='o-layout_item u-1/2'
             data-scroll
             data-scroll-direction='horizontal'
             data-scroll-speed='-10'
             data-scroll-position='top'
             data-scroll-target='#header'
           >
-            <h1 class='u-label c-header_heading_label'>
+            <h1 className='u-label c-header_heading_label'>
               <a
                 href='https://locomotive.ca'
                 target='_blank'
@@ -71,15 +71,15 @@ export function Main() {
             </h1>
           </div>
           <div
-            class='o-layout_item u-1/2'
+            className='o-layout_item u-1/2'
             data-scroll
             data-scroll-direction='horizontal'
             data-scroll-speed='2'
             data-scroll-position='top'
             data-scroll-target='#header'
           >
-            <div class='u-text-right'>
-              <p class='u-label c-header_heading_label'>v4.x – Edition</p>
+            <div className='u-text-right'>
+              <p className='u-label c-header_heading_label'>v4.x – Edition</p>
             </div>
           </div>
         </div>
@@ -114,10 +114,8 @@ export function Main() {
           SCROLL
         </h1>
       </div>
-
-      <div style={{ marginTop: '200px' }}>'</div>
-      <div style={{ marginTop: '200px' }}>'</div>
-
+      <div style={{ marginTop: '200px' }}>&apos;</div>
+      <div style={{ marginTop: '200px' }}>&apos;</div>
       <div style={{ display: 'flex', gap: '1px', fontSize: '36px' }}>
         <h1 data-scroll data-scroll-delay='0.13' data-scroll-speed='-5'>
           B
@@ -148,12 +146,12 @@ export function Main() {
         </h1>
       </div>
 
-      <div style={{ marginTop: '200px' }}>'</div>
-      <div style={{ marginTop: '200px' }}>'</div>
-      <div style={{ marginTop: '200px' }}>'</div>
-      <div style={{ marginTop: '200px' }}>'</div>
-      <div style={{ marginTop: '200px' }}>'</div>
-      <div style={{ marginTop: '200px' }}>'</div>
+      <div style={{ marginTop: '200px' }}>&apos;</div>
+      <div style={{ marginTop: '200px' }}>&apos;</div>
+      <div style={{ marginTop: '200px' }}>&apos;</div>
+      <div style={{ marginTop: '200px' }}>&apos;</div>
+      <div style={{ marginTop: '200px' }}>&apos;</div>
+      <div style={{ marginTop: '200px' }}>&apos;</div>
 
       <WordToLetter
         word='DAMN YOU REALY LIKE SCROLL'
@@ -161,11 +159,12 @@ export function Main() {
         dir='vertical'
       />
 
-      <div style={{ marginTop: '200px' }}>'</div>
-      <div style={{ marginTop: '200px' }}>'</div>
-      <div style={{ marginTop: '200px' }}>'</div>
-      <div style={{ marginTop: '200px' }}>'</div>
-      <div style={{ marginTop: '200px' }}>'</div>
+      <div style={{ marginTop: '200px' }}>&apos;</div>
+      <div style={{ marginTop: '200px' }}>&apos;</div>
+      <div style={{ marginTop: '200px' }}>&apos;</div>
+      <div style={{ marginTop: '200px' }}>&apos;</div>
+      <div style={{ marginTop: '200px' }}>&apos;</div>
+      <div style={{ marginTop: '200px' }}>&apos;</div>
       <div data-scroll data-scroll-speed='-7' id='hero-sphere'>
         <Spline
           data-scroll
