@@ -123,7 +123,7 @@ export function Main() {
               className='c-lerp-block_title'
               data-scroll
               data-scroll-delay='0.6'
-              data-scroll-speed='1'
+              data-scroll-speed='6'
             >
               <span>I have a lerp</span>
             </span>
@@ -133,7 +133,7 @@ export function Main() {
               className='c-lerp-block_index'
               data-scroll
               data-scroll-delay='0.06'
-              data-scroll-speed='1'
+              data-scroll-speed='6'
               data-scroll-call='dynamicColor'
               data-scroll-repeat
             >
@@ -143,7 +143,7 @@ export function Main() {
               className='c-lerp-block_title'
               data-scroll
               data-scroll-delay='0.1'
-              data-scroll-speed='3'
+              data-scroll-speed='6'
             >
               <span>
                 Me too! <br />
