@@ -2,7 +2,7 @@ import { Container } from '@mui/material';
 import AText from '../Animated/Text';
 import Spline from '@splinetool/react-spline';
 import SectionTitle from '../SectionTitle/SectionTitle';
-import WordToLetter  from '../../../utils/wordToLetter.js';
+import WordToLetter  from '../../../utils/WordToLetter.jsx';
 
 export function Main() {
   return (

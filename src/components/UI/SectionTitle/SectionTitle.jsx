@@ -1,5 +1,5 @@
 import React from 'react';
-import WordToLetter  from '../../../utils/wordToLetter.js';
+import WordToLetter  from '../../../utils/WordToLetter.jsx';
 
 import style from './style.module.scss';
 
