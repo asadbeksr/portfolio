@@ -2,7 +2,7 @@ import { Container } from '@mui/material';
 import AText from '../Animated/Text';
 import Spline from '@splinetool/react-spline';
 import SectionTitle from '../SectionTitle/SectionTitle';
-import WordToLetter  from '../../../utils/WordToLetter.jsx';
+import WordToLetter from '../../../utils/WordToLetter.jsx';
 
 export function Main() {
   return (
@@ -94,14 +94,13 @@ export function Main() {
         DAMN YOU REALY LIKE SCROLL
       </h1>
 
-
       <SectionTitle title='About' num='01' />
       <SectionTitle title='Blog' num='02' />
       <SectionTitle title='Projects' num='03' />
       <SectionTitle title='Aboxut' num='04' />
       <SectionTitle title='Contact' num='05' />
 
-      <div style={{ marginTop: '150px' }}>
+      <div style={{ margin: '200px' }}>
         <h1
           data-scroll
           data-scroll-delay='0.03'
@@ -109,7 +108,49 @@ export function Main() {
           data-scroll-call='dynamicColor'
           data-scroll-repeat
         >
-          SCROLL
+          <div className='c-lerp-block'>
+            <span
+              className='c-lerp-block_index'
+              data-scroll
+              data-scroll-delay='0.2'
+              data-scroll-speed='1'
+              data-scroll-call='dynamicColor'
+              data-scroll-repeat
+            >
+              01
+            </span>
+            <span
+              className='c-lerp-block_title'
+              data-scroll
+              data-scroll-delay='0.6'
+              data-scroll-speed='1'
+            >
+              <span>I have a lerp</span>
+            </span>
+          </div>
+          <div className='c-lerp-block'>
+            <span
+              className='c-lerp-block_index'
+              data-scroll
+              data-scroll-delay='0.06'
+              data-scroll-speed='1'
+              data-scroll-call='dynamicColor'
+              data-scroll-repeat
+            >
+              02
+            </span>
+            <span
+              className='c-lerp-block_title'
+              data-scroll
+              data-scroll-delay='0.1'
+              data-scroll-speed='3'
+            >
+              <span>
+                Me too! <br />
+                And even more
+              </span>
+            </span>
+          </div>
         </h1>
       </div>
       <div style={{ marginTop: '200px' }}>&apos;</div>
@@ -156,7 +197,65 @@ export function Main() {
         speed='6'
         dir='vertical'
       />
-
+      <div className='c-direction-block' id='direction'>
+        <div className='c-direction-block_item -one'>
+          <span
+            className='c-direction-block_item_inner'
+            data-scroll
+            data-scroll-direction='horizontal'
+            data-scroll-speed='6'
+            data-scroll-target='#direction'
+          >
+            Im moving in this direction
+          </span>
+        </div>
+        <div className='c-direction-block_item -two'>
+          <span
+            className='c-direction-block_item_inner'
+            data-scroll
+            data-scroll-direction='horizontal'
+            data-scroll-speed='-8'
+            data-scroll-target='#direction'
+          >
+            And in this direction
+          </span>
+        </div>
+        <div className='c-direction-block_item -three'>
+          <span
+            className='c-direction-block_item_inner'
+            data-scroll
+            data-scroll-direction='horizontal'
+            data-scroll-speed='9'
+            data-scroll-target='#direction'
+            data-scroll-delay='0.05'
+          >
+            Sooo customizable. Right?
+          </span>
+        </div>
+        <div className='c-direction-block_item -four'>
+          <span
+            className='c-direction-block_item_inner'
+            data-scroll
+            data-scroll-direction='horizontal'
+            data-scroll-speed='15'
+            data-scroll-target='#direction'
+          >
+            I can also go in this direction
+          </span>
+        </div>
+        <div className='c-direction-block_item -five'>
+          <span
+            className='c-direction-block_item_inner'
+            data-scroll
+            data-scroll-direction='horizontal'
+            data-scroll-speed='-20'
+            data-scroll-target='#direction'
+            data-scroll-delay='0.05'
+          >
+            Ok, enough!!!!
+          </span>
+        </div>
+      </div>
 
       <div style={{ marginTop: '200px' }}>&apos;</div>
       <div style={{ marginTop: '200px' }}>&apos;</div>
