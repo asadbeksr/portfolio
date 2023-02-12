@@ -2,8 +2,7 @@ import { Container } from '@mui/material';
 import AText from '../Animated/Text';
 import Spline from '@splinetool/react-spline';
 import SectionTitle from '../SectionTitle/SectionTitle';
-import wordToLetter from '../../../utils/wordToLetter';
-import WordToLetter from '../../../utils/wordToLetter';
+import WordToLetter  from '../../../utils/wordToLetter.js';
 
 export function Main() {
   return (
@@ -95,7 +94,6 @@ export function Main() {
         DAMN YOU REALY LIKE SCROLL
       </h1>
 
-      {wordToLetter('FRONTEND')}
 
       <SectionTitle title='About' num='01' />
       <SectionTitle title='Blog' num='02' />
@@ -158,6 +156,7 @@ export function Main() {
         speed='6'
         dir='vertical'
       />
+
 
       <div style={{ marginTop: '200px' }}>&apos;</div>
       <div style={{ marginTop: '200px' }}>&apos;</div>
