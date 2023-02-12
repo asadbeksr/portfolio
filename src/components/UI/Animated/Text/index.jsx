@@ -11,10 +11,11 @@ export default function AText({
   fontWeight = '700',
   outlined = false,
   end = '',
+  speed = 1
 }) {
   text = text.split('');
   let textRefs = useRef([]);
-  console.log(end);
+
   useEffect(() => {
     charStagger(textRefs.current, delay);
   }, []);
@@ -53,6 +54,7 @@ export default function AText({
         gap: '1px',
         textTransform: 'uppercase',
       }}
+      // data-scroll data-scroll-speed={speed}
     >
       {text.map((char, index) => (
         <div
