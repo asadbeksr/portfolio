@@ -54,12 +54,12 @@ const MobileHeader = () => {
       <Container>
         <header className='header'>
           <div className='inner-header'>
-            <div className='logo smooth'>
+            <div className='logo'>
               <Link href='/'>
                 <a>BEK.</a>
               </Link>
             </div>
-            <div className='menu smooth'>
+            <div className='menu'>
               <div className='logo'>
                 <a href='#' onClick={() => (!disabled ? handleMenu() : null)}>
                   {state.menuName}

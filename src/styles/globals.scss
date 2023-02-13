@@ -140,6 +140,7 @@ html.has-scroll-dragging {
   transform-origin: center right;
   transition: transform 0.3s, opacity 0.3s;
   opacity: 0;
+  z-index: 99999;
 }
 .c-scrollbar:hover {
   transform: scaleX(1.45);
@@ -182,6 +183,9 @@ html.has-scroll-dragging {
 }
 
 .mobile-header {
+  // background-color: $tertiary;
+  // z-index: 11 !important;
+  // position:inherit;
   .home {
     display: flex;
     justify-content: center;
@@ -387,7 +391,7 @@ html.has-scroll-dragging {
 
 #hero-sphere {
   position: absolute;
-  top: 120px;
+  top: -120px;
   right: 60px;
 }
 

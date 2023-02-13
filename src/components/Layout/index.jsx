@@ -1,7 +1,7 @@
 import MobileHeader from 'components/UI/Header/MobileHeader.jsx';
 import { useRef, useState } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
-// import { Footer } from 'components/UI/Footer/Footer';
+import { Footer } from 'components/UI/Footer/Footer';
 // import { Header } from 'components/UI/Header/Header';
 // import dynamic from 'next/dynamic';
 
@@ -25,19 +25,21 @@ export default function Layout({ children }) {
 
   return (
     <div className={theme}>
-      <button
-        className={`toggle-button ${theme === 'light' ? 'moon' : 'circle'}`}
-        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-      />
+      <MobileHeader />
+
       <LocomotiveScrollProvider options={options} containerRef={ref}>
         <main data-scroll-container ref={ref}>
           {/* <Cursor /> */}
           {/* <Header /> */}
-          <MobileHeader />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </main>
       </LocomotiveScrollProvider>
+
+      <button
+        className={`toggle-button ${theme === 'light' ? 'moon' : 'circle'}`}
+        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      />
     </div>
   );
 }
