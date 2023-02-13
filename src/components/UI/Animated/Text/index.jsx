@@ -33,7 +33,7 @@ export default function AText({
 
   const styles = {
     transform: directions(),
-    transition: 'transform .8s',
+    transition: 'transform .5s',
     fontFamily: font,
     fontWeight: fontWeight,
     fontStyle: fontStyle,
