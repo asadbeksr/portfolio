@@ -50,16 +50,16 @@ const MobileHeader = () => {
   };
 
   return (
-    <div className='mobile-header'>
+    <div className='mobile-header '>
       <Container>
         <header className='header'>
           <div className='inner-header'>
-            <div className='logo'>
+            <div className='logo smooth'>
               <Link href='/'>
                 <a>BEK.</a>
               </Link>
             </div>
-            <div className='menu'>
+            <div className='menu smooth'>
               <div className='logo'>
                 <a href='#' onClick={() => (!disabled ? handleMenu() : null)}>
                   {state.menuName}

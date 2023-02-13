@@ -33,7 +33,7 @@ export default function AText({
 
   const styles = {
     transform: directions(),
-    transition: 'transform .5s',
+    transition: 'transform .8s',
     fontFamily: font,
     fontWeight: fontWeight,
     fontStyle: fontStyle,
@@ -51,10 +51,11 @@ export default function AText({
       style={{
         display: 'flex',
         clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
-        gap: '1px',
+        gap: '1.5px',
         textTransform: 'uppercase',
+        // height: '100px'
       }}
-      // data-scroll data-scroll-speed={speed}
+      data-scroll data-scroll-speed={speed}
     >
       {text.map((char, index) => (
         <div
