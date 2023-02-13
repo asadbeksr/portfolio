@@ -19,6 +19,8 @@ body {
   font-family: 'Clash Display', 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $secondary;
+  color: $white;
 
   .dark {
     background-color: $black;
@@ -469,6 +471,9 @@ html.has-scroll-dragging {
   }
   .cursor {
     display: none;
+  }
+  .toggle-button {
+    margin: 20px !important;
   }
 }
 

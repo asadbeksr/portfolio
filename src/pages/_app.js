@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 import Loader from 'components/UI/Loader/Loader';
 
 function Loading({ children }) {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [end, setEnd] = useState(false)
 
   useEffect(() => {
