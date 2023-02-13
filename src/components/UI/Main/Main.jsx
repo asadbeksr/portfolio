@@ -52,16 +52,16 @@ export function Main() {
       <WordToLetter word='Asadbek Savronov' speed={2}/>
 
         <div
-          class='o-image_wrapper'
+          className='o-image_wrapper'
           data-scroll
           data-scroll-call='dynamicBackground'
           data-scroll-repeat
         >
-          <div class='o-image' data-scroll data-scroll-speed='-2'>
+          <div className='o-image' data-scroll data-scroll-speed='-2'>
             <img
               height={500}
               width={400}
-              class='c-speed-block_image'
+              className='c-speed-block_image'
               src='/images/self.jpeg'
             />
           </div>

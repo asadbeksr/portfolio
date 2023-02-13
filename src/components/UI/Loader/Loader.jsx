@@ -1,20 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-export default function Loader() {
+export default function Loader({ end }) {
   return (
-    <div
-    style={{
-        position: 'absolute',
-        height: '100vh',
-        width: '100%', 
-        zIndex: 11, 
-        backgroundColor: "#123e4e",
-        display: 'flex',
-        alignItems: 'center', 
-        justifyContent: 'center'
-    }}
-    >
-        <h1 className='h1-animated'>Loading</h1>
+    <div className={`loader ${end ? 'loaded' : ''}`}>
+      <h1 className='h1-animated'>Loading</h1>
     </div>
-  )
+  );
 }

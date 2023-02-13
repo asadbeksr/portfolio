@@ -5,43 +5,27 @@ import theme from 'mui-theme';
 import { persistor, store } from '../store/store';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-
-import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import Loader from 'components/UI/Loader/Loader';
 
-function Loading() {
-  const router = useRouter();
-
+function Loading({ children }) {
   const [loading, setLoading] = useState(true);
+  const [end, setEnd] = useState(false)
 
   useEffect(() => {
-    const handleStart = (url) => {
-      if (url !== router.asPath) setLoading(true);
-    };
-
-    const handleComplete = (url) =>
+    const handleLoad = () => {
+      setEnd(true)
       setTimeout(() => {
         setLoading(false);
-      }, 200);
-
-    if (loading) handleComplete();
-
-    router.events.on('routeChangeStart', handleStart);
-    router.events.on('routeChangeComplete', handleComplete);
-    router.events.on('routeChangeError', handleComplete);
-
+      }, 1000);
+    };
+    window.addEventListener('load', handleLoad);
     return () => {
-      router.events.off('routeChangeStart', handleStart);
-      router.events.off('routeChangeComplete', handleComplete);
-      router.events.off('routeChangeError', handleComplete);
+      window.removeEventListener('load', handleLoad);
     };
   }, []);
 
-  // if (loading) {
-  //   return <Loader />;
-  // } else
-  return <></>;
+  return loading ? <Loader end={end} /> : <Layout>{children}</Layout>;
 }
 
 function MyApp({ Component, pageProps }) {
@@ -51,18 +35,16 @@ function MyApp({ Component, pageProps }) {
         {typeof window !== 'undefined' ? (
           <PersistGate loading={null} persistor={persistor}>
             <ThemeProvider theme={theme}>
-              <Loading />
-              <Layout>
+              <Loading>
                 <Component {...pageProps} />
-              </Layout>
+              </Loading>
             </ThemeProvider>
           </PersistGate>
         ) : (
           <ThemeProvider theme={theme}>
-            <Loading />
-            <Layout>
+            <Loading>
               <Component {...pageProps} />
-            </Layout>
+            </Loading>
           </ThemeProvider>
         )}
       </Provider>
