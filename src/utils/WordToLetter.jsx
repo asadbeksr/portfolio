@@ -5,7 +5,7 @@ export default function WordToLetter({word = "Word", speed = 2, dir = "vertical"
   const letters = word.split('');
 
   return (
-    <div style={{ display: 'flex', gap: '2px'}}>
+    <div style={{ display: 'flex', gap: '1px'}}>
       {letters.map((letter, index) => (
         <span
           data-scroll
