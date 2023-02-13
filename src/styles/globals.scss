@@ -441,8 +441,8 @@ html.has-scroll-dragging {
   }
 
   #hero-sphere {
-    scale: 0.7;
-    // display: none !important;
+    // scale: 0.7;
+    display: none !important;
   }
   .cursor {
     display: none;
@@ -508,7 +508,9 @@ html.has-scroll-dragging {
 .c-lerp-block_index {
   vertical-align: middle;
   color: ivory;
-  width: rem(60px);
+  width: auto;
+  min-width: rem(65px);
+  padding: 4px;
   height: rem(45px);
   display: inline-flex;
   align-items: center;

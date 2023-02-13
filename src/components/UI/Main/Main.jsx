@@ -6,9 +6,9 @@ import WordToLetter from '../../../utils/WordToLetter.jsx';
 
 export function Main() {
   return (
-    <Container>
-      <div id='header' style={{ margin: '150px 0' }}>
-        <AText text='Asadbek Savronov' variant='h2' dir='up' speed={2} />
+    <Container  data-scroll-container>
+      <div style={{ margin: '150px 0' }}id='header'  >
+        <AText text='Asadbek Savronov' variant='h2' dir='up' speed={2}   />
         <AText
           text='Creative'
           variant='h2'
@@ -42,7 +42,15 @@ export function Main() {
         />
       </div>
 
-      <div
+      <SectionTitle title='About' num='01' />
+      <SectionTitle title='Blog' num='02' />
+      <SectionTitle title='Works' num='03' />
+      <SectionTitle title='Contact' num='04' />
+
+
+      <div style={{padding:"50px"}}></div>
+
+      {/* <div
         className='c-header_heading'
         data-scroll
         data-scroll-speed='-5'
@@ -92,15 +100,11 @@ export function Main() {
         data-scroll-repeat
       >
         DAMN YOU REALY LIKE SCROLL
-      </h1>
+      </h1> */}
 
-      <SectionTitle title='About' num='01' />
-      <SectionTitle title='Blog' num='02' />
-      <SectionTitle title='Projects' num='03' />
-      <SectionTitle title='Aboxut' num='04' />
-      <SectionTitle title='Contact' num='05' />
+     
 
-      <div style={{ margin: '200px' }}>
+      {/* <div style={{ margin: '0px' }} >
         <h1
           data-scroll
           data-scroll-delay='0.03'
@@ -117,7 +121,7 @@ export function Main() {
               data-scroll-call='dynamicColor'
               data-scroll-repeat
             >
-              01
+              Asadbek Savronov
             </span>
             <span
               className='c-lerp-block_title'
@@ -188,6 +192,32 @@ export function Main() {
       <div style={{ marginTop: '200px' }}>&apos;</div>
       <div style={{ marginTop: '200px' }}>&apos;</div>
       <div style={{ marginTop: '200px' }}>&apos;</div>
+
+      <div className='c-lerp-block'>
+            <span
+              className='c-lerp-block_index'
+              data-scroll
+              data-scroll-delay='0.06'
+              data-scroll-speed='6'
+              data-scroll-call='dynamicColor'
+              data-scroll-repeat
+            >
+              07
+            </span>
+            <span
+              className='c-lerp-block_title'
+              data-scroll
+              data-scroll-delay='0.1'
+              data-scroll-speed='6'
+            >
+              <span>
+                Me too! <br />
+                And even more
+              </span>
+            </span>
+          </div>
+
+
       <div style={{ marginTop: '200px' }}>&apos;</div>
       <div style={{ marginTop: '200px' }}>&apos;</div>
       <div style={{ marginTop: '200px' }}>&apos;</div>
@@ -262,10 +292,10 @@ export function Main() {
       <div style={{ marginTop: '200px' }}>&apos;</div>
       <div style={{ marginTop: '200px' }}>&apos;</div>
       <div style={{ marginTop: '200px' }}>&apos;</div>
-      <div style={{ marginTop: '200px' }}>&apos;</div>
-      <div data-scroll data-scroll-speed='-7' id='hero-sphere'>
+      <div style={{ marginTop: '200px' }}>&apos;</div> */}
+      <div  data-scroll-speed='-7' id='hero-sphere'>
         <Spline
-          data-scroll
+          // data-scroll
           data-scroll-speed='5'
           data-scroll-direction='horizontal'
           scene='https://prod.spline.design/QoUsqkLcAPNMg1pz/scene.splinecode'
