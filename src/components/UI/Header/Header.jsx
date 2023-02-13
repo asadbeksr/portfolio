@@ -7,7 +7,7 @@ import styles from './style.module.scss';
 
 export function Header() {
   const router = useRouter();
-  const { t } = useTranslation('common');
+x
 
   const langs = [
     {
