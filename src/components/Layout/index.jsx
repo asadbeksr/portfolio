@@ -16,7 +16,7 @@ export default function Layout({ children }) {
   const options = {
     smooth: true,
     repeat: true,
-    multiplier: 1,
+    multiplier: 2,
     touchMultiplier: 3,
     smartphone: {
       smooth: true,
