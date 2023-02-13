@@ -1,55 +1,105 @@
-import React from 'react'
-import Head from 'next/head'
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 
-export default function SEO({ title }) {
+export default function SEO({
+  title = "Asadbek's Portfolio",
+  description = 'Creative Portfolio',
+  image = '',
+  url = '',
+  twitterUsername = 'asadbeksr',
+}) {
+  const [currentTitle, setCurrentTitle] = useState(0);
+
+  const titles = [
+    '_________🛻',
+    '________🛻_',
+    '_______🛻__',
+    '______🛻___',
+    '_____🛻____',
+    '____🛻_____',
+    '___🛻______',
+    '__🛻_______',
+    '_🛻________',
+    '🛻_________',
+    '__________',
+  ];
+  const handleScroll = () => {
+    setTimeout(() => {
+      if (currentTitle === titles.length - 1) {
+        setCurrentTitle(0);
+      } else {
+        setCurrentTitle(currentTitle + 1);
+      }
+    }, 200);
+  };
+
+  useEffect(() => {
+    window.addEventListener('wheel', handleScroll);
+    return () => {
+      setTimeout(() => {
+        setCurrentTitle(null);
+      }, 5000);
+      window.removeEventListener('wheel', handleScroll);
+    };
+  }, [currentTitle]);
+
   return (
     <Head>
+      <meta charSet='utf-8' />
       <meta
         name='viewport'
-        content='width=device-width, initial-scale=1  maximum-scale=1, user-scalable=0'
+        content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
       />
-      <meta charSet='utf-8' />
-      <title>{title || "Asadbek's Portfolio "}</title>
-      <meta name='description' content='Creative Portfolio' />
-      <meta
-        name='keywords'
-        content='Portfolio, creative, react, next, javascript, developer, frontend, asadbek, asadbekov, asadbekovasadbek, udevs'
+      <meta name='theme-color' content='#123e4e' />
+      <meta name='robots' content='index,follow' />
+
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='32x32'
+        href='/images/favicons/favicon-32x32.png'
       />
-      <meta property='og:type' content='website' />
-      <meta
-        property='og:title'
-        content={title || "Asadbek's Portfolio"}
-        key='ogtitle'
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='16x16'
+        href='/images/favicons/favicon-16x16.png'
       />
-      <meta property='og:description' content='Creative Portfolio' key='ogdesc' />
-      <meta
-        property='og:site_name'
-        content={title || "Asadbek's Portfolio"}
-        key='ogsitename'
+      <link
+        rel='apple-touch-icon'
+        href='/images/favicons/apple-touch-icon.png'
       />
-      <meta
-        property='og:image'
-        // content='https://cdn.rasta.app/rasta/aef8208b-c6fc-4db9-878b-51544ab711be'
-        key='ogimage'
+      <link rel='manifest' href='/images/favicons/site.webmanifest' />
+      <link
+        rel='android-chrome'
+        sizes='192x192'
+        href='/images/favicons/android-chrome-192x192.png'
       />
-      <meta name='twitter:card' content='summary' />
-      <meta name='twitter:title' content={title || "Asadbek's Portfolio"} />
-      <meta name='twitter:description' content='Asadbek"s Portfolio' />
-      <meta name='twitter:site' content={title || "Asadbek's Portfolio"} />
-      <meta name='twitter:creator' content='Asadbek Savronov' />
-      <meta
-        name='twitter:image'
-        // content='https://cdn.rasta.app/rasta/aef8208b-c6fc-4db9-878b-51544ab711be'
+      <link
+        rel='android-chrome'
+        sizes='512x512'
+        href='/images/favicons/android-chrome-512x512.png'
       />
 
-      <link rel='icon' href='/favicon.ico' />
-      <link rel='icon' type='image/png' sizes='32x32' href='/images/favicons/favicon-32x32.png' />
-      <link rel='icon' type='image/png' sizes='16x16' href='/images/favicons/favicon-16x16.png' />
-      <link rel='apple-touch-icon' href='/images/favicons/apple-touch-icon.png' />
-      <link rel='manifest' href='/images/favicons/site.webmanifest' />
-      <link rel='android-chrome' sizes='192x192' href='/images/favicons/android-chrome-192x192.png' />
-      <link rel='android-chrome' sizes='512x512' href='/images/favicons/android-chrome-512x512.png' />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"></link>
+      <title>{titles[currentTitle] ?? title}</title>
+      <meta name='description' content={description} />
+      <meta
+        name='keywords'
+        content='portfolio, creative, unique, inspiring, react, next, software engineer, javascript, developer, frontend, asadbek, savronov, asadbek savronov,  udevs, udevs.io'
+      />
+      <meta property='og:type' content='website' />
+      <meta property='og:url' content={url} />
+      <meta property='og:title' content={title} />
+      <meta property='og:description' content={description} />
+      <meta property='og:image' content={image} />
+      <meta property='og:site_name' content={title} />
+
+      <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter:title' content={title} />
+      <meta name='twitter:description' content={description} />
+      <meta name='twitter:image' content={image} />
+      <meta name='twitter:site' content={`@${twitterUsername}`} />
+      <meta name='twitter:creator' content={`@${twitterUsername}`} />
     </Head>
-  )
+  );
 }
