@@ -48,8 +48,8 @@ export function Main() {
       </div>
 
       <SectionTitle title='About' num='01' />
-      <div style={{ display: 'flex', alignItems: 'baseline', fontSize: '56px', fontWeight: '700'}}>
-      <WordToLetter word='Asadbek Savronov' speed={2}/>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'baseline', fontSize: '56px', fontWeight: '700'}}>
+      {/* <WordToLetter word='Asadbek Savronov' speed={2}/> */}
 
         <div
           className='o-image_wrapper'
