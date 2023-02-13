@@ -6,7 +6,7 @@ export default function WordToLetter({word = "Word", speed = 2, dir = "vertical"
 
   return (
     <div style={{ display: 'flex', gap: '1px'}}>
-      {letters.map((letter, index) => (
+     {letters.map((letter, index) => (
         <span
           data-scroll
           data-scroll-direction={dir}
@@ -14,7 +14,7 @@ export default function WordToLetter({word = "Word", speed = 2, dir = "vertical"
           data-scroll-speed={speed}
           key={letter}
         >
-          {letter}
+          {letter === ' ' ? '\u00A0' : letter}
         </span>
       ))}
     </div>

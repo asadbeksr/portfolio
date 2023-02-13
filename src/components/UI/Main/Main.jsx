@@ -3,12 +3,13 @@ import AText from '../Animated/Text';
 import Spline from '@splinetool/react-spline';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import WordToLetter from '../../../utils/WordToLetter.jsx';
+import Hr from '../Animated/Hr';
 
 export function Main() {
   return (
-    <Container  data-scroll-container>
-      <div style={{ margin: '150px 0' }}id='header'  >
-        <AText text='Asadbek Savronov' variant='h2' dir='up' speed={2}   />
+    <Container data-scroll-container>
+      <div style={{ margin: '150px 0' }} id='header'>
+        <AText text='Asadbek Savronov' variant='h2' dir='up' speed={2} />
         <AText
           text='Creative'
           variant='h2'
@@ -42,13 +43,41 @@ export function Main() {
         />
       </div>
 
+      <div style={{ marginTop: '400px' }}>
+        <Hr />
+      </div>
+
       <SectionTitle title='About' num='01' />
+      <div style={{ display: 'flex', alignItems: 'baseline', fontSize: '56px', fontWeight: '700'}}>
+      <WordToLetter word='Asadbek Savronov' speed={2}/>
+
+        <div
+          class='o-image_wrapper'
+          data-scroll
+          data-scroll-call='dynamicBackground'
+          data-scroll-repeat
+        >
+          <div class='o-image' data-scroll data-scroll-speed='-2'>
+            <img
+              height={500}
+              width={400}
+              class='c-speed-block_image'
+              src='/images/self.jpeg'
+            />
+          </div>
+        </div>
+
+      </div>
       <SectionTitle title='Blog' num='02' />
+      <Hr />
+
       <SectionTitle title='Works' num='03' />
+      <Hr />
+
       <SectionTitle title='Contact' num='04' />
+      <Hr />
 
-
-      <div style={{padding:"50px"}}></div>
+      <div style={{ padding: '50px' }}></div>
 
       {/* <div
         className='c-header_heading'
@@ -101,8 +130,6 @@ export function Main() {
       >
         DAMN YOU REALY LIKE SCROLL
       </h1> */}
-
-     
 
       {/* <div style={{ margin: '0px' }} >
         <h1
@@ -293,7 +320,7 @@ export function Main() {
       <div style={{ marginTop: '200px' }}>&apos;</div>
       <div style={{ marginTop: '200px' }}>&apos;</div>
       <div style={{ marginTop: '200px' }}>&apos;</div> */}
-      <div  data-scroll-speed='-7' id='hero-sphere'>
+      <div data-scroll-speed='-7' id='hero-sphere'>
         <Spline
           // data-scroll
           data-scroll-speed='5'

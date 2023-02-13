@@ -566,3 +566,51 @@ html.has-scroll-dragging {
       min-width: 0.3em;
   }
 }
+.c-header_line {
+  height: 1px;
+  font-size: 2px;
+  transform: scaleX(0);
+  transition: transform 0.6s ease-in-out;
+  &.is-inview {
+      transform: scaleX(1)
+  }
+}
+
+.o-image_wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+
+  &.-full {
+      height: 100%;
+      margin: 0 rem(100px);
+      display: flex;
+      align-content: center;
+
+  }
+}
+
+.o-image {
+  opacity: 0.75;
+  mix-blend-mode: multiply;
+
+  img {
+      opacity: 0;
+      transform: scale(1.4);
+      transition: opacity 1.2s ease-in, transform 1.2s ease-in-out;
+      object-fit: cover;
+  }
+
+  &.is-inview {
+      img {
+          opacity: 1;
+          transform: scale(1);
+          transition-delay: 0.6s;
+      }
+  }
+
+  .o-image_wrapper.-full & {
+      align-self: center;
+
+  }
+}
