@@ -1,5 +1,5 @@
 import MobileHeader from 'components/UI/Header/MobileHeader.jsx';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 // import { Footer } from 'components/UI/Footer/Footer';
 // import { Header } from 'components/UI/Header/Header';
@@ -11,6 +11,7 @@ import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 // );
 
 export default function Layout({ children }) {
+  const [theme, setTheme] = useState('light');
   const ref = useRef(null);
   const options = {
     smooth: true,
@@ -23,7 +24,11 @@ export default function Layout({ children }) {
   };
 
   return (
-    <>
+    <div className={theme}>
+      <button
+        className={`toggle-button ${theme === 'light' ? 'moon' : 'circle'}`}
+        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      />
       <LocomotiveScrollProvider options={options} containerRef={ref}>
         <main data-scroll-container ref={ref}>
           {/* <Cursor /> */}
@@ -33,6 +38,6 @@ export default function Layout({ children }) {
           {/* <Footer /> */}
         </main>
       </LocomotiveScrollProvider>
-    </>
+    </div>
   );
 }

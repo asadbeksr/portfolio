@@ -17,10 +17,31 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Clash Display', 'Poppins', sans-serif;
-  background-color: $secondary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $white !important;
+
+  .dark {
+    background-color: $black;
+    color: $grey !important;
+    transition: all 0.5s ease-in-out, color 0.5s ease-in-out;
+    .c-lerp-block_index {
+      color: $black !important;
+      &::before {
+        background-color: $grey;
+      }
+    }
+    .menu-layer {
+      position: relative;
+      background: $black;
+    }
+  }
+  .light {
+    background-color: $secondary;
+    color: $white !important;
+    transition: all 0.5s ease-in-out, color 0.5s ease-in-out;
+    
+    
+  }
 }
 
 body::before {
@@ -189,17 +210,17 @@ html.has-scroll-dragging {
       justify-content: space-between;
       align-items: center;
       .logo {
-        font-family: "Poppins";
+        font-family: 'Poppins';
         font-weight: 700;
         text-decoration: none;
-        color: $main;
+        // color: $main;
         text-transform: uppercase;
       }
       .menu {
         font-weight: 700;
         font-size: 1rem;
         text-decoration: none;
-        color: $main;
+        // color: $main;
         button {
           border: none;
           background: none;
@@ -232,7 +253,7 @@ html.has-scroll-dragging {
       }
       .menu-layer {
         position: relative;
-        background: $black;
+        background: $tertiary;
         height: 100%;
         overflow: hidden;
         .wrapper {
@@ -259,10 +280,10 @@ html.has-scroll-dragging {
                   width: 700px;
                   a {
                     position: absolute;
-                    color: $white;
+                    // color: $white;
                     text-decoration: none;
                     &:hover {
-                      color: $main;
+                      // color: $main;
                     }
                   }
                 }
@@ -271,7 +292,7 @@ html.has-scroll-dragging {
             .info {
               width: 300px;
               h3 {
-                color: $main;
+                // color: $main;
                 font-weight: 500;
                 font-size: 1.2rem;
                 margin: 8px auto;
@@ -285,7 +306,7 @@ html.has-scroll-dragging {
           .locations {
             position: absolute;
             bottom: -80px;
-            color: $white;
+            // color: $white;
             margin-top: 16px;
             font-size: 0.8rem;
             font-weight: 600;
@@ -298,7 +319,7 @@ html.has-scroll-dragging {
               margin: 0 32px;
               transition: 0.3s ease-in-out;
               &:hover {
-                color: $main;
+                // color: $main;
                 background: $white;
                 padding: 8px 24px;
                 border-radius: 4px;
@@ -351,10 +372,10 @@ html.has-scroll-dragging {
         width: 2000px;
         a {
           position: absolute;
-          color: $white;
+          // color: $white;
           text-decoration: none;
           &:hover {
-            color: $main;
+            // color: $main;
           }
         }
       }
@@ -364,8 +385,8 @@ html.has-scroll-dragging {
 
 #hero-sphere {
   position: absolute;
-  top: 300px;
-  right: 0px;
+  top: 120px;
+  right: 60px;
 }
 
 // Text styles
@@ -373,7 +394,7 @@ html.has-scroll-dragging {
   font-size: 72px;
 }
 .h2-animated {
-  font-size: 100px;
+  font-size: 62px;
 }
 .h3-animated {
   font-size: 40px;
@@ -451,17 +472,15 @@ html.has-scroll-dragging {
   }
 }
 
-
 .c-direction-block {
   position: absolute;
   right: 0;
   left: 0;
   z-index: 1;
-
 }
 
 .c-direction-block_item {
-  color: black;
+  // color: black;
   position: absolute;
   font-size: 10vw;
   white-space: nowrap;
@@ -470,46 +489,43 @@ html.has-scroll-dragging {
   line-height: 1;
 
   span {
-      display: block;
-      background-color: $white;
-      white-space: nowrap;
-      padding: 0 20px;
+    display: block;
+    background-color: $white;
+    white-space: nowrap;
+    padding: 0 20px;
   }
 
   &.-one {
-      top: 33%;
-      transform: translateX(-50vw) rotate(26deg)
+    top: 33%;
+    transform: translateX(-50vw) rotate(26deg);
   }
   &.-two {
-      top: 45%;
-      // transform: translateX(-50vw);
+    top: 45%;
+    // transform: translateX(-50vw);
   }
   &.-three {
-      top: 55%;
-      transform: rotate(9deg)
+    top: 55%;
+    transform: rotate(9deg);
   }
   &.-four {
-      top: 68%;
-      transform: translateX(-50vw) rotate(-19deg)
+    top: 68%;
+    transform: translateX(-50vw) rotate(-19deg);
   }
   &.-five {
-      top: 63%;
-      transform: translateX(-10vw) rotate(3deg)
+    top: 63%;
+    transform: translateX(-10vw) rotate(3deg);
   }
 }
-
-
 
 .c-lerp-block {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: rem(160px);
-
 }
 
 .c-lerp-block_index {
   vertical-align: middle;
-  color: ivory;
+  // color: ivory;
   width: auto;
   min-width: rem(65px);
   padding: 4px;
@@ -522,24 +538,24 @@ html.has-scroll-dragging {
   z-index: 1;
 
   &::before {
-      content:"";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      z-index: -1;
-      background-color: $black;
-      border-radius: 50%;
-      transform: scale(0);
-      transition: transform 0.6s ease-in-out;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $black;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.6s ease-in-out;
   }
 
   &.is-inview {
-      &::before {
-          transform: scale(1);
-          transition-delay: 0.3s;
-      }
+    &::before {
+      transform: scale(1);
+      transition-delay: 0.3s;
+    }
   }
 }
 
@@ -551,22 +567,22 @@ html.has-scroll-dragging {
   line-height: 1.1;
 
   &.is-inview {
-      >span:not([data-scroll]) {
-          opacity: 1;
-          transform: none;
-          transition-delay: 0.4s;
-      }
+    > span:not([data-scroll]) {
+      opacity: 1;
+      transform: none;
+      transition-delay: 0.4s;
+    }
   }
 
-  >span:not([data-scroll]) {
-      opacity: 0;
-      transform: translateY(60px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+  > span:not([data-scroll]) {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
   }
 
   span {
-      display: inline-block;
-      min-width: 0.3em;
+    display: inline-block;
+    min-width: 0.3em;
   }
 }
 .c-header_line {
@@ -595,7 +611,6 @@ html.has-scroll-dragging {
       transform-origin: right;
     }
   }
- 
 }
 
 .o-image_wrapper {
@@ -604,11 +619,10 @@ html.has-scroll-dragging {
   background-color: transparent;
 
   &.-full {
-      height: 100%;
-      margin: 0 rem(100px);
-      display: flex;
-      align-content: center;
-
+    height: 100%;
+    margin: 0 rem(100px);
+    display: flex;
+    align-content: center;
   }
 }
 
@@ -617,23 +631,22 @@ html.has-scroll-dragging {
   mix-blend-mode: multiply;
 
   img {
-      opacity: 0;
-      transform: scale(1.4);
-      transition: opacity 1.2s ease-in, transform 1.2s ease-in-out;
-      object-fit: cover;
+    opacity: 0;
+    transform: scale(1.4);
+    transition: opacity 1.2s ease-in, transform 1.2s ease-in-out;
+    object-fit: cover;
   }
 
   &.is-inview {
-      img {
-          opacity: 1;
-          transform: scale(1);
-          transition-delay: 0.6s;
-      }
+    img {
+      opacity: 1;
+      transform: scale(1);
+      transition-delay: 0.6s;
+    }
   }
 
   .o-image_wrapper.-full & {
-      align-self: center;
-
+    align-self: center;
   }
 }
 
@@ -647,11 +660,37 @@ html.has-scroll-dragging {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: .4s ease-in, transform .4s ease-in;
+  transition: 0.4s ease-in, transform 0.4s ease-in;
   &.loaded {
     opacity: 0;
-    transition: .4s ease-in, transform .4s ease-in;
+    transition: 0.4s ease-in, transform 0.4s ease-in;
   }
 }
 
+.toggle-button {
+  all: unset;
+  border-radius: 50%;
+  transition: all 0.3s ease-in;
+  z-index: 9999;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 50px;
+}
 
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff77e;
+}
+
+.moon {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: inset -8px -8px #fff77e, inset 0px 0px 0px 0px #fff77e;
+  -moz-box-shadow: inset -8px -8px #fff77e, inset 0px 0px 0px 0px #fff77e;
+}

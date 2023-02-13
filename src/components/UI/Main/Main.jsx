@@ -4,47 +4,12 @@ import Spline from '@splinetool/react-spline';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import WordToLetter from '../../../utils/WordToLetter.jsx';
 import Hr from '../Animated/Hr';
-import { useEffect } from 'react';
 
 export function Main() {
   return (
     <Container data-scroll-container>
-      <div style={{ margin: '150px 0', display: 'flex', flexDirection: 'column', alignItems: 'center' }} id='header'>
-      {/* <AText
-          text='A'
-          variant='h2'
-          dir='up'
-          font="StretchPro"
-          speed={1}
-          end='sadbeek'
-        />
-        <AText
-          text='S'
-          variant='h2'
-          dir='up'
-          font="StretchPro"
-          speed={1}
-          end='avronov'
-        />
-          <AText
-          text='C'
-          variant='h2'
-          dir='up'
-          font="StretchPro"
-          speed={1}
-          end='eaative'
-        />
-         <AText
-          text='D'
-          variant='h2'
-          dir='up'
-          font="StretchPro"
-          speed={1}
-          end='eveloper'
-        /> */}
-    
-      
-        {/* <AText text='Asadbek Savronov' variant='h2' dir='up' speed={2} />
+      <div style={{ margin: '150px 0' }} id='header'>
+        <AText text='Asadbek Savronov' variant='h2' dir='up' speed={2} />
         <AText
           text='Creative'
           variant='h2'
@@ -52,28 +17,28 @@ export function Main() {
           delay='1'
           outlined
           speed={2}
-        /> */}
+        />
         <AText
           text='Front-end Developer'
           variant='h2'
           dir='up'
-          speed={4}
+          delay='1.5'
+          speed={2}
         />
         <AText
           text='based in Tashkent'
           variant='h2'
           dir='up'
-          delay='.8'
-          speed={3}
+          delay='2.3'
+          speed={2}
         />
         <AText
-          text='Uzbekistan'
+          text='Uzbekistan '
           variant='h2'
           dir='up'
-          delay='1.5'
+          delay='3'
           outlined
           end='🇺🇿'
-          data-scroll-offset="100"
           speed={2}
         />
       </div>
@@ -104,29 +69,24 @@ export function Main() {
 
       </div>
       <SectionTitle title='Blog' num='02' />
-      <Hr origin='left'/>
+      <Hr origin='center'/>
       <h1>Line</h1>
-      <Hr origin='left'/>
+      <Hr origin='center'/>
       <h1>Line</h1>
-      <Hr origin='left'/>
+      <Hr origin='center'/>
       <h1>Line</h1>
-      <Hr origin='left'/>
+      <Hr origin='center'/>
       <h1>Line</h1>
-      <Hr origin='left'/>
+      <Hr origin='center'/>
       <h1>Line</h1>
-      <Hr origin='left'/>
+      <Hr origin='center'/>
       <h1>Line</h1>
-      <Hr origin='left'/>
-      <h1>Line</h1><Hr origin='left'/>
+      <Hr origin='center'/>
+      <h1>Line</h1><Hr origin='center'/>
       <h1>Line</h1>
-      <Hr origin='left'/>
+      <Hr origin='center'/>
       <h1>Line</h1>
      
-
-      <div    data-scroll
-          data-scroll-call='dynamicBackground'
-          data-scroll-repeat>HELLOOOOOOOO</div>
-
 
       <SectionTitle title='Works' num='03' />
       <Hr />
@@ -171,7 +131,7 @@ export function Main() {
             data-scroll-position='top'
             data-scroll-target='#header'
           >
-            <div className='u-text-right'>
+            <div className='u-text-center'>
               <p className='u-label c-header_heading_label'>v4.x – Edition</p>
             </div>
           </div>
@@ -377,14 +337,14 @@ export function Main() {
       <div style={{ marginTop: '200px' }}>&apos;</div>
       <div style={{ marginTop: '200px' }}>&apos;</div>
       <div style={{ marginTop: '200px' }}>&apos;</div> */}
-      {/* <div  data-scroll data-scroll-speed='-10' id='hero-sphere'>
+      <div data-scroll-speed='-7' id='hero-sphere'>
         <Spline
-          data-scroll
-          data-scroll-speed='6'
+          // data-scroll
+          data-scroll-speed='5'
           data-scroll-direction='horizontal'
           scene='https://prod.spline.design/QoUsqkLcAPNMg1pz/scene.splinecode'
         />
-      </div> */}
+      </div>
     </Container>
   );
 }
