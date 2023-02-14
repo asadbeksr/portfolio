@@ -8,7 +8,7 @@ import Hr from '../Animated/Hr';
 export function Main() {
   return (
     <Container data-scroll-container>
-      <div style={{ padding: '250px 0' }} id='header'>
+      <div style={{ margin: '150px 0' }} id='header'>
         <AText text='Asadbek Savronov' variant='h2' dir='up' speed={2} />
         <AText
           text='Creative'
