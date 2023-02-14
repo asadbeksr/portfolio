@@ -8,7 +8,7 @@ import Hr from '../Animated/Hr';
 export function Main() {
   return (
     <Container data-scroll-container>
-      <div style={{ margin: '150px 0' }} id='header'>
+      <div style={{ padding: '250px 0' }} id='header'>
         <AText text='Asadbek Savronov' variant='h2' dir='up' speed={2} />
         <AText
           text='Creative'
@@ -70,22 +70,22 @@ export function Main() {
 
       </div>
       <SectionTitle title='Blog' num='02' />
-      <Hr origin='center'/>
+      <Hr />
       <h1>Line</h1>
-      <Hr origin='center'/>
+      <Hr />
       <h1>Line</h1>
-      <Hr origin='center'/>
+      <Hr />
       <h1>Line</h1>
-      <Hr origin='center'/>
+      <Hr />
       <h1>Line</h1>
-      <Hr origin='center'/>
+      <Hr />
       <h1>Line</h1>
-      <Hr origin='center'/>
+      <Hr />
       <h1>Line</h1>
-      <Hr origin='center'/>
-      <h1>Line</h1><Hr origin='center'/>
+      <Hr />
+      <h1>Line</h1><Hr />
       <h1>Line</h1>
-      <Hr origin='center'/>
+      <Hr />
       <h1>Line</h1>
      
 

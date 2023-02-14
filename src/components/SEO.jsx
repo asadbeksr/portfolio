@@ -51,13 +51,20 @@ export default function SEO({
   };
 
   useEffect(() => {
-    window.addEventListener('wheel', handleScroll);
-    return () => {
-      setTimeout(() => {
-        setCurrentTitle(null);
-      }, 5000);
-      window.removeEventListener('wheel', handleScroll);
-    };
+    // window.addEventListener('wheel', handleScroll);
+    // return () => {
+    //   setTimeout(() => {
+    //     setCurrentTitle(null);
+    //   }, 5000);
+    //   window.removeEventListener('wheel', handleScroll);
+    // };
+    setTimeout(() => {
+      if (currentTitle === titles.length - 1) {
+        setCurrentTitle(0);
+      } else {
+        setCurrentTitle(currentTitle + 1);
+      }
+    }, 700);
   }, [currentTitle]);
 
   return (
@@ -98,7 +105,7 @@ export default function SEO({
         href='/images/favicons/android-chrome-512x512.png'
       />
 
-      <title>{titles[currentTitle] ?? title}</title>
+      <title>{currentTitle ? titles[currentTitle] : title}</title>
       <meta name='description' content={description} />
       <meta
         name='keywords'

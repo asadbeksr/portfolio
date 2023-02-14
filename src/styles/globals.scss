@@ -215,16 +215,17 @@ html.has-scroll-dragging {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-size: 1.4rem;
+
       .logo {
         font-family: 'Poppins', sans-serif;
         font-weight: 700;
         text-decoration: none;
-        // color: $main;
+        color: $main;
         text-transform: uppercase;
       }
       .menu {
         font-weight: 700;
-        font-size: 1rem;
         text-decoration: none;
         // color: $main;
         button {
@@ -610,7 +611,7 @@ html.has-scroll-dragging {
     transform-origin: left;
     &.is-inview {
       transform: scaleX(1);
-      transform-origin: right;
+      transform-origin: left;
     }
   }
   &.right {
