@@ -59,6 +59,7 @@ export function Main() {
         >
           <div className='o-image' data-scroll data-scroll-speed='-2'>
             <img
+              alt="develper's photo"
               height={500}
               width={400}
               className='c-speed-block_image'

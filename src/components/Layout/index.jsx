@@ -32,7 +32,7 @@ export default function Layout({ children }) {
           {/* <Cursor /> */}
           {/* <Header /> */}
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </main>
       </LocomotiveScrollProvider>
 
