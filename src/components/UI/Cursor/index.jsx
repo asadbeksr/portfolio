@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 export default function Cursor() {
+
   const cursorRef = useRef(null);
+
   useEffect(() => {
     if (cursorRef.current == null || cursorRef == null) return;
     document.addEventListener('mousemove', (e) => {
@@ -19,5 +21,6 @@ export default function Cursor() {
       }, 300);
     });
   }, []);
-  return <div className='cursor' ref={cursorRef}></div>;
+
+  return <div data-scroll={false} className='cursor' ref={cursorRef}></div>;
 }

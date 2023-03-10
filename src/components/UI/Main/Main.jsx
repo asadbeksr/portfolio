@@ -63,7 +63,7 @@ export function Main() {
               height={500}
               width={400}
               className='c-speed-block_image'
-              src='/images/self.jpeg'
+              src='/images/avo.jpg'
             />
           </div>
         </div>

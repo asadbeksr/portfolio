@@ -34,7 +34,7 @@ body {
     }
     .menu-layer {
       position: relative;
-      background: $black;
+      background: $black !important;
     }
   }
   .light {
@@ -703,4 +703,31 @@ html.has-scroll-dragging {
   border-radius: 50%;
   box-shadow: inset -8px -8px #fff77e, inset 0px 0px 0px 0px #fff77e;
   -moz-box-shadow: inset -8px -8px #fff77e, inset 0px 0px 0px 0px #fff77e;
+}
+
+.shiny {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)), radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 9999;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Show the shiny effect on hover */
+.hoverable:hover .shiny {
+  opacity: 1;
+}
+
+/* Track the mouse position */
+.hoverable:hover .shiny {
+  transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y)));
 }

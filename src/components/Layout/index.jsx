@@ -3,12 +3,12 @@ import { useRef, useState } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import { Footer } from 'components/UI/Footer/Footer';
 // import { Header } from 'components/UI/Header/Header';
-// import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic';
 
-// const Cursor = dynamic(
-//   () => import('components/UI/Cursor'),
-//   { ssr: false }
-// );
+const Cursor = dynamic(
+  () => import('components/UI/Cursor'),
+  { ssr: false }
+);
 
 export default function Layout({ children }) {
   const [theme, setTheme] = useState('light');
@@ -29,7 +29,7 @@ export default function Layout({ children }) {
 
       <LocomotiveScrollProvider options={options} containerRef={ref}>
         <main data-scroll-container ref={ref}>
-          {/* <Cursor /> */}
+          <Cursor />
           {/* <Header /> */}
           {children}
           {/* <Footer /> */}
