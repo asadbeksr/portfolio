@@ -40,7 +40,7 @@ export default function Experience()
                         position={ [ 0, 1.56, - 1.4 ] }
                         rotation-x={ - 0.256 }
                     >
-                        <iframe src="https://www.asadbek.me" />
+                        <iframe src="https://www.test.asadbek.me" />
                     </Html>
                 </primitive>
 
