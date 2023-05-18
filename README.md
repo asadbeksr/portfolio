@@ -1,1 +1,0 @@
-Asadbek Savronov's Portfolio 2022
