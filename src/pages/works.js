@@ -2,28 +2,28 @@
 import Head from 'next/head';
 import { Container, Typography } from '@mui/material';
 // layouts
-import DashboardLayout from '../../layouts/dashboard';
+import CompactLayout from '../layouts/compact';
 // components
-import { useSettingsContext } from '../../components/settings';
+import { useSettingsContext } from '../components/settings';
 
 // ----------------------------------------------------------------------
 
-PageTwo.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
+WorksPage.getLayout = (page) => <CompactLayout>{page}</CompactLayout>;
 
 // ----------------------------------------------------------------------
 
-export default function PageTwo() {
+export default function WorksPage() {
   const { themeStretch } = useSettingsContext();
 
   return (
     <>
       <Head>
-        <title> Page Two | Minimal UI</title>
+        <title> Works | Asadbek Savonov</title>
       </Head>
 
       <Container maxWidth={themeStretch ? false : 'xl'}>
         <Typography variant="h3" component="h1" paragraph>
-          Page Two
+        Works
         </Typography>
 
         <Typography gutterBottom>

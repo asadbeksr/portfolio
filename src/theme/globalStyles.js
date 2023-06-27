@@ -48,6 +48,10 @@ export default function GlobalStyles() {
           margin: 0,
           padding: 0,
         },
+        a: {
+          all: 'unset',
+          cursor: 'pointer',
+        },
       }}
     />
   );

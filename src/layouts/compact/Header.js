@@ -1,13 +1,10 @@
 import PropTypes from 'prop-types';
+import NextLink from 'next/link';
 // @mui
 import { useTheme } from '@mui/material/styles';
 import { AppBar, Toolbar, Box, Link } from '@mui/material';
 // config
 import { HEADER } from '../../config-global';
-// utils
-import { bgBlur } from '../../utils/cssStyles';
-// components
-import Logo from '../../components/logo';
 // ----------------------------------------------------------------------
 
 Header.propTypes = {
@@ -41,7 +38,16 @@ export default function Header({ isOffset }) {
         }}
       >
         {/* <Logo /> */}
-        <Link variant="h3" color="primary" fontWeight={800}>
+        <Link
+          component={NextLink}
+          href="/"
+          variant="h3"
+          color="primary"
+          fontWeight={800}
+          sx={{
+            textDecoration: 'none !important',
+          }}
+        >
           BEK.
         </Link>
         <Link variant="subtitle2" color="inherit">

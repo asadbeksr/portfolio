@@ -2,28 +2,28 @@
 import Head from 'next/head';
 import { Container, Typography } from '@mui/material';
 // layouts
-import DashboardLayout from '../../layouts/dashboard';
+import CompactLayout from '../layouts/compact';
 // components
-import { useSettingsContext } from '../../components/settings';
+import { useSettingsContext } from '../components/settings';
 
 // ----------------------------------------------------------------------
 
-PageThree.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
+ContactPage.getLayout = (page) => <CompactLayout>{page}</CompactLayout>;
 
 // ----------------------------------------------------------------------
 
-export default function PageThree() {
+export default function ContactPage() {
   const { themeStretch } = useSettingsContext();
 
   return (
     <>
       <Head>
-        <title> Page Three | Minimal UI</title>
+        <title> Contact | Asadbek Savonov</title>
       </Head>
 
       <Container maxWidth={themeStretch ? false : 'xl'}>
         <Typography variant="h3" component="h1" paragraph>
-          Page Three
+        Contact
         </Typography>
 
         <Typography gutterBottom>

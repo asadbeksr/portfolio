@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 // next
 import dynamic from 'next/dynamic';
 // @mui
-import { Stack, Container } from '@mui/material';
+import { Container } from '@mui/material';
 // hooks
 import useOffSetTop from '../../hooks/useOffSetTop';
 // config
@@ -25,18 +25,20 @@ export default function CompactLayout({ children }) {
     <>
       <Header isOffset={isOffset} />
 
-      <Container component="main">
-        <Stack
-          sx={{
-            py: 12,
-            m: 'auto',
-          }}
-        >
-          {children}
-        </Stack>
-      </Container>
+      <Container
+        component="main"
+        maxWidth={false}
+        sx={{
+          px: {
+            md: '40px !important',
+          },
+          pt: 11,
+        }}
+      >
+        {children}
 
-      <Footer />
+        <Footer />
+      </Container>
     </>
   );
 }
