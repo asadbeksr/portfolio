@@ -8,7 +8,6 @@ import { HEADER } from '../../config-global';
 import { bgBlur } from '../../utils/cssStyles';
 // components
 import Logo from '../../components/logo';
-
 // ----------------------------------------------------------------------
 
 Header.propTypes = {
@@ -22,6 +21,7 @@ export default function Header({ isOffset }) {
     <AppBar color="transparent" sx={{ boxShadow: 0 }}>
       <Toolbar
         sx={{
+          px: '80px !important', // Increase left padding
           justifyContent: 'space-between',
           height: {
             xs: HEADER.H_MOBILE,
@@ -31,22 +31,25 @@ export default function Header({ isOffset }) {
             easing: theme.transitions.easing.easeInOut,
             duration: theme.transitions.duration.shorter,
           }),
-          ...(isOffset && {
-            ...bgBlur({ color: theme.palette.background.default }),
-            height: {
-              md: HEADER.H_MAIN_DESKTOP - 16,
-            },
-          }),
+
+          // ...(isOffset && {
+          //   ...bgBlur({ color: theme.palette.background.default }),
+          //   height: {
+          //     md: HEADER.H_MAIN_DESKTOP - 16,
+          //   },
+          // }),
         }}
       >
-        <Logo />
-
+        {/* <Logo /> */}
+        <Link variant="h3" color="primary" fontWeight={800}>
+          BEK.
+        </Link>
         <Link variant="subtitle2" color="inherit">
           Need Help?
         </Link>
       </Toolbar>
 
-      {isOffset && <Shadow />}
+      {/* {isOffset && <Shadow />} */}
     </AppBar>
   );
 }

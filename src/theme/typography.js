@@ -1,4 +1,4 @@
-import { Public_Sans, Barlow } from '@next/font/google';
+import { Inter, Anton } from '@next/font/google';
 
 // ----------------------------------------------------------------------
 
@@ -24,19 +24,20 @@ export function responsiveFontSizes({ sm, md, lg }) {
   };
 }
 
-export const primaryFont = Public_Sans({
+export const primaryFont = Inter({
   weight: ['400', '500', '600', '700', '800'],
   subsets: ['latin'],
   display: 'swap',
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
 });
 
-export const secondaryFont = Barlow({
-  weight: ['900'],
+export const secondaryFont = Anton({
+  weight: ['400'],
   subsets: ['latin'],
   display: 'swap',
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
 });
+
 
 // ----------------------------------------------------------------------
 
@@ -49,10 +50,11 @@ const typography = {
   fontWeightMedium: 600,
   fontWeightBold: 700,
   h1: {
+    letterSpacing: 2,
     fontWeight: 800,
     lineHeight: 80 / 64,
-    fontSize: pxToRem(40),
-    ...responsiveFontSizes({ sm: 52, md: 58, lg: 64 }),
+    fontSize: pxToRem(96),
+    ...responsiveFontSizes({ sm: 52, md: 58, lg: 96 }),
   },
   h2: {
     fontWeight: 800,

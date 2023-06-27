@@ -11,16 +11,16 @@ const GREY = {
   300: '#DFE3E8',
   400: '#C4CDD5',
   500: '#919EAB',
-  600: '#637381',
+  600: '#666666',
   700: '#454F5B',
   800: '#212B36',
-  900: '#161C24',
+  900: '#000000',
 };
 
 const PRIMARY = {
   lighter: '#C8FACD',
   light: '#5BE584',
-  main: '#00AB55',
+  main: '#9FED61',
   dark: '#007B55',
   darker: '#005249',
   contrastText: '#FFFFFF',
@@ -29,7 +29,7 @@ const PRIMARY = {
 const SECONDARY = {
   lighter: '#D6E4FF',
   light: '#84A9FF',
-  main: '#3366FF',
+  main: '#4874E5',
   dark: '#1939B7',
   darker: '#091A7A',
   contrastText: '#FFFFFF',
@@ -113,8 +113,8 @@ export default function palette(themeMode) {
     mode: 'dark',
     text: {
       primary: '#FFFFFF',
-      secondary: GREY[500],
-      disabled: GREY[600],
+      secondary: GREY[600],
+      disabled: GREY[700],
     },
     background: {
       paper: GREY[800],

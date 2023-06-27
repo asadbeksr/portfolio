@@ -7,6 +7,8 @@ import { Stack, Container } from '@mui/material';
 import useOffSetTop from '../../hooks/useOffSetTop';
 // config
 import { HEADER } from '../../config-global';
+// components
+import Footer from './Footer';
 //
 const Header = dynamic(() => import('./Header'), { ssr: false });
 
@@ -28,15 +30,13 @@ export default function CompactLayout({ children }) {
           sx={{
             py: 12,
             m: 'auto',
-            maxWidth: 400,
-            minHeight: '100vh',
-            textAlign: 'center',
-            justifyContent: 'center',
           }}
         >
           {children}
         </Stack>
       </Container>
+
+      <Footer />
     </>
   );
 }
