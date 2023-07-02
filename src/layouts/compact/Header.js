@@ -18,7 +18,9 @@ export default function Header({ isOffset }) {
     <AppBar color="transparent" sx={{ boxShadow: 0 }}>
       <Toolbar
         sx={{
-          px: '80px !important', // Increase left padding
+          px: {
+            lg: '80px !important'
+          }, // Increase left padding
           justifyContent: 'space-between',
           height: {
             xs: HEADER.H_MOBILE,

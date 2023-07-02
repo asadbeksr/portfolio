@@ -23,6 +23,8 @@ export default function Button(theme) {
     const largeSize = ownerState.size === 'large';
 
     const defaultStyle = {
+      borderRadius: '24px',
+      height: 46,
       ...(inheritColor && {
         // CONTAINED
         ...(containedVariant && {

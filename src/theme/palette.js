@@ -97,7 +97,7 @@ export default function palette(themeMode) {
     ...COMMON,
     mode: 'light',
     text: {
-      primary: GREY[800],
+      primary: GREY[900],
       secondary: GREY[600],
       disabled: GREY[500],
     },

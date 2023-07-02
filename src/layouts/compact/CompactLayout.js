@@ -9,6 +9,7 @@ import useOffSetTop from '../../hooks/useOffSetTop';
 import { HEADER } from '../../config-global';
 // components
 import Footer from './Footer';
+import CallToAction from '../../sections/call-to-action/CallToAction';
 //
 const Header = dynamic(() => import('./Header'), { ssr: false });
 
@@ -36,7 +37,7 @@ export default function CompactLayout({ children }) {
         }}
       >
         {children}
-
+        <CallToAction />
         <Footer />
       </Container>
     </>
