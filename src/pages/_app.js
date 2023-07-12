@@ -7,14 +7,14 @@ import 'simplebar-react/dist/simplebar.min.css';
 // lazy image
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
-import { Analytics } from '@vercel/analytics/react';
-
 // ----------------------------------------------------------------------
 
 import PropTypes from 'prop-types';
 import { CacheProvider } from '@emotion/react';
 // next
 import Head from 'next/head';
+// eslint-disable-next-line import/no-unresolved
+import { Analytics } from '@vercel/analytics/react';
 // utils
 import createEmotionCache from '../utils/createEmotionCache';
 // theme
