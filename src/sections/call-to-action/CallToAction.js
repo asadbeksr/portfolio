@@ -70,7 +70,7 @@ export default function CallToAction({ isOffset }) {
                     height: 30,
                     width: 30,
                     padding: 6,
-                    border: '2px solid black',
+                    border: `2px solid ${muiTheme.palette.primary.main}`,
                   }}
                   height={10}
                 />

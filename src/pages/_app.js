@@ -7,6 +7,8 @@ import 'simplebar-react/dist/simplebar.min.css';
 // lazy image
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
+import { Analytics } from '@vercel/analytics/react';
+
 // ----------------------------------------------------------------------
 
 import PropTypes from 'prop-types';
@@ -50,6 +52,10 @@ export default function MyApp(props) {
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
+
+       <Analytics />
+
+      
 
       {/* <AuthProvider> */}
         <SettingsProvider>
