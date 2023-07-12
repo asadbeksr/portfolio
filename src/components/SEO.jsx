@@ -39,7 +39,7 @@ export default function SEO({ title }) {
       <meta name='twitter:creator' content='Asadbek Savronov' />
       <meta
         name='twitter:image'
-        // content='https://cdn.rasta.app/rasta/aef8208b-c6fc-4db9-878b-51544ab711be'
+        // content='https://cdn.rasta.app/rasta/aef8208b-c6fc-4db9-878b-51544ab711be ' 
       />
 
       <link rel='icon' href='/favicon.ico' />
