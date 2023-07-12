@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from '@emotion/react'
 import Layout from 'components/Layout'
 import 'styles/globals.scss'
@@ -21,6 +22,7 @@ function MyApp({ Component, pageProps }) {
           <ThemeProvider theme={theme}>
             <Layout>
               <Component {...pageProps} />
+              <Analytics />
             </Layout>
           </ThemeProvider>
       )}
