@@ -17,7 +17,7 @@ export const Card: React.FC<PropsWithChildren> = ({ children }) => {
 		mouseX.set(clientX - left);
 		mouseY.set(clientY - top);
 	}
-	let maskImage = useMotionTemplate`radial-gradient(240px at ${mouseX}px ${mouseY}px, white, transparent)`;
+	let maskImage = useMotionTemplate`radial-gradient(240px at ${mouseX}px ${mouseY}px, #4f4f, transparent)`;
 	let style = { maskImage, WebkitMaskImage: maskImage };
 
 	return (
