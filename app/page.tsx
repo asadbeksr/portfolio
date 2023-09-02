@@ -8,36 +8,21 @@ const navigation = [
 ];
 
 export default function Home() {
-  // const [time, setTime] = useState(new Date());
-
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  // 	setTime(new Date());
-  //   }, 1000);
-
-  //   return () => {
-  // 	clearInterval(intervalId);
-  //   };
-  // }, []);
-
-  // const formattedTime = time.toLocaleTimeString();
 
   return (
-    <div className='flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-200/20 to-black'>
+    <div className='flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-[#0b2732]'>
       <nav className='my-16 animate-fade-in'>
         <ul className='flex items-center justify-center gap-4'>
           {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className='text-sm duration-500 text-zinc-500 hover:text-zinc-300 pointer'
+              className='text-sm duration-500 text-zinc-400 hover:text-zinc-200 pointer'
             >
               {item.name}
             </Link>
           ))}
-          {/* <li  className='text-sm duration-500 text-zinc-500 hover:text-zinc-300'>
-			{`${formattedTime} (UTC+5) `}
-		  </li> */}
+
         </ul>
       </nav>
       <div className='hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0' />
@@ -45,13 +30,13 @@ export default function Home() {
         className='absolute inset-0 -z-10 animate-fade-in'
         quantity={500}
       />
-      <h1 className='z-10 text-5xl text-transparent duration-500 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text '>
+      <h1 className='z-10 text-5xl text-transparent duration-500 bg-[#55FF80]/70 cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text '>
         asadbek
       </h1>
 
-      <div className='hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0' />
+      <div className='hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-100/50 to-zinc-100/0' />
       <div className='my-16 text-center animate-fade-in'>
-        <h2 className='text-sm text-zinc-500  max-w-lg'>
+        <h2 className='text-sm text-zinc-400  max-w-lg'>
           Frontend Engineer with 3+ years of hands-on experience crafting
           responsive, user-friendly interfaces with eye-catching animations
         </h2>
