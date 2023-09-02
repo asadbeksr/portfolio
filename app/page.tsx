@@ -17,7 +17,7 @@ export default function Home() {
             <Link
               key={item.href}
               href={item.href}
-              className='text-sm duration-500 text-zinc-400 hover:text-zinc-200 pointer'
+              className='text-sm duration-500 text-zinc-400 hover:text-[#55FF80] pointer'
             >
               {item.name}
             </Link>
@@ -30,7 +30,7 @@ export default function Home() {
         className='absolute inset-0 -z-10 animate-fade-in'
         quantity={500}
       />
-      <h1 className='z-10 text-5xl text-transparent duration-500 bg-[#55FF80]/70 cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text '>
+      <h1 className='z-10 text-5xl text-transparent duration-500 bg-[#55FF80]/70 cursor-default  animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text '>
         asadbek
       </h1>
 
