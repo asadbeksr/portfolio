@@ -1,14 +1,13 @@
 "use client";
-import { Github, Mail } from "lucide-react";
+import { Github, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
-import Image from "next/image";
 
 
 const socials = [
 	{
-		icon: <Image src="/twitter.png" alt="x.com logo" width={12} height={12}/>,
+		icon: <Twitter size={20}/>,
 		href: "https://x.com/asadbeksr",
 		label: "X",
 		handle: "@asadbeksr",
@@ -29,7 +28,7 @@ const socials = [
 
 export default function Example() {
 	return (
-		<div className="bg-gradient-to-tl from-[#0b2732]">
+		<div className="bg-gradient-to-tl from-emerald-900">
 			<Navigation />
 			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
 				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
