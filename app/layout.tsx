@@ -6,14 +6,14 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
 	title: {
-		default: "asadbek.me",
+		default: "asadbek.me - Crafting Engaging Web Experiences",
 		template: "%s | asadbek.me",
 	},
-	description: "Software engineer at upstash.com and founder of planetfall.io",
+	description: "Crafting captivating web experiences as a frontend developer. Specializing in visually stunning and responsive web applications that enchant users. Designs seamlessly transform into engaging code. Offering guidance for a seamless transition to innovative frontend technologies.",
 	openGraph: {
-		title: "asadbek.me",
+		title: "asadbek.me - Crafting Engaging Web Experiences",
 		description:
-			"Software engineer at upstash.com and founder of planetfall.io",
+			"Crafting captivating web experiences as a frontend developer. Specializing in visually stunning and responsive web applications that enchant users. Designs seamlessly transform into engaging code. Offering guidance for a seamless transition to innovative frontend technologies.",
 		url: "https:/asadbek.me",
 		siteName: "asadbek.me",
 		images: [

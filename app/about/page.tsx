@@ -18,15 +18,10 @@ const socials = [
 		label: "Email",
 		handle: "hello@asadbek.me",
 	},
-	{
-		icon: <Github size={20} />,
-		href: "https://github.com/asadbeksr",
-		label: "Github",
-		handle: "asadbeksr",
-	},
+
 ];
 
-export default function ContacPage() {
+export default function AboutPage() {
 	return (
 		<div className="bg-gradient-to-tl from-emerald-900">
 			<Navigation />
