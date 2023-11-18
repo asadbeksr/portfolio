@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .text-edge-outline {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+  }
+} 
+/* 
+body::before {
+  animation: grain 8s steps(10) infinite;
+  background-image: url(./public/noise.png);
+  content: '';
+  height: 300%;
+  left: -50%;
+  opacity: 0.6;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+} */
