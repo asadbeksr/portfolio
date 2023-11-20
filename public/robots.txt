@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.asadbek.me
+
+# Sitemaps
+Sitemap: https://www.asadbeks.me/sitemap.xml
