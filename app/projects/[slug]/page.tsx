@@ -1,3 +1,4 @@
+import type { Metadata, ResolvingMetadata } from 'next'
 import { notFound } from "next/navigation";
 import { allProjects } from "contentlayer/generated";
 import { Mdx } from "@/app/components/mdx";
@@ -14,6 +15,29 @@ type Props = {
 	};
 };
 
+export async function generateMetadata(
+	{ params }: Props,
+	parent: ResolvingMetadata
+  ): Promise<Metadata> {
+	const { slug } = params
+	const project = allProjects.find((p) => p.slug === slug)
+  
+	if (!project) {
+	  throw new Error('Project not found')
+	}
+  
+	const views = (await redis.get<number>(["pageviews", "projects", slug].join(":"))) ?? 0
+  
+	return {
+	  title: project.title, // Assuming 'title' is the field containing the project's title
+	//   openGraph: {
+	// 	images: ['/some-specific-page-image.jpg'], // Your specific page images
+	//   },
+	  // You can add more metadata fields as needed
+	}
+  }
+
+  
 const redis = Redis.fromEnv();
 
 export async function generateStaticParams(): Promise<Props["params"][]> {
