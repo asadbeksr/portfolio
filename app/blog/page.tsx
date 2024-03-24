@@ -4,20 +4,19 @@ import { allBlogPosts } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
-import { Redis } from "@upstash/redis";
+// import { Redis } from "@upstash/redis";
 import { GetStaticProps } from "next";
 import { Eye } from "lucide-react";
 import { getAllPublished } from "@/util/notion";
 
-const redis = Redis.fromEnv();
-interface ProjectsPageProps {
-	posts: any; // Using 'any' to bypass strict type checking
-}
+// const redis = Redis.fromEnv();
+// interface ProjectsPageProps {
+// 	posts: any; // Using 'any' to bypass strict type checking
+// }
 
 export const revalidate = 60;
 
-export default async function ProjectsPage({ posts }: ProjectsPageProps) {
-	console.log(posts);
+export default async function ProjectsPage() {
 	// const views = (
 	// 	await redis.mget<number[]>(
 	// 		...allBlogPosts.map((p) => ["pageviews", "projects", p.slug].join(":")),
@@ -135,9 +134,9 @@ export default async function ProjectsPage({ posts }: ProjectsPageProps) {
 	);
 }
 
-export async function getData() {
-	const databaseId = "your-database-id"; // Replace with your Notion database ID
-	const posts = await getAllPublished(databaseId);
+// export async function getData() {
+// 	const databaseId = "your-database-id"; // Replace with your Notion database ID
+// 	const posts = await getAllPublished(databaseId);
 
-	return { props: { posts } };
-}
+// 	return { props: { posts } };
+// }
