@@ -1,45 +1,39 @@
 import Link from "next/link";
 import React from "react";
-import { allProjects } from "contentlayer/generated";
+import { allBlogPosts } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
 import { Redis } from "@upstash/redis";
+import { GetStaticProps } from "next";
 import { Eye } from "lucide-react";
+import { getAllPublished } from "@/util/notion";
 
 const redis = Redis.fromEnv();
+interface ProjectsPageProps {
+	posts: any; // Using 'any' to bypass strict type checking
+}
 
 export const revalidate = 60;
-export default async function ProjectsPage() {
-	const views = (
-		await redis.mget<number[]>(
-			...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),
-		)
-	).reduce((acc, v, i) => {
-		acc[allProjects[i].slug] = v ?? 0;
-		return acc;
-	}, {} as Record<string, number>);
 
-	const featured = allProjects.find((project) => project.slug === "rasta")!;
-	const top2 = allProjects.find((project) => project.slug === "utas")!;
-	const top3 = allProjects.find((project) => project.slug === "oxbox")!;
+export default async function ProjectsPage({ posts }: ProjectsPageProps) {
+	console.log(posts);
+	// const views = (
+	// 	await redis.mget<number[]>(
+	// 		...allBlogPosts.map((p) => ["pageviews", "projects", p.slug].join(":")),
+	// 	)
+	// ).reduce((acc, v, i) => {
+	// 	acc[allBlogPosts[i].slug] = v ?? 0;
+	// 	return acc;
+	// }, {} as Record<string, number>);
 
-
-	console.log(allProjects, "------ me")
-
-	const sorted = allProjects
-		.filter((p) => p.published)
-		.filter(
-			(project) =>
-				project.slug !== featured.slug &&
-				project.slug !== top2.slug &&
-				project.slug !== top3.slug,
-		)
-		.sort(
-			(a, b) =>
-				new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
-				new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
-		);
+	// const sorted = allBlogPosts
+	// 	.filter((p) => p.published)
+	// 	.sort(
+	// 		(a, b) =>
+	// 			new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
+	// 			new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
+	// 	);
 
 	return (
 		<div className="relative pb-16">
@@ -49,12 +43,13 @@ export default async function ProjectsPage() {
 					<h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
 						Blog
 					</h2>
-					{/* <p className="mt-4 text-zinc-400">
-						Some of the projects are from work and some are on my own time.
-					</p> */}
+					<p className="mt-4 text-zinc-400">
+						Experience is the best teacher. I write about my projects, my
+						learnings and my thoughts.
+					</p>
 				</div>
-				{/* <div className="w-full h-px bg-zinc-500" /> */}
-
+				<div className="w-full h-px bg-emerald-700" />
+				{/* 
 				<div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
 					<Card>
 						<Link href={`/blog/${featured.slug}`}>
@@ -74,7 +69,7 @@ export default async function ProjectsPage() {
 									<span className="flex items-center gap-1 text-xs text-zinc-300">
 										<Eye className="w-4 h-4" />{" "}
 										{Intl.NumberFormat("en-US", { notation: "compact" }).format(
-											views[featured.slug] ?? 0,
+											0,
 										)}
 									</span>
 								</div>
@@ -100,44 +95,49 @@ export default async function ProjectsPage() {
 					<div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
 						{[top2, top3].map((project) => (
 							<Card key={project.slug}>
-								<Article project={project} views={views[project.slug] ?? 0} />
+								<Article blog={project} views={views[project.slug] ?? 0} />
 							</Card>
 						))}
 					</div>
-				</div>
+				</div> */}
 
-				<div className="hidden w-full h-px md:block bg-emerald-700" />
-
-				<div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
+				{/* <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
 					<div className="grid grid-cols-1 gap-4">
 						{sorted
 							.filter((_, i) => i % 3 === 0)
-							.map((project) => (
-								<Card key={project.slug}>
-									<Article project={project} views={views[project.slug] ?? 0} />
+							.map((blog) => (
+								<Card key={blog.slug}>
+									<Article blog={blog} views={views[blog.slug] ?? 0} />
 								</Card>
 							))}
 					</div>
 					<div className="grid grid-cols-1 gap-4">
 						{sorted
 							.filter((_, i) => i % 3 === 1)
-							.map((project) => (
-								<Card key={project.slug}>
-									<Article project={project} views={views[project.slug] ?? 0} />
+							.map((blog) => (
+								<Card key={blog.slug}>
+									<Article blog={blog} views={views[blog.slug] ?? 0} />
 								</Card>
 							))}
 					</div>
 					<div className="grid grid-cols-1 gap-4">
 						{sorted
 							.filter((_, i) => i % 3 === 2)
-							.map((project) => (
-								<Card key={project.slug}>
-									<Article project={project} views={views[project.slug] ?? 0} />
+							.map((blog) => (
+								<Card key={blog.slug}>
+									<Article blog={blog} views={views[blog.slug] ?? 0} />
 								</Card>
 							))}
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);
+}
+
+export async function getData() {
+	const databaseId = "your-database-id"; // Replace with your Notion database ID
+	const posts = await getAllPublished(databaseId);
+
+	return { props: { posts } };
 }

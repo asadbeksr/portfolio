@@ -4,10 +4,9 @@ import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 
-
 const socials = [
 	{
-		icon: <Twitter size={20}/>,
+		icon: <Twitter size={20} />,
 		href: "https://x.com/asadbeksr",
 		label: "X",
 		handle: "@asadbeksr",

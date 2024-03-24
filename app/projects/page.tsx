@@ -24,7 +24,6 @@ export default async function ProjectsPage() {
 	const top2 = allProjects.find((project) => project.slug === "utas")!;
 	const top3 = allProjects.find((project) => project.slug === "oxbox")!;
 
-
 	const sorted = allProjects
 		.filter((p) => p.published)
 		.filter(
@@ -48,7 +47,7 @@ export default async function ProjectsPage() {
 						Projects
 					</h2>
 					<p className="mt-4 text-zinc-400">
-					Explore both professional and personal projects showcased here.
+						Explore both professional and personal projects showcased here.
 					</p>
 				</div>
 				<div className="w-full h-px bg-emerald-700" />
