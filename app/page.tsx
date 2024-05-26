@@ -1,46 +1,102 @@
-// 'use client'
-import Link from "next/link";
-import Particles from "./components/particles";
-
-const navigation = [
-	{ name: "Projects", href: "/projects" },
-	// { name: "Blog", href: "/blog" },
-	// { name: "About", href: "/about" },
-	{ name: "Contact", href: "/contact" },
-];
+import Link from 'next/link';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import {
+  Copy,
+  Github,
+  Instagram,
+  Linkedin,
+  Mail,
+  Twitter,
+  Youtube,
+} from 'lucide-react';
+import ProjectCard from '@/components/projectcard';
+import Footer from '@/components/footer';
+import SocialCard from '@/components/socialcard';
+import VideoCard from '@/components/videocard';
 
 export default function Home() {
-	return (
-		<div className='flex ring flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-emerald-900'>
-			<nav className='my-16 animate-fade-in'>
-				<ul className='flex items-center justify-center gap-4'>
-					{navigation.map((item) => (
-						<Link
-							key={item.href}
-							href={item.href}
-							className='text-sm duration-500 text-zinc-400 hover:text-[#55FF80] pointer'
-						>
-							{item.name}
-						</Link>
-					))}
-				</ul>
-			</nav>
-			<div className='hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0' />
-			<Particles
-				className='absolute inset-0 -z-10 animate-fade-in'
-				quantity={500}
-			/>
-			<h1 className='z-10 text-5xl text-transparent duration-500 bg-[#55FF80]/70 cursor-default  animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text '>
-				asadbek
-			</h1>
+  return (
+    <main className='my-[100px]'>
+      <div className='container gap-4'>
+        <Image
+          className='rounded-full'
+          src='/imgs/4.png'
+          alt='Asadbek Savronov - Profile Picture'
+          width={100}
+          height={100}
+        />
 
-			<div className='hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-100/50 to-zinc-100/0' />
-			<div className='my-16 text-center animate-fade-in'>
-				<h2 className='text-sm text-zinc-400  max-w-lg'>
-					Frontend Engineer with 3+ years of hands-on experience crafting
-					responsive, user-friendly interfaces with eye-catching animations
-				</h2>
-			</div>
-		</div>
-	);
+        <h1 className='text-4xl font-medium mt-3 text-white text-center'>
+          Asadbek
+        </h1>
+
+        <p className='text-center max-w-md'>
+          Front-end developer based in the Italy 🇮🇹 <br />
+          with a passion for creating stunning web applications
+        </p>
+
+        <div className='flex gap-4 mt-2'>
+          <Button
+            variant='outline'
+            asChild
+            className='border hover:animate-pulse'
+          >
+            <Link href='/cv.pdf' target='_blank'>
+              Resume
+            </Link>
+          </Button>
+
+          <Button
+            variant='outline'
+            className='bg-zinc-950/30 hover:animate-pulse'
+            asChild
+          >
+            <Link href='mailto:hello@asadbek.me'>
+              <Mail className='mr-2 h-4 w-4 opacity-60' />
+              Email
+            </Link>
+          </Button>
+        </div>
+
+        <div className='flex gap-4 mt-8 flex-col'>
+          <ProjectCard
+            title='Utas'
+            description='University website for admission.'
+            actionText='View'
+            actionLink='https://utas.uz/'
+            image='/imgs/utas.png'
+          />
+
+          <ProjectCard
+            title='Rasta'
+            description='Restaurant website for ordering food.'
+            actionText='View'
+            actionLink='https://rasta.uz/'
+            image='/imgs/rasta.png'
+          />
+        </div>
+
+        <div className='flex gap-4 flex-col'>
+          <VideoCard title='Latest Video' link='https://youtube.com/asadbekr' linkTitle='YouTube' />
+        </div>
+
+        <div className='flex gap-4 w-full items-center justify-center mb-8'>
+          <SocialCard
+            icon={<Instagram />}
+            link='https://instagram.com/asadbeksr'
+          />
+          <SocialCard
+            icon={<Linkedin />}
+            link='https://www.linkedin.com/in/asadbeksr/'
+          />
+          <SocialCard icon={<Twitter />} link='https://twitter.com/asadbeksr' />
+          <SocialCard icon={<Github />} link='hhtps://github.com/asadbekr' />
+          <SocialCard icon={<Youtube />} link='https://youtube.com/asadbekr' />
+        </div>
+
+        <Footer />
+      </div>
+    </main>
+  );
 }
