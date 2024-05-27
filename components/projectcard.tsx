@@ -29,8 +29,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           className='md:w-[100px] md:h-[70px] rounded-md h-[45px] w-[45px]'
         />
         <div className='h-12'>
-          <h3 className='md:text-xl font-medium text-white text-lg'>{title}</h3>
-          <p className='md:text-sm text-white/30 max-w-sm text-xs'>
+          <h3 className='md:text-xl font-medium dark:text-white text-lg'>{title}</h3>
+          <p className='md:text-sm dark:text-white/30 text-black/60 max-w-sm text-xs'>
             {description}
           </p>
         </div>

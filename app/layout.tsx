@@ -73,10 +73,11 @@ export default function RootLayout({
             <div className='pattern-bg' />
           </div>
 
-          <div className='relative z-10'>{children}</div>
-          <div className='fixed z-20 sm:top-10 sm:right-10 top-4 right-4'>
+          <div className='relative z-20'>{children}</div>
+          {/* <div className='absolute z-30 sm:top-10 sm:right-10 top-4 right-4'>
             <ModeToggle />
-          </div>
+          </div> */}
+          <div className='light-bottom' />
         </ThemeProvider>
       </body>
     </html>

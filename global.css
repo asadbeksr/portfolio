@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 99%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
@@ -27,9 +27,9 @@
   }
 
   .dark {
-    --background: 0 0% 3.9%;
+    --background: 0 3% 9%;
     --foreground: 0 0% 98%;
-    --card: 28 28 100%;
+    --card: 0 0% 10.9%;
     --card-foreground: 100%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
@@ -63,18 +63,12 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --token-1ed6d5d5-e471-4369-8639-00688ededc9f: rgb(124, 127, 130);
-  --token-02a6872c-fbac-4181-a8b8-1dcaa68ff80d: rgb(255, 255, 255);
-  --token-62be83f1-0097-4872-b224-94c7b2aa11d6: rgb(28, 28, 28);
-  --token-5b9801ec-2b2c-45f7-a548-e4428099a1ac: rgb(43, 43, 43);
-  --token-b7046cab-a803-4f27-934d-bf5b26201782: rgb(40, 40, 40);
-  --token-b0731588-6d12-493c-8302-62f9f032c7c8: rgb(61, 61, 61);
-  --token-b51ef5c2-aa9a-430c-a5f7-c49146f35812: rgb(22, 22, 22);
+  --pattern-color: rgb(245, 245, 245);
+  --pattern-overlay: rgb(255, 255, 255);
+  --pattern-color-dark: rgb(28, 28, 28);
+  --pattern-overlay-dark: rgb(22, 22, 22);
   --framer-aspect-ratio-supported: auto;
-  background: var(
-    --token-b51ef5c2-aa9a-430c-a5f7-c49146f35812,
-    rgb(253, 253, 252)
-  );
+  /* background: var(--pattern-overlay, rgb(253, 253, 252)); */
 }
 
 .pattern-bg {
@@ -85,27 +79,22 @@ body {
   height: 100%;
   background-color: transparent;
   background-image: linear-gradient(
-      var(--token-62be83f1-0097-4872-b224-94c7b2aa11d6, rgb(245, 245, 245))
-        /* {"name":"UI Background"} */ 2px,
+      var(--pattern-color-dark, rgb(245, 245, 245)) 2px,
       transparent 2px
     ),
     linear-gradient(
       90deg,
-      var(--token-62be83f1-0097-4872-b224-94c7b2aa11d6, rgb(245, 245, 245))
-        /* {"name":"UI Background"} */ 2px,
+      var(--pattern-color-dark, rgb(245, 245, 245)) 2px,
       transparent 2px
     ),
     linear-gradient(
-      var(--token-62be83f1-0097-4872-b224-94c7b2aa11d6, rgb(245, 245, 245))
-        /* {"name":"UI Background"} */ 1px,
+      var(--pattern-color-dark, rgb(245, 245, 245)) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      var(--token-62be83f1-0097-4872-b224-94c7b2aa11d6, rgb(245, 245, 245))
-        /* {"name":"UI Background"} */ 1px,
-      var(--token-b51ef5c2-aa9a-430c-a5f7-c49146f35812, rgb(253, 253, 252))
-        /* {"name":"Page Background"} */ 1px
+      var(--pattern-color-dark, rgb(245, 245, 245)) 1px,
+      var(--pattern-overlay-dark, rgb(253, 253, 252)) 1px
     );
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
   background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
@@ -134,19 +123,12 @@ body {
 }
 
 .pattern-overlay {
-  --token-1ed6d5d5-e471-4369-8639-00688ededc9f: rgb(124, 127, 130);
-  --token-02a6872c-fbac-4181-a8b8-1dcaa68ff80d: rgb(255, 255, 255);
-  --token-62be83f1-0097-4872-b224-94c7b2aa11d6: rgb(28, 28, 28);
-  --token-5b9801ec-2b2c-45f7-a548-e4428099a1ac: rgb(43, 43, 43);
-  --token-b7046cab-a803-4f27-934d-bf5b26201782: rgb(40, 40, 40);
-  --token-b0731588-6d12-493c-8302-62f9f032c7c8: rgb(61, 61, 61);
-  --token-b51ef5c2-aa9a-430c-a5f7-c49146f35812: rgb(22, 22, 22);
   --framer-aspect-ratio-supported: auto;
   box-sizing: border-box;
   -webkit-font-smoothing: inherit;
   background: linear-gradient(
     0deg,
-    var(--token-b51ef5c2-aa9a-430c-a5f7-c49146f35812, #fdfdfc) 0%,
+    var(--pattern-overlay-dark, #fdfdfc) 0%,
     rgba(22, 22, 22, 0) 100%
   );
   flex: none;
@@ -157,13 +139,6 @@ body {
 }
 
 .container {
-  --token-1ed6d5d5-e471-4369-8639-00688ededc9f: rgb(124, 127, 130);
-  --token-02a6872c-fbac-4181-a8b8-1dcaa68ff80d: rgb(255, 255, 255);
-  --token-62be83f1-0097-4872-b224-94c7b2aa11d6: rgb(28, 28, 28);
-  --token-5b9801ec-2b2c-45f7-a548-e4428099a1ac: rgb(43, 43, 43);
-  --token-b7046cab-a803-4f27-934d-bf5b26201782: rgb(40, 40, 40);
-  --token-b0731588-6d12-493c-8302-62f9f032c7c8: rgb(61, 61, 61);
-  --token-b51ef5c2-aa9a-430c-a5f7-c49146f35812: rgb(22, 22, 22);
   align-content: center;
   align-items: center;
   display: flex;
@@ -176,4 +151,7 @@ body {
   position: relative;
   width: 100%;
   padding: 0 24px;
+}
+
+.light-bottom {
 }

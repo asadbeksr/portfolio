@@ -27,11 +27,11 @@ export default function Home() {
           height={100}
         />
 
-        <h1 className='text-4xl font-medium mt-3 text-white text-center'>
+        <h1 className='text-4xl font-medium mt-3 text-center'>
           Asadbek
         </h1>
 
-        <p className='text-center max-w-md'>
+        <p className='text-center max-w-md font-light'>
           Front-end developer based in the Italy 🇮🇹 <br />
           with a passion for creating stunning web applications
         </p>
@@ -49,7 +49,7 @@ export default function Home() {
 
           <Button
             variant='outline'
-            className='bg-zinc-950/30 hover:animate-pulse'
+            className='bg-popover hover:animate-pulse'
             asChild
           >
             <Link href='mailto:hello@asadbek.me'>
@@ -59,7 +59,7 @@ export default function Home() {
           </Button>
         </div>
 
-        <div className='flex gap-4 mt-8 flex-col'>
+        <div className='flex gap-4 mt-12 flex-col'>
           <ProjectCard
             title='Utas'
             description='University website for admission.'
@@ -78,7 +78,11 @@ export default function Home() {
         </div>
 
         <div className='flex gap-4 flex-col'>
-          <VideoCard title='Latest Video' link='https://youtube.com/asadbekr' linkTitle='YouTube' />
+          <VideoCard
+            title='Latest Video'
+            link='https://www.youtube.com/channel/UC06ECXAc_hcCc7ixPCTQc6w'
+            linkTitle='YouTube'
+          />
         </div>
 
         <div className='flex gap-4 w-full items-center justify-center mb-8'>
