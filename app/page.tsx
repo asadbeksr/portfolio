@@ -17,7 +17,7 @@ import VideoCard from '@/components/videocard';
 
 export default function Home() {
   return (
-    <main className='my-[100px]'>
+    <main className='sm:my-[100px] my-[60px]'>
       <div className='container gap-4'>
         <Image
           className='rounded-full'
@@ -57,10 +57,10 @@ export default function Home() {
           </Button>
         </div>
 
-        <div className='flex gap-4 mt-12 flex-col'>
+        <div className='flex gap-4 sm:mt-12 mt-8 flex-col'>
           <ProjectCard
             title='Utas'
-            description='University website for admission.'
+            description='University website'
             actionText='View'
             actionLink='https://utas.uz/'
             image='/imgs/utas.png'
@@ -68,7 +68,7 @@ export default function Home() {
 
           <ProjectCard
             title='Rasta'
-            description='Restaurant website for ordering food.'
+            description='Food delivery service.'
             actionText='View'
             actionLink='https://rasta.uz/'
             image='/imgs/rasta.png'

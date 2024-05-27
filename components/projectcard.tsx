@@ -30,12 +30,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         />
         <div className='h-12'>
           <h3 className='md:text-xl font-medium dark:text-white text-lg'>{title}</h3>
-          <p className='md:text-sm dark:text-white/30 text-black/60 max-w-sm text-xs'>
+          <p className='md:text-sm dark:text-white/30 text-black/60 max-w-sm text-xs font-light'>
             {description}
           </p>
         </div>
       </div>
-      <Button variant='outline' asChild className='hover:animate-pulse'>
+      <Button variant='outline' asChild className='hover:animate-pulse md:h-10 md:px-6 md:py-2"' size="sm">
         <Link href={actionLink} target='_blank'>
           {actionText}
         </Link>
