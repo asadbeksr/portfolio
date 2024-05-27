@@ -8,9 +8,6 @@
     "start": "next start",
     "fmt": "pnpm rome check . --apply-suggested && pnpm rome format . --write"
   },
-    "engines": {
-      "node": "v19.3.0"
-    },
   "dependencies": {
     "@next/mdx": "^13.4.3",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
