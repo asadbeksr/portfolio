@@ -27,12 +27,10 @@ export default function Home() {
           height={100}
         />
 
-        <h1 className='text-4xl font-medium mt-3 text-center'>
-          Asadbek
-        </h1>
+        <h1 className='text-4xl font-medium mt-3 text-center'>Asadbek</h1>
 
         <p className='text-center max-w-md font-light'>
-          Front-end developer based in the Italy 🇮🇹 <br />
+          Front-end developer based in Italy 🇮🇹 <br />
           with a passion for creating stunning web applications
         </p>
 
