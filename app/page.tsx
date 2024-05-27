@@ -17,10 +17,10 @@ import VideoCard from '@/components/videocard';
 
 export default function Home() {
   return (
-    <main className='sm:my-[100px] my-[60px]'>
+    <main className='sm:my-[100px] my-[60px] '>
       <div className='container gap-4'>
         <Image
-          className='rounded-full'
+          className='rounded-full '
           src='/imgs/4.png'
           alt='Asadbek Savronov - Profile Picture'
           width={100}
