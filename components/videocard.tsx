@@ -29,9 +29,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ title, link, linkTitle }) => {
       </CardHeader>
       <CardContent>
         <iframe
-          width='560'
-          height='315'
-          className='rounded-md'
+          className='rounded-md xl:w-[560px] xl:h-[535px] md:w-[560px] md:h-[350px]  w-[280px] h-[157.5px]'
           src='https://www.youtube.com/embed/dQw4w9WgXcQ?si=HuFfapEJLJL7aNRO&amp;controls=0'
           title='YouTube video player'
    // @ts-ignore
