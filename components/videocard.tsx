@@ -34,6 +34,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ title, link, linkTitle }) => {
           className='rounded-md'
           src='https://www.youtube.com/embed/dQw4w9WgXcQ?si=HuFfapEJLJL7aNRO&amp;controls=0'
           title='YouTube video player'
+   // @ts-ignore
           frameborder='0'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
           referrerpolicy='strict-origin-when-cross-origin'
