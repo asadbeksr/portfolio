@@ -21,7 +21,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ title, link, linkTitle }) => {
       <CardHeader className='flex justify-between flex-row items-center'>
         <CardTitle>{title}</CardTitle>
         <CardDescription className='hover:animate-pulse'>
-          <Link href={link} target="_blank" className='flex items-center font-thin'>
+          <Link href={link} target="_blank" className='flex items-center font-light'>
             {linkTitle}
             <ArrowRight className='ml-2 w-4 h-4' />
           </Link>

@@ -24,6 +24,9 @@
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
     --radius: 0.5rem;
+
+    --pattern-color: rgb(245, 245, 245);
+    --pattern-overlay: rgb(255, 255, 255);
   }
 
   .dark {
@@ -31,7 +34,7 @@
     --foreground: 0 0% 98%;
     --card: 0 0% 10.9%;
     --card-foreground: 100%;
-    --popover: 0 0% 3.9%;
+    --popover: 0 0% 8%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
     --primary-foreground: 0 0% 9%;
@@ -46,6 +49,9 @@
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
+
+    --pattern-color-dark: rgb(28, 28, 28);
+    --pattern-overlay-dark: rgb(22, 22, 22);
   }
 }
 
@@ -63,16 +69,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --pattern-color: rgb(245, 245, 245);
-  --pattern-overlay: rgb(255, 255, 255);
-  --pattern-color-dark: rgb(28, 28, 28);
-  --pattern-overlay-dark: rgb(22, 22, 22);
-  --framer-aspect-ratio-supported: auto;
-  /* background: var(--pattern-overlay, rgb(253, 253, 252)); */
 }
 
 .pattern-bg {
-  --framer-aspect-ratio-supported: auto;
   box-sizing: border-box;
   -webkit-font-smoothing: inherit;
   width: 100%;
@@ -123,7 +122,6 @@ body {
 }
 
 .pattern-overlay {
-  --framer-aspect-ratio-supported: auto;
   box-sizing: border-box;
   -webkit-font-smoothing: inherit;
   background: linear-gradient(
@@ -135,7 +133,7 @@ body {
   inset: 0;
   overflow: hidden;
   position: absolute;
-  z-index: 2;
+  z-index: 19;
 }
 
 .container {
@@ -151,7 +149,4 @@ body {
   position: relative;
   width: 100%;
   padding: 0 24px;
-}
-
-.light-bottom {
 }

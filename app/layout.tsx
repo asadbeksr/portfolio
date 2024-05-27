@@ -2,8 +2,7 @@ import '../global.css';
 import { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from '../components/theme-provider';
-// import { ModeToggle } from '@/components/ui/modetoggle';
-// import Particles from './components/particles';
+import { ModeToggle } from '@/components/ui/modetoggle';
 
 export const metadata: Metadata = {
   title: {
@@ -68,6 +67,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <div className='fixed z-30 sm:top-10 sm:right-10 top-4 right-4'>
+            <ModeToggle />
+          </div>
           <div className='pattern-overlay' />
           <div className='pattern-overlay' />
           <div className='pattern-div'>
@@ -75,15 +77,7 @@ export default function RootLayout({
           </div>
 
           <div className='relative z-20'>{children}</div>
-          {/* <div className='absolute z-30 sm:top-10 sm:right-10 top-4 right-4'>
-            <ModeToggle />
-          </div> */}
-          <div className='light-bottom' />
-          <div className='w-screen h-px bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0' />
-          {/* <Particles
-            className='fixed bottom-0 inset-0 z-10 animate-fade-in'
-            quantity={50}
-          /> */}
+          <div className='w-screen h-[2px] bg-gradient-to-r from-zinc-600/0 via-zinc-600/50 to-zinc-600/0 dark:from-zinc-300/0 dark:via-zinc-300/50 dark:to-zinc-300/0' />
         </ThemeProvider>
       </body>
     </html>
