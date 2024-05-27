@@ -80,6 +80,9 @@ dependencies:
   remark-gfm:
     specifier: ^3.0.1
     version: 3.0.1
+  shiki:
+    specifier: ^1.6.0
+    version: 1.6.0
   tailwind-merge:
     specifier: ^2.3.0
     version: 2.3.0
