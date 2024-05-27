@@ -68,7 +68,7 @@ export default function Home() {
 
           <ProjectCard
             title='Rasta'
-            description='Food delivery service.'
+            description='Food delivery service'
             actionText='View'
             actionLink='https://rasta.uz/'
             image='/imgs/rasta.png'

@@ -2,8 +2,8 @@ import '../global.css';
 import { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from '../components/theme-provider';
-import { ModeToggle } from '@/components/ui/modetoggle';
-import Particles from './components/particles';
+// import { ModeToggle } from '@/components/ui/modetoggle';
+// import Particles from './components/particles';
 
 export const metadata: Metadata = {
   title: {
@@ -80,10 +80,10 @@ export default function RootLayout({
           </div> */}
           <div className='light-bottom' />
           <div className='w-screen h-px bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0' />
-          <Particles
+          {/* <Particles
             className='fixed bottom-0 inset-0 z-10 animate-fade-in'
             quantity={50}
-          />
+          /> */}
         </ThemeProvider>
       </body>
     </html>
