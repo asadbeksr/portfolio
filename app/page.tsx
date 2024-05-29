@@ -37,7 +37,7 @@ export default function Home() {
           <Button
             variant='outline'
             asChild
-            className='border bg-secondary hover:border-accent-foreground'
+            className='border hover:border-accent-foreground'
           >
             <Link href='/cv.pdf' target='_blank'>
               Resume
