@@ -84,16 +84,25 @@ export default function Home() {
 
         <div className='flex gap-4 w-full items-center justify-center mb-8'>
           <SocialCard
-            icon={<Instagram />}
+            icon={<Instagram strokeWidth={1} />}
             link='https://instagram.com/asadbeksr'
           />
           <SocialCard
-            icon={<Linkedin />}
+            icon={<Linkedin strokeWidth={1} />}
             link='https://www.linkedin.com/in/asadbeksr/'
           />
-          <SocialCard icon={<Twitter />} link='https://twitter.com/asadbeksr' />
-          <SocialCard icon={<Github />} link='hhtps://github.com/asadbekr' />
-          <SocialCard icon={<Youtube />} link='https://youtube.com/asadbekr' />
+          <SocialCard
+            icon={<Twitter strokeWidth={1} />}
+            link='https://twitter.com/asadbeksr'
+          />
+          <SocialCard
+            icon={<Github strokeWidth={1} />}
+            link='hhtps://github.com/asadbekr'
+          />
+          <SocialCard
+            icon={<Youtube strokeWidth={1} />}
+            link='https://youtube.com/asadbekr'
+          />
         </div>
       </div>
     </main>

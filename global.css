@@ -80,7 +80,7 @@ body {
       #e5e5f7 10px
     ),
     repeating-linear-gradient(rgb(73, 73, 73), #000000);
-  width: 100%;
+  width: 200vh;
   height: 100%;
   background-color: transparent;
 }
