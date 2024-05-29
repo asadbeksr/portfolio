@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from '../components/theme-provider';
 import { ModeToggle } from '@/components/ui/modetoggle';
+import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
   title: {
@@ -58,7 +59,7 @@ export default function RootLayout({
         <Analytics />
       </head>
       <body
-        className={`
+        className={`sm:mt-[100px] mt-[60px]
 		${process.env.NODE_ENV === 'development' ? 'debug-screens' : undefined}`}
       >
         <ThemeProvider
@@ -77,7 +78,7 @@ export default function RootLayout({
           </div>
 
           <div className='relative z-20'>{children}</div>
-          <div className='w-screen h-[2px] bg-gradient-to-r from-zinc-600/0 via-zinc-600/50 to-zinc-600/0 dark:from-zinc-300/0 dark:via-zinc-300/50 dark:to-zinc-300/0' />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

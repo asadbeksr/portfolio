@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import {
-  Copy,
   Github,
   Instagram,
   Linkedin,
@@ -11,13 +10,12 @@ import {
   Youtube,
 } from 'lucide-react';
 import ProjectCard from '@/components/projectcard';
-import Footer from '@/components/footer';
 import SocialCard from '@/components/socialcard';
 import VideoCard from '@/components/videocard';
 
 export default function Home() {
   return (
-    <main className='sm:my-[100px] my-[60px] '>
+    <main>
       <div className='container gap-4'>
         <Image
           className='rounded-full '
@@ -31,14 +29,15 @@ export default function Home() {
 
         <p className='text-center max-w-md font-light'>
           Front-end developer based in Italy 🇮🇹 <br />
-          with a passion for creating stunning web applications
+          Crafting User-Friendly Web Experiences
+          {/* with a passion for creating stunning web applications */}
         </p>
 
         <div className='flex gap-4 mt-2'>
           <Button
             variant='outline'
             asChild
-            className='border hover:animate-pulse'
+            className='border bg-secondary hover:border-accent-foreground'
           >
             <Link href='/cv.pdf' target='_blank'>
               Resume
@@ -47,7 +46,7 @@ export default function Home() {
 
           <Button
             variant='outline'
-            className='bg-popover hover:animate-pulse'
+            className='bg-popover hover:border-accent-foreground'
             asChild
           >
             <Link href='mailto:hello@asadbek.me'>
@@ -97,7 +96,6 @@ export default function Home() {
           <SocialCard icon={<Youtube />} link='https://youtube.com/asadbekr' />
         </div>
 
-        <Footer />
       </div>
     </main>
   );

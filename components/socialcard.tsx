@@ -9,7 +9,7 @@ interface SocialCardProps {
 const SocialCard: React.FC<SocialCardProps> = ({ icon, link }) => {
   return (
     <Link href={link} target='_blank'>
-      <Card className='flex items-center justify-center md:w-[109px] w-[53px] md:h-24 h-16 sm:w-[71px] text-gray-400 dark:hover:text-white hover:text-black hover:border-[#1c1c1c] hover:animate-pulse'>
+      <Card className='flex items-center justify-center md:w-[109px] w-[53px] md:h-20 h-16 sm:w-[71px] text-[#7C7F82] dark:hover:text-white hover:text-black hover:border-accent hover:animate-pulse duration-100 ease-in-out'>
         {icon}
       </Card>
     </Link>
