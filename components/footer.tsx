@@ -7,7 +7,7 @@ const Footer = () => {
         <p>www.asadbek.me</p>
       </Link>
 
-      <div className='mt-20 w-screen h-[2px] bg-gradient-to-r from-zinc-600/0 via-zinc-600/50 to-zinc-600/0 dark:from-zinc-300/0 dark:via-zinc-300/50 dark:to-zinc-300/0' />
+      <div className='mt-16 w-screen h-[2px] dark:h-[1px] bg-gradient-to-r from-lime-600/0 via-slate-600 to-red-600/0 dark:via-zinc-300 dark:to-red-600/50' />
     </footer>
   );
 };

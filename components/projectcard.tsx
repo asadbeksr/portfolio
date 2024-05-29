@@ -19,7 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
 }) => {
   return (
-    <Card  className='border p-4  w-[324px] sm:w-m-[580px] md:w-[610px] flex items-center justify-between gap-6 bg-secondary dark:bg-card'>
+    <Card  className='border p-4  w-[324px] sm:w-m-[580px] md:w-[610px] flex items-center justify-between gap-6'>
       <div className='flex items-center gap-6'>
         <Image
           src={image}

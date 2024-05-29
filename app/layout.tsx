@@ -73,6 +73,7 @@ export default function RootLayout({
           </div>
           <div className='pattern-overlay' />
           <div className='pattern-overlay' />
+          <div className='pattern-overlay' />
           <div className='pattern-div'>
             <div className='pattern-bg' />
           </div>
