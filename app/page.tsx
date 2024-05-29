@@ -95,7 +95,6 @@ export default function Home() {
           <SocialCard icon={<Github />} link='hhtps://github.com/asadbekr' />
           <SocialCard icon={<Youtube />} link='https://youtube.com/asadbekr' />
         </div>
-
       </div>
     </main>
   );

@@ -13,9 +13,20 @@ export const metadata: Metadata = {
   description:
     'Asadbek Savronov, a Front-End Developer. Top rated freelancer on Upwork with a 100% job success score. My professional focus is on delivering innovative design and robust coding, aimed at creating impactful, user-focused web experiences.',
   openGraph: {
-    title: 'asadbek.me - Crafting Engaging Web Experiences',
-    description:
-      'Asadbek Savronov, a Front-End Developer. Top rated freelancer on Upwork with a 100% job success score. My professional focus is on delivering innovative design and robust coding, aimed at creating impactful, user-focused web experiences.',
+    title: 'asadbek.me - Crafting User-Friendly Web Experiences',
+    description: `Asadbek Savronov, a Front-End Developer. Top rated freelancer on Upwork with a 100% job success score.
+      
+      Passionate about creating stunning web applications with over 3 years of hands-on experience. 
+
+      Expertise:
+      ✦ Next.js, React.js, TypeScript, 
+      ✦ Three.js, React-Three-Fiber (R3F)
+      ✦ Low/No Code Platforms: Webflow, Framer
+      ✦ SEO: Google Tag Manager, Facebook Pixel, Server-Side Tagging (Stape.io)
+
+      Skilled in building responsive, user-friendly interfaces featuring eye-catching animations. Dedicated to leveraging technology to make a positive impact. Driven to bring innovative ideas to life and elevate web projects. 
+
+      `,
     url: 'https:/asadbek.me',
     siteName: 'asadbek.me',
     images: [
@@ -45,7 +56,9 @@ export const metadata: Metadata = {
   },
   icons: {
     shortcut: '/favicon.png',
+    apple: '/apple-touch-icon.png',
   },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({

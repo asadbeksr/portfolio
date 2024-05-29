@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* brand color: #55FF7C */
 @layer base {
   :root {
     --background: 0 0% 99%;
