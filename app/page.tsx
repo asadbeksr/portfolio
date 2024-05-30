@@ -12,11 +12,13 @@ import {
 import ProjectCard from '@/components/projectcard';
 import SocialCard from '@/components/socialcard';
 import VideoCard from '@/components/videocard';
+import Gallery from '@/components/gallery';
+import NewsletterInput from '@/components/newsletter-input';
 
 export default function Home() {
   return (
     <main>
-      <div className='container gap-4'>
+      <div className='container gap-4 '>
         <Image
           className='rounded-full '
           src='/imgs/4.png'
@@ -37,7 +39,7 @@ export default function Home() {
           <Button
             variant='outline'
             asChild
-            className='border hover:border-accent-foreground'
+            className='border hover:border-ring'
           >
             <Link href='/cv.pdf' target='_blank'>
               Resume
@@ -46,7 +48,7 @@ export default function Home() {
 
           <Button
             variant='outline'
-            className='bg-popover hover:border-accent-foreground'
+            className='bg-popover hover:border-ring'
             asChild
           >
             <Link href='mailto:hello@asadbek.me'>
@@ -60,7 +62,7 @@ export default function Home() {
           <ProjectCard
             title='Utas'
             description='University website'
-            actionText='View'
+            actionText='Explore'
             actionLink='https://utas.uz/'
             image='/imgs/utas.png'
           />
@@ -68,7 +70,7 @@ export default function Home() {
           <ProjectCard
             title='Rasta'
             description='Food delivery service'
-            actionText='View'
+            actionText='Explore'
             actionLink='https://rasta.uz/'
             image='/imgs/rasta.png'
           />
@@ -80,6 +82,16 @@ export default function Home() {
             link='https://www.youtube.com/channel/UC06ECXAc_hcCc7ixPCTQc6w'
             linkTitle='YouTube'
           />
+        </div>
+
+        <div>
+          <Gallery
+            title='Stack'
+          />
+        </div>
+
+        <div>
+          <NewsletterInput />
         </div>
 
         <div className='flex gap-4 w-full items-center justify-center mb-8'>
