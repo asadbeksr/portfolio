@@ -21,7 +21,7 @@ export default function Home() {
       <div className='container gap-4 '>
         <Image
           className='rounded-full '
-          src='/imgs/4.png'
+          src='/images/4.png'
           alt='Asadbek Savronov - Profile Picture'
           width={100}
           height={100}
@@ -64,7 +64,7 @@ export default function Home() {
             description='University website'
             actionText='Explore'
             actionLink='https://utas.uz/'
-            image='/imgs/utas.png'
+            image='/images/utas.png'
           />
 
           <ProjectCard
@@ -72,7 +72,7 @@ export default function Home() {
             description='Food delivery service'
             actionText='Explore'
             actionLink='https://rasta.uz/'
-            image='/imgs/rasta.png'
+            image='/images/rasta.png'
           />
         </div>
 
