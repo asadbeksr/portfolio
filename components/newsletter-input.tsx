@@ -13,11 +13,9 @@ export default function NewsletterInput() {
   return (
     <Card className='w-full'>
       <CardHeader className='pb-4'>
-        <CardTitle>
-          Tech Blog
-        </CardTitle>
+        <CardTitle>Tech Blog</CardTitle>
         <CardDescription>
-          Subscribe to get my latest content by email.
+          Get inspiring and useful insights direct in your mail
         </CardDescription>
       </CardHeader>
       <CardContent className='flex justify-between gap-4 mt-'>

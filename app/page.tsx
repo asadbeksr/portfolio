@@ -16,6 +16,8 @@ import {
   Twitter,
   Youtube,
 } from 'lucide-react';
+import Services from '@/components/services';
+import BlogPosts from '@/components/blog-posts';
 
 export default function Home() {
   return (
@@ -75,6 +77,14 @@ export default function Home() {
             actionLink='https://rasta.uz/'
             image='/images/rasta.png'
           />
+        </div>
+
+        <div className='w-full'>
+          <Services />
+        </div>
+
+        <div className='w-full'>
+          <BlogPosts />
         </div>
 
         <div className='flex gap-4 flex-col w-full '>
