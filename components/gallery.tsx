@@ -1,25 +1,14 @@
 'use client';
 import * as React from 'react';
 import Image from 'next/image';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { ArrowRight } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
-
-import Autoplay from 'embla-carousel-autoplay';
 import AutoScroll from 'embla-carousel-auto-scroll';
 
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  type CarouselApi,
 } from '@/components/ui/carousel';
 
 interface GalleryProps {
@@ -56,6 +45,7 @@ const icons: Icon[] = [
     src: '/icons/react.svg',
     link: 'https://reactjs.org',
   },
+
   {
     name: 'Next.js',
     src: '/icons/next.svg',
@@ -66,6 +56,16 @@ const icons: Icon[] = [
     name: 'Tailwind CSS',
     src: '/icons/tailwind.svg',
     link: 'https://tailwindcss.com',
+  },
+  {
+    name: 'Arc',
+    src: '/icons/arc.svg',
+    link: 'https://arc.net',
+  },
+  {
+    name: 'TypeScript',
+    src: '/icons/typescript.svg',
+    link: 'https://www.typescriptlang.org',
   },
 ];
 const iconsList = [...icons, ...icons, ...icons];
@@ -82,7 +82,7 @@ const Gallery: React.FC<GalleryProps> = ({ title }) => {
   );
 
   return (
-    <Card>
+    <Card className='w-full shadow-inner'>
       <CardHeader className='flex justify-between flex-row items-center'>
         <CardTitle>{title}</CardTitle>
       </CardHeader>
@@ -93,7 +93,6 @@ const Gallery: React.FC<GalleryProps> = ({ title }) => {
           dragFree: true,
         }}
         plugins={[plugin.current]}
-        className='md:w-[610px] w-[324px] sm:w-m-[580px]'
         onMouseEnter={() => {
           plugin.current.stop();
         }}

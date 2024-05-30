@@ -2,7 +2,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
@@ -17,11 +16,15 @@ interface VideoCardProps {
 
 const VideoCard: React.FC<VideoCardProps> = ({ title, link, linkTitle }) => {
   return (
-    <Card>
+    <Card className='w-full'>
       <CardHeader className='flex justify-between flex-row items-center'>
         <CardTitle>{title}</CardTitle>
         <CardDescription>
-          <Link href={link} target="_blank" className='flex items-center font-light hover:text-foreground duration-100 ease-in-out'>
+          <Link
+            href={link}
+            target='_blank'
+            className='flex items-center font-light hover:text-foreground duration-100 ease-in-out'
+          >
             {linkTitle}
             <ArrowRight className='ml-2 w-4 h-4' />
           </Link>
@@ -29,7 +32,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ title, link, linkTitle }) => {
       </CardHeader>
       <CardContent>
         <iframe
-          className='rounded-md xl:w-[560px] xl:h-[310px] md:w-[560px] md:h-[300px]  w-[280px] h-[157.5px]'
+          className='rounded-md aspect-video w-full'
           src='https://www.youtube.com/embed/dQw4w9WgXcQ?si=HuFfapEJLJL7aNRO&amp;controls=0'
           title='YouTube video player'
           // @ts-ignore

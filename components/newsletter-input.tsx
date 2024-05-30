@@ -1,25 +1,41 @@
 import { MailPlus } from 'lucide-react';
-import { Button } from './ui/button';
-import { Card } from './ui/card';
-import { Input } from './ui/input';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
 
 export default function NewsletterInput() {
   return (
-    <Card className='border p-4  w-[324px] sm:w-m-[580px] md:w-[610px] flex items-center justify-between gap-2'>
-      <Input
-        type='email'
-        // simplify and creative the placeholder text
-        placeholder="Email address"
-        // placeholder='Get latest blog posts in your inbox'
-        className='h-10 outline-none focus:border-red'
-      />
-      <Button
-        type='submit'
-        variant='outline'
-      >
-        Subscribe
-        <MailPlus strokeWidth={1} className='ml-2 w-4 opacity-90' />
-      </Button>
+    <Card className='w-full'>
+      <CardHeader className='pb-4'>
+        <CardTitle>
+          Tech Blog
+        </CardTitle>
+        <CardDescription>
+          Subscribe to get my latest content by email.
+        </CardDescription>
+      </CardHeader>
+      <CardContent className='flex justify-between gap-4 mt-'>
+        <Input
+          type='email'
+          placeholder='Email address'
+          className='md:h-10 outline-none focus:border-red'
+          required
+        />
+        <Button
+          type='submit'
+          variant='outline'
+          className='h-9 rounded-md px-3 md:h-10 md:px-6 md:py-2'
+        >
+          Subscribe
+          <MailPlus strokeWidth={1} className='ml-2 w-4 opacity-90' />
+        </Button>
+      </CardContent>
     </Card>
   );
 }

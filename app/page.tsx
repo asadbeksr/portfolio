@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
+
 import { Button } from '@/components/ui/button';
+import ProjectCard from '@/components/projectcard';
+import SocialCard from '@/components/socialcard';
+import VideoCard from '@/components/videocard';
+import Gallery from '@/components/gallery';
+import NewsletterInput from '@/components/newsletter-input';
+
 import {
   Github,
   Instagram,
@@ -9,16 +16,11 @@ import {
   Twitter,
   Youtube,
 } from 'lucide-react';
-import ProjectCard from '@/components/projectcard';
-import SocialCard from '@/components/socialcard';
-import VideoCard from '@/components/videocard';
-import Gallery from '@/components/gallery';
-import NewsletterInput from '@/components/newsletter-input';
 
 export default function Home() {
   return (
     <main>
-      <div className='container gap-4 '>
+      <div className='container gap-4'>
         <Image
           className='rounded-full '
           src='/images/4.png'
@@ -32,7 +34,6 @@ export default function Home() {
         <p className='text-center max-w-md font-light'>
           Front-end developer based in Italy 🇮🇹 <br />
           Crafting User-Friendly Web Experiences
-          {/* with a passion for creating stunning web applications */}
         </p>
 
         <div className='flex gap-4 mt-2'>
@@ -58,7 +59,7 @@ export default function Home() {
           </Button>
         </div>
 
-        <div className='flex gap-4 sm:mt-12 mt-8 flex-col'>
+        <div className='flex gap-4 sm:mt-12 mt-8 flex-col w-full'>
           <ProjectCard
             title='Utas'
             description='University website'
@@ -76,7 +77,7 @@ export default function Home() {
           />
         </div>
 
-        <div className='flex gap-4 flex-col'>
+        <div className='flex gap-4 flex-col w-full '>
           <VideoCard
             title='Latest Video'
             link='https://www.youtube.com/channel/UC06ECXAc_hcCc7ixPCTQc6w'
@@ -84,24 +85,18 @@ export default function Home() {
           />
         </div>
 
-        <div>
-          <Gallery
-            title='Stack'
-          />
+        <div className='w-full'>
+          <Gallery title='Stack' />
         </div>
 
-        <div>
+        <div className='w-full'>
           <NewsletterInput />
         </div>
 
-        <div className='flex gap-4 w-full items-center justify-center mb-8'>
+        <div className='w-full items-center justify-center mb-8 grid md:grid-cols-5 grid-cols-2 gap-4'>
           <SocialCard
             icon={<Instagram strokeWidth={1} />}
             link='https://instagram.com/asadbeksr'
-          />
-          <SocialCard
-            icon={<Linkedin strokeWidth={1} />}
-            link='https://www.linkedin.com/in/asadbeksr/'
           />
           <SocialCard
             icon={<Twitter strokeWidth={1} />}
@@ -115,6 +110,12 @@ export default function Home() {
             icon={<Youtube strokeWidth={1} />}
             link='https://youtube.com/asadbekr'
           />
+          <div className='col-span-2 md:col-span-1'>
+            <SocialCard
+              icon={<Linkedin strokeWidth={1} />}
+              link='https://www.linkedin.com/in/asadbeksr/'
+            />
+          </div>
         </div>
       </div>
     </main>

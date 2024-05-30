@@ -47,7 +47,7 @@
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
+    --border: 0 0% 16%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 50%;
 
@@ -85,7 +85,7 @@ body {
   background-color: transparent;
 }
 
-/* .pattern-div {
+/* .pattern-bg {
   box-sizing: border-box;
   -webkit-font-smoothing: inherit;
   width: 100%;
@@ -154,12 +154,10 @@ body {
   align-content: center;
   align-items: center;
   display: flex;
-  flex: none;
   flex-direction: column;
-  flex-wrap: nowrap;
   height: min-content;
-  justify-content: flex-start;
-  max-width: 640px;
+  justify-content: center;
+  max-width: 660px;
   position: relative;
   width: 100%;
   padding: 0 24px;
