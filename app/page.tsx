@@ -45,25 +45,23 @@ export default function Home() {
         </p>
 
         <div className='flex gap-4 mt-2'>
-          <ShineBorder
-            className='bg-card px-5 py-1'
-            color={['#1c1c1c', '#e5f7e9']}
-          >
-            <Link href='/cv.pdf' target='_blank'>
-              Resume
-            </Link>
-          </ShineBorder>
-
           <Button
             variant='outline'
-            className='bg-popover hover:border-ring'
+            className='bg-card hover:border-ring' 
             asChild
           >
-            <Link href='mailto:hello@asadbek.me'>
+            <Link href='mailto:hello@asadbek.me'>Resume</Link>
+          </Button>
+
+          <ShineBorder
+            className='bg-card px-5 py-1'
+            color={['#1c1c1c', '#727272']}
+          >
+            <Link href='mailto:hello@asadbek.me' className='flex items-center'>
               <Mail className='mr-2 h-4 w-4 opacity-60' />
               Email
             </Link>
-          </Button>
+          </ShineBorder>
         </div>
 
         <div className='flex gap-4 sm:mt-12 mt-8 flex-col w-full'>
