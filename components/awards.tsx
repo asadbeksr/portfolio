@@ -17,7 +17,7 @@ type Award = {
 };
 const awardsList: Award[] = [
   {
-    title: 'Top Rated Frontend Developer',
+    title: 'Top Rated Freelancer',
     description:
       'Earned "Top Rated" badge through a track record of consistently delivering high-quality services and maintaining a flawless 100% Job Success Score.',
     by: 'Upwork',
@@ -25,15 +25,15 @@ const awardsList: Award[] = [
     link: 'https://www.upwork.com/freelancers/asadbeks',
   },
   {
-    title: 'Full Tuition fee Schoolarship',
+    title: 'MITC Grant',
     description:
       'Recipient of a prestigious scholarship covering 100% of tuition fees at IT Park University, sponsored by the Ministry of Digital Technologies of Uzbekistan. ',
     by: 'MITC x ITPU.uz',
-    year: '2023',
+    year: '2022',
     link: 'https://t.me/itpu_uz/171',
   },
   {
-    title: 'Front-end Nanodegree Program Grant',
+    title: 'Front-end Nanodegree Program',
     description:
       'Winner of the competitive Udacity Frontend Nanodegree Grant, awarded by Udacity in collaboration with uzbekcoders.uz. ',
     by: 'Udacity x uzbekcoders.uz',
@@ -66,7 +66,7 @@ export default function Awards() {
                 <span className='font-light text-xs'>{award.year}</span>
               </div>
               <CardDescription>{award.by}</CardDescription>
-              <CardDescription className='mt-2 pr-12 text-left'>
+              <CardDescription className='mt-2 text-left'>
                 {award.description}
               </CardDescription>
             </div>

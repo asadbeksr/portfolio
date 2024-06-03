@@ -17,7 +17,7 @@ type Award = {
 };
 const awardsList: Award[] = [
   {
-    title: 'Frontend Developer - Freelancer',
+    title: 'Frontend Engineer',
     description:
       'Achieved the "Top Rated" badge on Upwork by consistently delivering high-quality services and maintaining a perfect 100% Job Success Score.',
     by: 'Upwork',
@@ -25,8 +25,8 @@ const awardsList: Award[] = [
     link: 'https://www.upwork.com/freelancers/asadbeks',
   },
   {
-    title: 'Frontend Developer',
-    description: `Completed 3 projects from scratch, maintained over 5, and optimized code for high-quality standards. Stay updated with the latest technologies, troubleshoot issues promptly, and mentor team members for optimal growth.`,
+    title: 'Frontend Engineer',
+    description: `Led the successful completion of three projects from inception to delivery, in addition to maintaining and optimizing code for adherence to high-quality standards.`,
     by: 'Udevs.io',
     year: '2021 - 2023',
     link: 'https://udevs.io',
@@ -57,7 +57,7 @@ export default function Experience() {
                 <span className='font-light text-xs'>{award.year}</span>
               </div>
               <CardDescription>{award.by}</CardDescription>
-              <CardDescription className='mt-2 pr-12 text-justify'>
+              <CardDescription className='mt-2 text-justify'>
                 {award.description}
               </CardDescription>
             </div>
