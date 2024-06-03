@@ -4,8 +4,6 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import ProjectCard from '@/components/projectcard';
 import SocialCard from '@/components/socialcard';
-import VideoCard from '@/components/videocard';
-import Gallery from '@/components/gallery';
 import NewsletterInput from '@/components/newsletter-input';
 
 import {
@@ -47,7 +45,7 @@ export default function Home() {
         <div className='flex gap-4 mt-2'>
           <Button
             variant='outline'
-            className='bg-card hover:border-ring' 
+            className='bg-card hover:border-ring'
             asChild
           >
             <Link href='mailto:hello@asadbek.me'>Resume</Link>

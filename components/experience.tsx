@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import {
   Card,
   CardHeader,
@@ -6,7 +5,6 @@ import {
   CardDescription,
   CardContent,
 } from '@/components/ui/card';
-import { ExternalLink } from 'lucide-react';
 import { BorderBeam } from './ui/border-beam';
 
 type Award = {
@@ -14,7 +12,6 @@ type Award = {
   description: string;
   by: string;
   year: string;
-  link: string;
 };
 const awardsList: Award[] = [
   {
@@ -23,14 +20,12 @@ const awardsList: Award[] = [
       'Achieved the "Top Rated" badge on Upwork by consistently delivering high-quality services and maintaining a perfect 100% Job Success Score.',
     by: 'Upwork',
     year: '2022 - Present',
-    link: 'https://www.upwork.com/freelancers/asadbeks',
   },
   {
     title: 'Frontend Engineer',
     description: `Led the successful completion of three projects from inception to delivery, in addition to maintaining and optimizing code for adherence to high-quality standards.`,
     by: 'Udevs.io',
     year: '2021 - 2023',
-    link: 'https://udevs.io',
   },
 ];
 
@@ -46,15 +41,8 @@ export default function Experience() {
             className={index === 0 ? 'pt-0' : 'border-t pt-4'}
             key={award.title}
           >
-            <div className='flex justify-between items-center'>
-              <Link
-                href={award.link}
-                target='_blank'
-                className='flex items-center'
-              >
-                <h1>{award.title}</h1>
-                <ExternalLink strokeWidth={1} size='16px' className='ml-1' />
-              </Link>
+            <div className='flex justify-between items-center relative'>
+              <h1>{award.title}</h1>
               <span className='font-light text-xs'>{award.year}</span>
             </div>
             <CardDescription>{award.by}</CardDescription>
@@ -65,7 +53,7 @@ export default function Experience() {
         ))}
       </CardContent>
 
-      <BorderBeam  />
+      <BorderBeam />
     </Card>
   );
 }
