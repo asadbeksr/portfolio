@@ -4,7 +4,6 @@ import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from '../components/theme-provider';
 import { ModeToggle } from '@/components/ui/modetoggle';
 import Footer from '@/components/footer';
-import Meteors from '@/components/ui/meteors';
 
 export const metadata: Metadata = {
   title: {
