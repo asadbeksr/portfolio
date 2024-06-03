@@ -21,6 +21,10 @@ import BlogPosts from '@/components/blog-posts';
 import Awards from '@/components/awards';
 import Experience from '@/components/experience';
 import Stack from '@/components/stack';
+import BlurIn from '@/components/ui/blur-in';
+import AnimatedShinyText from '@/components/ui/animated-shiny-text';
+import { cn } from '@/lib/utils';
+import ShineBorder from '@/components/ui/shine-border';
 
 export default function Home() {
   return (
@@ -33,8 +37,7 @@ export default function Home() {
           width={100}
           height={100}
         />
-
-        <h1 className='text-4xl font-medium mt-3 text-center'>Asadbek</h1>
+        <BlurIn word='Asadbek' />
 
         <p className='text-center max-w-md font-light'>
           Front-end developer based in Italy 🇮🇹 <br />
@@ -42,15 +45,14 @@ export default function Home() {
         </p>
 
         <div className='flex gap-4 mt-2'>
-          <Button
-            variant='outline'
-            asChild
-            className='border hover:border-ring'
+          <ShineBorder
+            className='bg-card px-5 py-1'
+            color={['#1c1c1c', '#e5f7e9']}
           >
             <Link href='/cv.pdf' target='_blank'>
               Resume
             </Link>
-          </Button>
+          </ShineBorder>
 
           <Button
             variant='outline'
@@ -84,9 +86,9 @@ export default function Home() {
 
         <Experience />
 
-        {/* <Services /> */}
-
         <Awards />
+
+        {/* <Services /> */}
 
         <BlogPosts />
 

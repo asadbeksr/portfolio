@@ -7,6 +7,7 @@ import {
   CardContent,
 } from '@/components/ui/card';
 import { ExternalLink } from 'lucide-react';
+import { BorderBeam } from './ui/border-beam';
 
 type Award = {
   title: string;
@@ -35,34 +36,36 @@ const awardsList: Award[] = [
 
 export default function Experience() {
   return (
-      <Card className='w-full'>
-        <CardHeader className='pb-4'>
-          <CardTitle>Experience</CardTitle>
-        </CardHeader>
-        <CardContent className='flex gap-4 flex-col'>
-          {awardsList.map((award, index) => (
-            <div
-              className={index === 0 ? 'pt-0' : 'border-t pt-4'}
-              key={award.title}
-            >
-              <div className='flex justify-between items-center'>
-                <Link
-                  href={award.link}
-                  target='_blank'
-                  className='flex items-center'
-                >
-                  <h1>{award.title}</h1>
-                  <ExternalLink strokeWidth={1} size='16px' className='ml-1' />
-                </Link>
-                <span className='font-light text-xs'>{award.year}</span>
-              </div>
-              <CardDescription>{award.by}</CardDescription>
-              <CardDescription className='mt-2 text-justify'>
-                {award.description}
-              </CardDescription>
+    <Card className='w-full relative'>
+      <CardHeader className='pb-4'>
+        <CardTitle>Experience</CardTitle>
+      </CardHeader>
+      <CardContent className='flex gap-4 flex-col'>
+        {awardsList.map((award, index) => (
+          <div
+            className={index === 0 ? 'pt-0' : 'border-t pt-4'}
+            key={award.title}
+          >
+            <div className='flex justify-between items-center'>
+              <Link
+                href={award.link}
+                target='_blank'
+                className='flex items-center'
+              >
+                <h1>{award.title}</h1>
+                <ExternalLink strokeWidth={1} size='16px' className='ml-1' />
+              </Link>
+              <span className='font-light text-xs'>{award.year}</span>
             </div>
-          ))}
-        </CardContent>
-      </Card>
+            <CardDescription>{award.by}</CardDescription>
+            <CardDescription className='mt-2 text-justify'>
+              {award.description}
+            </CardDescription>
+          </div>
+        ))}
+      </CardContent>
+
+      <BorderBeam  />
+    </Card>
   );
 }

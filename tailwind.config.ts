@@ -128,6 +128,42 @@ const config = {
             opacity: '100%',
           },
         },
+        grid: {
+          '0%': { transform: 'translateY(-50%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        shimmer: {
+          '0%, 90%, 100%': {
+            'background-position': 'calc(-100% - var(--shimmer-width)) 0',
+          },
+          '30%, 60%': {
+            'background-position': 'calc(100% + var(--shimmer-width)) 0',
+          },
+        },
+        meteor: {
+          '0%': { transform: 'rotate(215deg) translateX(0)', opacity: 1 },
+          '70%': { opacity: 1 },
+          '100%': {
+            transform: 'rotate(215deg) translateX(-500px)',
+            opacity: 0,
+          },
+        },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
+        "shine-pulse": {
+          "0%": {
+            "background-position": "0% 0%",
+          },
+          "50%": {
+            "background-position": "100% 100%",
+          },
+          to: {
+            "background-position": "0% 0%",
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -136,6 +172,10 @@ const config = {
         title: 'title 3s ease-out forwards',
         'fade-left': 'fade-left 0.4s ease-in-out forwards',
         'fade-right': 'fade-right 0.4s ease-in-out forwards',
+        grid: 'grid 15s linear infinite',
+        shimmer: 'shimmer 8s infinite',
+        meteor: 'meteor 5s linear infinite',
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
     },
   },

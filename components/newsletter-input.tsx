@@ -8,10 +8,11 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import { BorderBeam } from './ui/border-beam';
 
 export default function NewsletterInput() {
   return (
-    <Card className='w-full'>
+    <Card className='w-full relative'>
       <CardHeader className='pb-4'>
         <CardTitle>Tech Blog</CardTitle>
         <CardDescription>
@@ -36,6 +37,8 @@ export default function NewsletterInput() {
           <MailPlus strokeWidth={1} className='ml-2 w-4 opacity-90' />
         </Button>
       </CardContent>
+
+      <BorderBeam />
     </Card>
   );
 }
