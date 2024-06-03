@@ -15,7 +15,7 @@ export default function NewsletterInput() {
       <CardHeader className='pb-4'>
         <CardTitle>Tech Blog</CardTitle>
         <CardDescription>
-          Get inspiring and useful insights direct in your mail
+          Get useful insights direct in your mail
         </CardDescription>
       </CardHeader>
       <CardContent className='flex justify-between gap-4 mt-'>
@@ -24,10 +24,12 @@ export default function NewsletterInput() {
           placeholder='Email address'
           className='md:h-10 outline-none focus:border-red'
           required
+          disabled
         />
         <Button
           type='submit'
           variant='outline'
+          disabled
           className='h-9 rounded-md px-3 md:h-10 md:px-6 md:py-2'
         >
           Subscribe

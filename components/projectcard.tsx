@@ -1,7 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components//ui/button';
-import { Card, CardTitle, CardDescription, CardHeader } from '@/components//ui/card';
+import {
+  Card,
+  CardTitle,
+  CardDescription,
+  CardHeader,
+} from '@/components//ui/card';
 
 interface ProjectCardProps {
   title: string;
@@ -29,13 +34,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           className='md:w-[100px] md:h-[70px] rounded-md h-[46px] w-[66px] object-cover'
         />
         <CardHeader className='p-0'>
-
           <CardTitle>{title}</CardTitle>
-         
-         <CardDescription>
-          {description}
-        </CardDescription>
-         
+
+          <CardDescription>{description}</CardDescription>
         </CardHeader>
       </div>
       <Button

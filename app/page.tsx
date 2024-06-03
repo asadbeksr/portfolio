@@ -18,6 +18,9 @@ import {
 } from 'lucide-react';
 import Services from '@/components/services';
 import BlogPosts from '@/components/blog-posts';
+import Awards from '@/components/awards';
+import Experience from '@/components/experience';
+import Stack from '@/components/stack';
 
 export default function Home() {
   return (
@@ -79,29 +82,27 @@ export default function Home() {
           />
         </div>
 
-        <div className='w-full'>
-          <Services />
-        </div>
+        <Experience />
 
-        <div className='w-full'>
-          <BlogPosts />
-        </div>
+        {/* <Services /> */}
 
-        <div className='flex gap-4 flex-col w-full '>
+        <Awards />
+
+        <BlogPosts />
+
+        {/* <div className='flex gap-4 flex-col w-full '>
           <VideoCard
             title='Latest Video'
             link='https://www.youtube.com/channel/UC06ECXAc_hcCc7ixPCTQc6w'
             linkTitle='YouTube'
           />
-        </div>
+        </div> */}
 
-        <div className='w-full'>
-          <Gallery title='Stack' />
-        </div>
+        {/* <Gallery title='Gallery' /> */}
 
-        <div className='w-full'>
-          <NewsletterInput />
-        </div>
+        <Stack title='Stack' />
+
+        <NewsletterInput />
 
         <div className='w-full items-center justify-center mb-8 grid md:grid-cols-5 grid-cols-2 gap-4'>
           <SocialCard

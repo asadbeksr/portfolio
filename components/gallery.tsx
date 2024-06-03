@@ -9,6 +9,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from '@/components/ui/carousel';
 
 interface GalleryProps {
@@ -19,109 +21,67 @@ type Icon = {
   name: string;
   src: string;
   classes?: string;
-  link: string;
+  link?: string;
 };
 
 const icons: Icon[] = [
   {
-    name: 'Github',
-    src: '/icons/github.svg',
-    classes: 'dark:invert',
-    link: 'https://github.com',
+    name: 'Istanbul, Turkey - Asadbek Savronov / 2023 ',
+    src: '/images/gallery-1.jpeg',
   },
   {
-    name: 'VSCode',
-    src: '/icons/vscode.svg',
-    link: 'https://code.visualstudio.com',
+    name: 'Vatican City, Italy - Asadbek Savronov / 2024',
+    src: '/images/gallery-2.jpeg',
   },
   {
-    name: 'Vercel',
-    src: '/icons/vercel.svg',
-    classes: 'dark:invert',
-    link: 'https://vercel.com',
+    name: 'Colosseum, Italy - Asadbek Savronov / 2024',
+    src: '/images/gallery-3.jpg',
   },
   {
-    name: 'React',
-    src: '/icons/react.svg',
-    link: 'https://reactjs.org',
-  },
-
-  {
-    name: 'Next.js',
-    src: '/icons/next.svg',
-    classes: 'dark:invert',
-    link: 'https://nextjs.org',
-  },
-  {
-    name: 'Tailwind CSS',
-    src: '/icons/tailwind.svg',
-    link: 'https://tailwindcss.com',
-  },
-  {
-    name: 'Arc',
-    src: '/icons/arc.svg',
-    link: 'https://arc.net',
-  },
-  {
-    name: 'TypeScript',
-    src: '/icons/typescript.svg',
-    link: 'https://www.typescriptlang.org',
+    name: 'Venice, Italy - Asadbek Savronov / 2024',
+    src: '/images/gallery-4.jpeg',
   },
 ];
-const iconsList = [...icons, ...icons, ...icons];
 
 const Gallery: React.FC<GalleryProps> = ({ title }) => {
-  const plugin = React.useRef(
-    AutoScroll({
-      playOnInit: true,
-      direction: 'forward',
-      speed: 0.6,
-      startDelay: 0,
-      stopOnInteraction: true,
-    })
-  );
-
   return (
     <Card className='w-full shadow-inner'>
       <CardHeader className='flex justify-between flex-row items-center'>
         <CardTitle>{title}</CardTitle>
       </CardHeader>
       <Carousel
+      className="gap-1"
         opts={{
           loop: true,
           skipSnaps: true,
-          dragFree: true,
-        }}
-        plugins={[plugin.current]}
-        onMouseEnter={() => {
-          plugin.current.stop();
-        }}
-        onMouseLeave={() => {
-          plugin.current.play();
+          axis: 'y',
         }}
       >
         <CarouselContent>
-          {iconsList.map((icon, index) => (
-            <CarouselItem key={index} className='basis-20 pb-4'>
-              <div>
-                <Link href={icon.link} target='_blank'>
-                  <Card className='hover:border-accent'>
-                    <CardContent
-                      className={`flex aspect-square items-center justify-center p-4 rounded-md ${icon.classes}`}
-                    >
+          {icons.map((icon, index) => (
+            <CarouselItem key={index} className='basis-1/3'>
+              <div className='py-4'>
+                <Card>
+                  <CardContent
+                    className={`flex items-center aspect-square justify-center rounded-md ${icon.classes} p-0`}
+                  >
+                    <div className='relative w-full h-full flex items-center justify-center'>
                       <Image
                         src={icon.src}
                         alt={icon.name}
-                        width={100}
-                        height={100}
+                        layout='fill'
+                        objectFit='cover'
+                        className='rounded-md'
                       />
-                    </CardContent>
-                  </Card>
-                </Link>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
       </Carousel>
     </Card>
   );
