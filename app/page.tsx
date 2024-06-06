@@ -48,14 +48,14 @@ export default function Home() {
             className='bg-card hover:border-ring'
             asChild
           >
-            <Link href='mailto:hello@asadbek.me'>Resume</Link>
+            <Link href='https://go.asadbek.me/cv' target="_blank">Resume</Link>
           </Button>
 
           <ShineBorder
             className='bg-card px-5 py-1'
             color={['#1c1c1c', '#727272']}
           >
-            <Link href='mailto:hello@asadbek.me' className='flex items-center'>
+            <Link href='https://go.asadbek.me/email' target="_blank" className='flex items-center'>
               <Mail className='mr-2 h-4 w-4 opacity-60' />
               Email
             </Link>
