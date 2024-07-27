@@ -30,6 +30,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 			href: project.url,
 		});
 	}
+
 	useEffect(() => {
 		if (!ref.current) return;
 		const observer = new IntersectionObserver(([entry]) =>
@@ -41,85 +42,49 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 	}, []);
 
 	return (
-		<header
-			ref={ref}
-			className="relative isolate overflow-hidden bg-gradient-to-tl from-emerald-900"
-		>
+		<header ref={ref} className='relative isolate overflow-hidden'>
 			<div
-				className={`fixed inset-x-0 top-0 z-50 backdrop-blur lg:backdrop-blur-none duration-200 border-b lg:bg-transparent ${
-					isIntersecting
-						? "bg-zinc-900/0 border-transparent"
-						: "bg-red-500  border-red-500 lg:border-transparent"
+				className={`fixed inset-x-0 top-0 z-50 backdrop-blur  duration-200 ${
+					isIntersecting ? "bg-zinc-900/0" : "bg-red-900/500  border-zinc-400 "
 				}`}
 			>
-				<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
-					<div className="flex justify-between gap-8">
-						<span
-							title="View counter for this page"
-							className={`duration-200 hover:font-medium flex items-center gap-1 ${
-								isIntersecting
-									? " text-zinc-300 hover:text-[#55FF80]"
-									: "text-zinc-700 hover:text-zinc-900"
-							} `}
-						>
-							<Eye className="w-5 h-5" />
-							{Intl.NumberFormat("en-US", { notation: "compact" }).format(
-								views,
-							)}
-						</span>
-						<Link target="_blank" href="https://x.com/asadbeksr">
-							<Twitter
-								className={`w-6 h-6 duration-200 hover:font-medium ${
-									isIntersecting
-										? " text-zinc-300 hover:text-[#55FF80]"
-										: "text-zinc-700 hover:text-zinc-900"
-								} `}
-							/>
-						</Link>
-						<Link target="_blank" href="https://github.com/asadbeksr">
-							<Github
-								className={`w-6 h-6 duration-200 hover:font-medium ${
-									isIntersecting
-										? " text-zinc-300 hover:text-[#55FF80]"
-										: "text-zinc-700 hover:text-zinc-900"
-								} `}
-							/>
-						</Link>
-					</div>
-
-					<Link
-						href="/projects"
-						className={`duration-200 hover:font-medium ${
-							isIntersecting
-								? " text-zinc-300 hover:text-[#55FF80]"
-								: "text-zinc-700 hover:text-zinc-900"
-						} `}
+				<div className='flex flex-row items-center gap-8 pt-6 md:pt-12 pb-6 md:pb-8  px-4 md:px-8  mx-auto'>
+					<Link href='/projects' className='hover:font-medium'>
+						<ArrowLeft className='w-6 h-6 ' />
+					</Link>
+					<span
+						title='View counter for this page'
+						className='flex items-center gap-1 hover:font-medium'
 					>
-						<ArrowLeft className="w-6 h-6 " />
+						<Eye className='w-5 h-5' />
+						{Intl.NumberFormat("en-US", { notation: "compact" }).format(views)}
+					</span>
+
+					<Link target='_blank' href='https://x.com/asadbeksr'>
+						<Twitter className='hover:font-medium' />
+					</Link>
+					<Link target='_blank' href='https://github.com/asadbeksr'>
+						<Github className='hover:font-medium' />
 					</Link>
 				</div>
 			</div>
-			<div className="container mx-auto relative isolate overflow-hidden  py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8 text-center flex flex-col items-center">
-					<div className="mx-auto max-w-2xl lg:mx-0">
-						<h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-display">
+
+			<div className='container mx-auto relative isolate overflow-hidden mt-6 mb-20'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8 text-center flex flex-col items-center'>
+					<div className='mx-auto max-w-2xl lg:mx-0'>
+						<h1 className='text-4xl font-bold tracking-tight dark:text-white sm:text-6xl font-display'>
 							{project.title}
 						</h1>
-						<p className="mt-6 text-lg leading-8 text-zinc-200">
+						<p className='mt-6 text-lg leading-8 dark:text-zinc-200'>
 							{project.description}
 						</p>
 					</div>
 
-					<div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-						<div className="grid grid-cols-1 gap-y-6 gap-x-8 text-base font-semibold leading-7 text-white  sm:grid-cols-2 md:flex lg:gap-x-10">
+					<div className='mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none'>
+						<div className='grid grid-cols-1 gap-y-6 gap-x-8 text-base font-semibold leading-7 dark:text-white  sm:grid-cols-2 md:flex lg:gap-x-10'>
 							{links.map((link) => (
-								<Link
-									target="_blank"
-									key={link.label}
-									href={link.href}
-									className="hover:text-[#55FF80]"
-								>
-									{link.label} <span aria-hidden="true">&rarr;</span>
+								<Link target='_blank' key={link.label} href={link.href}>
+									{link.label} <span aria-hidden='true'>&rarr;</span>
 								</Link>
 							))}
 						</div>

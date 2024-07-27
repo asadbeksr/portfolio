@@ -12,7 +12,7 @@ export const Article: React.FC<Props> = ({ blog, views }) => {
 		<Link href={`/blog/${blog.slug}`}>
 			<article className='p-4 md:p-8'>
 				<div className='flex justify-between gap-2 items-center'>
-					<span className='text-xs duration-1000 text-zinc-200 group-hover:text-white group-hover:border-zinc-200 drop-shadow-orange'>
+					<span className='text-xs duration-1000  drop-shadow-orange'>
 						{blog.date ? (
 							<time dateTime={new Date(blog.date).toISOString()}>
 								{Intl.DateTimeFormat(undefined, { dateStyle: "medium" }).format(

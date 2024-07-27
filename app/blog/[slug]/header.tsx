@@ -41,10 +41,7 @@ export const Header: React.FC<Props> = ({ blog, views }) => {
 	}, []);
 
 	return (
-		<header
-			ref={ref}
-			className='relative isolate overflow-hidden bg-gradient-to-tl from-emerald-900'
-		>
+		<header ref={ref} className='relative isolate overflow-hidden '>
 			<div
 				className={`fixed inset-x-0 top-0 z-50 backdrop-blur lg:backdrop-blur-none duration-200 border-b lg:bg-transparent ${
 					isIntersecting

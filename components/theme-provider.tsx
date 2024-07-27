@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { ThemeProvider as NextThemesProvider } from "next-themes"
-import { type ThemeProviderProps } from "next-themes/dist/types"
+import * as React from "react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { type ThemeProviderProps } from "next-themes/dist/types";
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-  // @ts-ignore
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+	// @ts-ignore
+	return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
 }

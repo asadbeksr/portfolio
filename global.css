@@ -73,6 +73,13 @@ body {
   overflow-x: hidden;
 }
 
+img {
+  margin: auto;
+  width: auto;
+  align-self: center;
+  margin: 4px 0;
+}
+
 .pattern-bg {
   opacity: 0.09;
   background-image: repeating-radial-gradient(
@@ -211,3 +218,5 @@ body {
   transform: translate(-10%, 10%);
 }
 } */
+
+
