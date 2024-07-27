@@ -32,20 +32,8 @@ type Icon = {
 
 const icons: Icon[] = [
 	{
-		name: "Istanbul, Türkiye - 2023 ",
-		src: "/images/gallery-1.jpeg",
-	},
-	{
 		name: "Coleseo, Italy - 2023",
 		src: "/images/coleseo.jpeg",
-	},
-	{
-		name: "Istanbul, Türkiye - 2024",
-		src: "/images/gallery-3.jpg",
-	},
-	{
-		name: "Venice, Italy - 2024",
-		src: "/images/gallery-4.jpeg",
 	},
 	{
 		name: "Ostia, Italy - 2024",
