@@ -11,13 +11,11 @@ export const metadata: Metadata = {
 		template: "%s | asadbek.me",
 	},
 	description:
-		"Asadbek Savronov, a Front-End Developer. Top rated freelancer on Upwork with a 100% job success score. My professional focus is on delivering innovative design and robust coding, aimed at creating impactful, user-focused web experiences.",
+		"Asadbek Savronov, a Front-End Developer. Top rated freelancer on Upwork with a 100% job success score. Creating impactful, user-focused web experiences.",
 	openGraph: {
 		title: "asadbek.me - Crafting User-Friendly Web Experiences",
-		description: `Asadbek Savronov, a Front-End Developer. Top rated freelancer on Upwork with a 100% job success score.
+		description: `Asadbek Savronov, a Front-End Developer.
       
-      Passionate about creating stunning web applications with over 3 years of hands-on experience. 
-
       Expertise:
       ✦ Next.js, React.js, TypeScript, 
       ✦ Three.js, React-Three-Fiber (R3F)
@@ -39,6 +37,7 @@ export const metadata: Metadata = {
 		locale: "en-US",
 		type: "website",
 	},
+	keywords: ['Asadbek Savronov', 'front-end developer', 'asadbek.me', 'top rated freelancer', 'web development', 'asadbeksr', 'uzbekistan', 'Asadbek', 'React.js', 'Next.js'],
 	robots: {
 		index: true,
 		follow: true,

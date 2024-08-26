@@ -60,7 +60,7 @@ export default function Awards() {
 								target='_blank'
 								className='flex items-center'
 							>
-								<h1>{award.title}</h1>
+								<h2>{award.title}</h2>
 								<ExternalLink strokeWidth={1} size='16px' className='ml-1' />
 							</Link>
 							<span className='font-light text-xs'>{award.year}</span>
