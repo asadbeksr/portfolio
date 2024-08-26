@@ -42,7 +42,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 	}, []);
 
 	return (
-		<header ref={ref} className='relative isolate overflow-hidden'>
+		<header ref={ref} className='relative isolate overflow-hidden z-50'>
 		<div
 				className={`fixed inset-x-0 top-0  duration-200 ${
 					isIntersecting ? "bg-zinc-900/0 " : "backdrop-blur border-zinc-400 "
