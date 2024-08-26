@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 		locale: "en-US",
 		type: "website",
 	},
-	keywords: ['Asadbek Savronov', 'front-end developer', 'asadbek.me', 'top rated freelancer', 'web development', 'asadbeksr', 'uzbekistan', 'Asadbek', 'React.js', 'Next.js'],
+	keywords: ['Asadbek Savronov', 'frontend developer', 'freelancer', 'web developer', 'asadbeksr', 'Uzbekistan'],
 	robots: {
 		index: true,
 		follow: true,
