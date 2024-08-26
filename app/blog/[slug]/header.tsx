@@ -41,12 +41,10 @@ export const Header: React.FC<Props> = ({ blog, views }) => {
 	}, []);
 
 	return (
-		<header ref={ref} className='relative isolate overflow-hidden '>
+		<header ref={ref} className='relative isolate overflow-hidden z-50'>
 			<div
-				className={`fixed inset-x-0 top-0 z-50 backdrop-blur lg:backdrop-blur-none duration-200 border-b lg:bg-transparent ${
-					isIntersecting
-						? "bg-zinc-900/0 border-transparent"
-						: "lg:border-transparent"
+				className={`fixed inset-x-0 top-0  duration-200 ${
+					isIntersecting ? "bg-zinc-900/0 " : "backdrop-blur border-zinc-400 "
 				}`}
 			>
 				<div className='container flex flex-row-reverse items-center justify-between p-6 mx-auto'>

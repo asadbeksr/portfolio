@@ -60,7 +60,7 @@ export default function Home() {
 				<div className='flex gap-4 mt-2'>
 					<Button
 						variant='outline'
-						className='bg-card hover:border-ring'
+						className='bg-card border-accent hover:border-ring'
 						asChild
 					>
 						<Link href='https://go.asadbek.me/cv' target='_blank'>
@@ -89,8 +89,8 @@ export default function Home() {
 							<CardTitle>Projects</CardTitle>
 						</Link>
 
-						<Link href='/projects'>
-							<CardDescription>View all</CardDescription>
+						<Link href='/projects' >
+							<CardDescription className="hover:text-primary">View all</CardDescription>
 						</Link>
 					</div>
 					<ProjectCard

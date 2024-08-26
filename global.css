@@ -7,7 +7,7 @@
   :root {
     --background: 0 0% 99%;
     --foreground: 0 0% 3.9%;
-    --card: 0 0% 96.1%;
+    --card: 0 0% 96.1% 50%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
@@ -21,7 +21,7 @@
     --accent-foreground: 0 0% 9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
+    --border: 0 0% 60%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
     --radius: 0.5rem;
@@ -33,7 +33,7 @@
   .dark {
     --background: 0 0% 8.6%;
     --foreground: 0 0% 98%;
-   --card: 0 0% 10.9%;
+    --card: 0 0% 10.9% 50%;
     --card-foreground: 100%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
@@ -65,12 +65,27 @@
   }
 }
 
+
+body::before {
+  animation: grain 8s steps(10) infinite;
+  background-image: url(./public/egg-noise.png);
+  content: '';
+  height: 300%;
+  left: -50%;
+  opacity: 0.6;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+}
+
+
 body {
   -webkit-font-smoothing: inherit;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  /* background-image: linear-gradient(30.7deg,#ffadd4 .93%,#6edbff 41.54%,hsla(0,0%,100%,.3) 64.36%) */
 }
 
 img {
@@ -148,7 +163,7 @@ img {
   -webkit-font-smoothing: inherit;
   background: linear-gradient(
     0deg,
-    var(--pattern-overlay-dark, #fdfdfc) 0%,
+    var(--pattern-overlay-dark, #f3f3f3) 0%,
     rgba(22, 22, 22, 0) 100%
   );
   flex: none;

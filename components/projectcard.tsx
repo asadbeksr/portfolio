@@ -47,7 +47,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 			<Button
 				variant='outline'
 				asChild
-				className='hover:animate-pulse md:h-10 md:px-6 md:py-2 bg-secondary dark:bg-card'
+				className='hover:animate-pulse md:h-10 md:px-6 md:py-2 bg-secondary dark:bg-card hover:border-ring'
 				size='sm'
 			>
 				<Link href={actionLink} target='_blank'>

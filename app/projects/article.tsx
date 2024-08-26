@@ -1,6 +1,7 @@
 import type { Project } from "@/.contentlayer/generated";
 import Link from "next/link";
 import { Eye, View } from "lucide-react";
+import { EvervaultCard } from "@/components/ui/evervault-card";
 
 type Props = {
 	project: Project;
@@ -10,6 +11,7 @@ type Props = {
 export const Article: React.FC<Props> = ({ project, views }) => {
 	return (
 		<Link href={`/projects/${project.slug}`}>
+			<EvervaultCard>
 			<article className='p-4 md:p-8'>
 				<div className='flex justify-between gap-2 items-center'>
 					<span className='text-xs duration-1000  '>
@@ -35,6 +37,7 @@ export const Article: React.FC<Props> = ({ project, views }) => {
 					{project.description}
 				</p>
 			</article>
+			</EvervaultCard>
 		</Link>
 	);
 };

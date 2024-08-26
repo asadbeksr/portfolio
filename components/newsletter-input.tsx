@@ -9,9 +9,11 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { BorderBeam } from "./ui/border-beam";
+import { EvervaultCard } from "./ui/evervault-card";
 
 export default function NewsletterInput() {
 	return (
+		<EvervaultCard>
 		<Card className='w-full relative'>
 			<CardHeader className='pb-4'>
 				<CardTitle>Tech Blog</CardTitle>
@@ -40,5 +42,6 @@ export default function NewsletterInput() {
 
 			<BorderBeam />
 		</Card>
+		</EvervaultCard>
 	);
 }
