@@ -52,7 +52,7 @@ export const Header: React.FC<Props> = ({ blog, views }) => {
 				}`}
 			>
 				<div className='flex flex-row items-center gap-8 pt-6 md:pt-12 pb-6 md:pb-8  px-4 md:px-8  mx-auto'>
-					<Link href='/blogs' >
+					<Link href='/blog' >
 						<ArrowLeft className='w-6 h-6 ' />
 					</Link>
 					<span
