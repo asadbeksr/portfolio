@@ -13,7 +13,7 @@ export const revalidate = 60;
 export default async function blogsPage() {
 	const views = (
 		await redis.mget<number[]>(
-			...allBlogPosts.map((p) => ["pageviews", "blogs", p.slug].join(":")),
+			...allBlogPosts.map((p) => ["pageviews", "projects", p.slug].join(":")),
 		)
 	).reduce((acc, v, i) => {
 		acc[allBlogPosts[i].slug] = v ?? 0;
@@ -38,6 +38,7 @@ export default async function blogsPage() {
 				new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
 		);
 
+		console.log(views, "V I E W S")
 	return (
 		<div className="relative pb-16">
 			<Navigation />
