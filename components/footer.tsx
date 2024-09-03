@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
 	return (
-		<footer className='text-sm font-thin text-center mt-6'>
+		<footer className='text-sm font-thin text-center mt-6 z-50 relative'>
 			<Link href='/'>
 				<p>asadbek.me &nbsp; ✦ &nbsp; 2024 </p>
 			</Link>

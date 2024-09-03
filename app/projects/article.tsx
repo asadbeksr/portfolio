@@ -14,7 +14,7 @@ export const Article: React.FC<Props> = ({ project, views }) => {
 			<EvervaultCard>
 			<article className='p-4 md:p-8'>
 				<div className='flex justify-between gap-2 items-center'>
-					<span className='text-xs duration-1000  '>
+				<span className='text-xs'>
 						{project.date ? (
 							<time dateTime={new Date(project.date).toISOString()}>
 								{Intl.DateTimeFormat(undefined, { dateStyle: "medium" }).format(
@@ -33,7 +33,7 @@ export const Article: React.FC<Props> = ({ project, views }) => {
 				<h2 className='z-20 text-xl font-medium duration-1000 lg:text-3xl '>
 					{project.title}
 				</h2>
-				<p className='z-20 mt-4 text-sm  duration-1000 text-red'>
+				<p className='z-20 mt-4 text-sm '>
 					{project.description}
 				</p>
 			</article>

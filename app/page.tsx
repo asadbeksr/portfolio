@@ -26,9 +26,13 @@ import ShineBorder from "@/components/ui/shine-border";
 import VideoCard from "@/components/videocard";
 import Gallery from "@/components/gallery";
 import { CardDescription, CardTitle } from "@/components/ui/card";
+import { TopTexture } from "@/components/top-texture";
 
 export default function Home() {
 	return (
+		<>
+		<TopTexture />
+		
 		<main>
 			<div className='container gap-4'>
 				<Link href='/about'>
@@ -44,7 +48,6 @@ export default function Home() {
 				<BlurIn word='Asadbek' />
 
 				<p className='text-center max-w-md font-light'>
-					{/* Front-end developer based in Italy 🇮🇹 <br /> */}
 					Front-end developer based in{" "}
 					<Link
 						href='www.asadbek.me'
@@ -97,7 +100,7 @@ export default function Home() {
 						title='Utas'
 						description='University website'
 						actionText='Explore'
-						actionLink='https://utas.uz/'
+						actionLink='/projects/utas'
 						image='/images/utas.png'
 						slug='utas'
 					/>
@@ -106,7 +109,7 @@ export default function Home() {
 						title='Rasta'
 						description='Food delivery service'
 						actionText='Explore'
-						actionLink='https://rasta.uz/'
+						actionLink='/projects/rasta'
 						image='/images/rasta.png'
 						slug='rasta'
 					/>
@@ -116,7 +119,7 @@ export default function Home() {
 
 				<Awards />
 
-				{/* <Services /> */}
+				<Services />
 
 				<BlogPosts />
 
@@ -126,9 +129,9 @@ export default function Home() {
             link='https://www.youtube.com/channel/UC06ECXAc_hcCc7ixPCTQc6w'
             linkTitle='YouTube'
           />
-        </div>
+        </div> */}
 
-        <Gallery title='Gallery' /> */}
+        {/* <Gallery title='Gallery' /> */}
 
 				<Stack title='Stack' />
 
@@ -160,5 +163,6 @@ export default function Home() {
 				</div>
 			</div>
 		</main>
+		</>
 	);
 }

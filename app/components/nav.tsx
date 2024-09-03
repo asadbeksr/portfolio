@@ -30,19 +30,13 @@ export const Navigation: React.FC = () => {
 							<ArrowLeft className="w-6 h-6 " />
 						</Link>
 						<Link  href="/projects">Projects</Link>
-						{/* <Link
+						<Link
 							href="/blog"
 							className="duration-200  "
 						>
 							Blog
-						</Link> */}
+						</Link>
 						<Link href="/about">About</Link>
-						{/* <Link
-							href="/contact"
-							className="duration-200  "
-						>
-							Contact
-						</Link> */}
 					</div>
 				</div>
 			</div>

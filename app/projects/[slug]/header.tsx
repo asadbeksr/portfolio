@@ -1,4 +1,5 @@
 "use client";
+import { TopTexture } from "@/components/top-texture";
 import { ArrowLeft, Eye, Github, Twitter } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
@@ -42,6 +43,8 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 	}, []);
 
 	return (
+		<>
+		<TopTexture minusHeight={10} />
 		<header ref={ref} className='relative isolate overflow-hidden z-50'>
 		<div
 				className={`fixed inset-x-0 top-0  duration-200 ${
@@ -49,22 +52,22 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 				}`}
 			>
 				<div className='flex flex-row items-center gap-8 pt-6 md:pt-12 pb-6 md:pb-8  px-4 md:px-8  mx-auto'>
-					<Link href='/projects' className='hover:font-medium'>
+					<Link href='/projects' >
 						<ArrowLeft className='w-6 h-6 ' />
 					</Link>
 					<span
 						title='View counter for this page'
-						className='flex items-center gap-1 hover:font-medium'
+						className='flex items-center gap-1'
 					>
 						<Eye className='w-5 h-5' />
 						{Intl.NumberFormat("en-US", { notation: "compact" }).format(views)}
 					</span>
 
 					<Link target='_blank' href='https://x.com/asadbeksr'>
-						<Twitter className='hover:font-medium' />
+						<Twitter  />
 					</Link>
 					<Link target='_blank' href='https://github.com/asadbeksr'>
-						<Github className='hover:font-medium' />
+						<Github  />
 					</Link>
 				</div>
 			</div>
@@ -81,7 +84,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 					</div>
 
 					<div className='mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none'>
-						<div className='grid grid-cols-1 gap-y-6 gap-x-8 text-base font-semibold leading-7 dark:text-white  sm:grid-cols-2 md:flex lg:gap-x-10'>
+						<div className='grid gap-y-6 gap-x-8 text-base font-semibold leading-7 dark:text-white  sm:grid-cols-2 md:flex lg:gap-x-10'>
 							{links.map((link) => (
 								<Link target='_blank' key={link.label} href={link.href}>
 									{link.label} <span aria-hidden='true'>&rarr;</span>
@@ -92,5 +95,6 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 				</div>
 			</div>
 		</header>
+		</>
 	);
 };

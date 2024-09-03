@@ -178,6 +178,9 @@ const config = {
 				meteor: "meteor 5s linear infinite",
 				"border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
 			},
+			transitionProperty: {
+				'bg': 'background-color',
+			},
 		},
 	},
 	plugins: [require("tailwindcss-animate")],
