@@ -1,5 +1,7 @@
 import '../global.css';
 import { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from '../components/theme-provider';
 import { ModeToggle } from '@/components/ui/modetoggle';
@@ -72,13 +74,23 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
 };
 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+
+const calSans = localFont({
+  src: '../public/fonts/CalSans-SemiBold.ttf',
+  variable: '--font-calsans',
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang='en' className={[inter.variable, calSans.variable, inter.className].join(' ')}>
       <head>
         <Analytics />
       </head>
