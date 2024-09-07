@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from '../components/theme-provider';
 import { ModeToggle } from '@/components/ui/modetoggle';
 import Footer from '@/components/footer';
+import { TopTexture } from '@/components/top-texture';
 
 export const metadata: Metadata = {
   title: {
@@ -82,15 +83,15 @@ export default function RootLayout({
         <Analytics />
       </head>
       <body
-        className={`sm:mt-[100px] mt-[60px] transition-bg duration-200
+        className={`sm:mt-[100px] mt-[60px]
 		${process.env.NODE_ENV === 'development' ? 'debug-screens' : undefined}`}
       >
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-			
           <div className='fixed z-30 sm:top-10 sm:right-10 top-4 right-4'>
             <ModeToggle />
           </div>
 
+          <TopTexture />
           <div className='relative z-20'>{children}</div>
           <Footer />
         </ThemeProvider>

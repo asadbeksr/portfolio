@@ -1,5 +1,4 @@
 "use client";
-import { TopTexture } from "@/components/top-texture";
 import { ArrowLeft, Eye, Github, Twitter } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
@@ -44,7 +43,6 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 
 	return (
 		<>
-		<TopTexture minusHeight={10} />
 		<header ref={ref} className='relative isolate overflow-hidden z-50'>
 		<div
 				className={`fixed inset-x-0 top-0  duration-200 ${

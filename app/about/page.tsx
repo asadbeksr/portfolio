@@ -8,7 +8,6 @@ import BlurIn from "@/components/ui/blur-in";
 import Gallery from "@/components/gallery";
 import { cn } from "@/lib/utils";
 import AnimatedShinyText from "@/components/ui/animated-shiny-text";
-import { TopTexture } from "@/components/top-texture";
 
 const socials = [
 	{
@@ -26,10 +25,7 @@ const socials = [
 ];
 
 export default function AboutPage() {
-	return (
-<>
-<TopTexture minusHeight={27} />
-		<main className='min-h-screen mb-20'>
+	return (<main className='min-h-screen mb-20'>
 			<Navigation />
 			<div className='container gap-4'>
 				<Image
@@ -83,6 +79,5 @@ export default function AboutPage() {
 				<Gallery title='Memories 📸' />
 			</div>
 		</main>
-		</>
 	);
 }
