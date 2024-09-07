@@ -21,8 +21,8 @@ export default async function blogsPage() {
 	}, {} as Record<string, number>);
 
 	const featured = allBlogPosts.find((blog) => blog.slug === "welcome")!;
-	const top2 = allBlogPosts.find((blog) => blog.slug === "welcome")!;
-	const top3 = allBlogPosts.find((blog) => blog.slug === "welcome")!;
+	const top2 = allBlogPosts.find((blog) => blog.slug === "email-newsletter")!;
+	const top3 = allBlogPosts.find((blog) => blog.slug === "email-newsletter")!;
 
 	const sorted = allBlogPosts
 		.filter((p) => p.published)
@@ -38,7 +38,7 @@ export default async function blogsPage() {
 				new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
 		);
 
-		console.log(views, "V I E W S")
+		console.log(allBlogPosts, "V I E W S")
 	return (
 		<div className="relative pb-16">
 			<Navigation />
@@ -83,7 +83,7 @@ export default async function blogsPage() {
 								>
 									{featured.title}
 								</h2>
-								<p className="mt-4 leading-8 duration-150 ">
+								<p className="mt-4 leading-8 ">
 									{featured.description}
 								</p>
 								<div className="absolute bottom-4 md:bottom-8">

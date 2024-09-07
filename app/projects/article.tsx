@@ -30,7 +30,7 @@ export const Article: React.FC<Props> = ({ project, views }) => {
 						{Intl.NumberFormat("en-US", { notation: "compact" }).format(views)}
 					</span>
 				</div>
-				<h2 className='z-20 text-xl font-medium duration-1000 lg:text-3xl '>
+				<h2 className='z-20 text-xl font-medium lg:text-3xl '>
 					{project.title}
 				</h2>
 				<p className='z-20 mt-4 text-sm '>
