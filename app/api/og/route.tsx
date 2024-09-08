@@ -4,7 +4,7 @@ export const runtime = 'edge'
  
 export async function GET(request: Request) {
   const calsSans = fetch(
-    new URL('../../../public/CalSans-SemiBold.ttf', import.meta.url)
+    new URL('../../../public/fonts/CalSans-SemiBold.ttf', import.meta.url)
   ).then((res) => res.arrayBuffer())
 
   try {
