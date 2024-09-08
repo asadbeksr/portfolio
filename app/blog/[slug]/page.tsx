@@ -5,6 +5,7 @@ import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
+import NewsletterInput from "@/components/newsletter-input";
 
 export const revalidate = 60;
 
@@ -36,13 +37,17 @@ export default async function PostPage({ params }: Props) {
 		(await redis.get<number>(["pageviews", "projects", slug].join(":"))) ?? 0;
 
 	return (
-		<div className='min-h-screen'>
+		<div className='min-h-screen  mb-14'>
 			<Header blog={blog} views={views} />
 			<ReportView slug={blog.slug} />
 
 			<article className='container px-4 py-12 mx-auto prose prose-zinc prose-quoteless'>
 				<Mdx code={blog.body.code} />
 			</article>
+
+			<div className="container">
+				<NewsletterInput />
+			</div>
 		</div>
 	);
 }

@@ -20,10 +20,10 @@ export const Navigation: React.FC = () => {
   return (
     <header ref={ref} className='relative isolate overflow-hidden z-50 '>
    <div
-				className={`fixed inset-x-0 top-0 z-50 backdrop-blur  duration-200 border-b  ${
+				className={`fixed inset-x-0 top-0 z-50  duration-200 border-b  ${
 					isIntersecting
 						? "bg-zinc-900/0 border-transparent"
-						: "bg-zinc-900/500  border-zinc-800 "
+						: "bg-zinc-900/500 backdrop-blur border-zinc-300 dark:border-zinc-800"
 				}`}
 			>
         <div className='flex flex-row items-center justify-between pt-6 md:pt-12 pb-6 md:pb-8 px-4 md:px-8 mx-auto'>

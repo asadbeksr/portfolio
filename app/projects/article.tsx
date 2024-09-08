@@ -10,7 +10,7 @@ type Props = {
 
 export const Article: React.FC<Props> = ({ project, views }) => {
   return (
-    <Link href={`/projects/${project.slug}`}>
+    <Link href={project.date ? `/projects/${project.slug}` : '#'} className={project.date ? 'cursor-pointer' : 'cursor-not-allowed'}>
       <EvervaultCard>
         <article className='p-4 md:p-8'>
           <div className='flex justify-between gap-2 items-center h-full'>

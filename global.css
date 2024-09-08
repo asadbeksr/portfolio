@@ -63,6 +63,10 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .dark a {
+    @apply text-white; 
+  }
 }
 
 
