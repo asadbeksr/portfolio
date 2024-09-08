@@ -47,7 +47,7 @@ export async function GET(request: Request) {
           <img
             width="203"
             height="44"
-            src={`../../../public/images/author.png`}
+            src={`https://asadbek.me/images/author.png`}
           />
         </div>
       ),
