@@ -19,7 +19,7 @@ export async function GET(request: Request) {
       (
         <div
           style={{
-            backgroundImage: 'url(https://cruip-tutorials-next.vercel.app/social-card-bg.jpg)',
+            backgroundImage: 'url(https://asadbek.me/images/og-bg.jpg)',
             backgroundSize: '100% 100%',
             height: '100%',
             width: '100%',
@@ -47,7 +47,7 @@ export async function GET(request: Request) {
           <img
             width="203"
             height="44"
-            src={`https://cruip-tutorials-next.vercel.app/author.png`}
+            src={`../../../public/images/author.png`}
           />
         </div>
       ),
