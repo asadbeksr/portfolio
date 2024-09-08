@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: 'asadbek.me',
     images: [
       {
-        url:  "https://cruip-tutorials-next.vercel.app/api/og?title=Asadbek Savronov ✦ asadbek.me",
+        url:  "https://asadbek.me/api/og?title=Asadbek Savronov - Front-End Developer",
         width: 1920,
         height: 1080,
       },
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     description:
       "Asadbek Savronov, a Front-End Developer. Creating impactful, user-focused web experiences.",
     images: [
-      "https://cruip-tutorials-next.vercel.app/api/og?title=Asadbek Savronov ✦ asadbek.me",
+      "https://asadbek.me/api/og?title=Asadbek Savronov - Front-End Developer",
     ],
   },
   keywords: [

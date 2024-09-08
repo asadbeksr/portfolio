@@ -19,7 +19,7 @@ export async function GET(request: Request) {
       (
         <div
           style={{
-            backgroundImage: 'url(https://asadbek.me/images/og-bg.jpg)',
+            backgroundImage: 'url(https://asadbek.me/images/og-bg.png)',
             backgroundSize: '100% 100%',
             height: '100%',
             width: '100%',
