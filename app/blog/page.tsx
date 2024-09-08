@@ -10,6 +10,7 @@ import { Eye } from "lucide-react";
 const redis = Redis.fromEnv();
 
 export const revalidate = 60;
+
 export default async function blogsPage() {
 	const views = (
 		await redis.mget<number[]>(

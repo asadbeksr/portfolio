@@ -10,35 +10,41 @@ import { TopTexture } from '@/components/top-texture';
 
 export const metadata: Metadata = {
   title: {
-    default: 'asadbek.me - Asadbek Savronov | Frontend Engineer',
-    template: '%s | asadbek.me',
+    default: 'Asadbek',
+    template: '%s ✦ asadbek.me',
   },
   description:
-    'Asadbek Savronov, a Front-End Developer. Top rated freelancer on Upwork with a 100% job success score. Creating impactful, user-focused web experiences.',
-  openGraph: {
-    title: 'asadbek.me - Crafting User-Friendly Web Experiences',
-    description: `Asadbek Savronov, a Front-End Developer.
-      
-      Expertise:
-      ✦ Next.js, React.js, TypeScript, 
+    'Asadbek Savronov, a Front-End Developer. Crafting User-Friendly Web Experiences',
+    openGraph: {
+      title: 'Asadbek Savronov ✦ asadbek.me',
+      description: `
+      Key Expertise:
+      ✦ Next.js, React.js, TypeScript
       ✦ Three.js, React-Three-Fiber (R3F)
       ✦ Low/No Code Platforms: Webflow, Framer
       ✦ SEO: Google Tag Manager, Facebook Pixel, Server-Side Tagging (Stape.io)
-
-      Skilled in building responsive, user-friendly interfaces featuring eye-catching animations. Dedicated to leveraging technology to make a positive impact. Driven to bring innovative ideas to life and elevate web projects. 
-
-      `,
+    
+      Crafting User-Friendly Web Experiences`,    
     url: 'https:/asadbek.me',
     siteName: 'asadbek.me',
     images: [
       {
-        url: 'https://asadbek.me/og.png',
+        url:  "https://cruip-tutorials-next.vercel.app/api/og?title=Asadbek Savronov ✦ asadbek.me",
         width: 1920,
         height: 1080,
       },
     ],
     locale: 'en-US',
     type: 'website',
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Asadbek Savronov - Front-End Developer",
+    description:
+      "Asadbek Savronov, a Front-End Developer. Creating impactful, user-focused web experiences.",
+    images: [
+      "https://cruip-tutorials-next.vercel.app/api/og?title=Asadbek Savronov ✦ asadbek.me",
+    ],
   },
   keywords: [
     'Asadbek Savronov',
@@ -62,10 +68,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  twitter: {
-    title: 'Asadbek',
-    card: 'summary_large_image',
   },
   icons: {
     shortcut: '/favicon.png',

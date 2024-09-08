@@ -25,21 +25,41 @@ export async function generateStaticParams(): Promise<Props["params"][]> {
 		}));
 }
 
+
 export async function generateMetadata(
 	{ params }: Props,
 	parent: ResolvingMetadata,
 ): Promise<Metadata> {
 	const slug = params?.slug;
 	const project = allProjects.find((project) => project.slug === slug);
-	// read route params
+
+	if (!project) {
+		return {
+			title: 'Project Not Found ✦ asadbek.me',
+			description: 'This project could not be found.',
+			openGraph: {
+				title: 'project Not Found - asadbek.me',
+				description: 'This project could not be found.',
+				url: `https:/asadbek.me/${slug}`,
+			},
+		};
+	}
 
 	return {
 		title: project?.title,
 		description: project?.description,
 		openGraph: {
-			title: `${project?.title} - asadbek.me'`,
+			title: `${project?.title} - asadbek.me`,
 			description: project?.description,
 			url: `https:/asadbek.me/${project?.slug}`,
+			images: [
+				{
+					url: `https://asadbek.me/api/og?title=${encodeURIComponent(project?.title)}`, // Dynamic OG image URL
+					width: 1200,
+					height: 630,
+					alt: `${project?.title} OpenGraph Image`,
+				},
+			],
 		},
 	};
 }
