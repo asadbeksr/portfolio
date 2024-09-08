@@ -19,7 +19,7 @@ export async function GET(request: Request) {
       (
         <div
           style={{
-            backgroundImage: 'url(https://asadbek.me/images/og-bg.png)',
+            backgroundImage: 'url(http://asadbek.me/images/og-bg.png)',
             backgroundSize: '100% 100%',
             height: '100%',
             width: '100%',
@@ -33,7 +33,7 @@ export async function GET(request: Request) {
         >
           <div
             style={{
-              fontSize: 60,
+              fontSize: 80,
               fontWeight: 800,
               letterSpacing: '-0.025em',
               lineHeight: 1,
@@ -47,6 +47,9 @@ export async function GET(request: Request) {
           <img
             width="203"
             height="44"
+            style={{
+              marginTop: 24,
+            }}
             src={`https://asadbek.me/images/author.png`}
           />
         </div>
