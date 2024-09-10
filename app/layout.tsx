@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: '%s ✦ asadbek.me',
   },
   description:
-    'Asadbek Savronov, a Front-End Developer. Crafting User-Friendly Web Experiences',
+    'Crafting User-Friendly Web Experiences',
     openGraph: {
       title: 'Asadbek Savronov ✦ asadbek.me',
       description: `
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Asadbek Savronov - Front-End Developer",
     description:
-      "Asadbek Savronov, a Front-End Developer. Creating impactful, user-focused web experiences.",
+      "Creating impactful, user-focused web experiences.",
     images: [
       "https://asadbek.me/api/og?title=Asadbek Savronov",
     ],
