@@ -13,13 +13,13 @@ export async function GET(request: Request) {
     const hasTitle = searchParams.has('title')
     const title = hasTitle
       ? searchParams.get('title')?.slice(0, 100)
-      : 'Asadbek Savronov ✦ asadbek.me'
+      : 'Asadbek Savronov ✦ asadbek.tech'
  
     return new ImageResponse(
       (
         <div
           style={{
-            backgroundImage: 'url(http://asadbek.me/images/og-bg.png)',
+            backgroundImage: 'url(http://asadbek.tech/images/og-bg.png)',
             backgroundSize: '100% 100%',
             height: '100%',
             width: '100%',
@@ -50,7 +50,7 @@ export async function GET(request: Request) {
             style={{
               marginTop: 24,
             }}
-            src={`https://asadbek.me/images/author.png`}
+            src={`https://asadbek.tech/images/author.png`}
           />
         </div>
       ),

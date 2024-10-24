@@ -24,7 +24,7 @@ import {
       <Body style={main}>
         <Container style={container}>
           <Img
-            src="https://asadbek.me/favicon.png"
+            src="https://asadbek.tech/favicon.png"
             width="50"
             height="50"
             alt="Asadbek's Blog"
@@ -36,7 +36,7 @@ import {
             latest insights, tutorials, and updates with you.
           </Text>
           <Section style={btnContainer}>
-            <Button style={button} href="https://www.asadbek.me/blog">
+            <Button style={button} href="https://www.asadbek.tech/blog">
              Explore
             </Button>
           </Section>
@@ -47,7 +47,7 @@ import {
           </Text>
           <Hr style={hr} />
           <Text style={footer}>
-          <p>asadbek.me &nbsp; ✦ &nbsp; 2024 </p>
+          <p>asadbek.tech &nbsp; ✦ &nbsp; 2024 </p>
           </Text>
         </Container>
       </Body>

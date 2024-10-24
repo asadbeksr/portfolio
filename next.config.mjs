@@ -4,7 +4,7 @@ import { withContentlayer } from "next-contentlayer";
 const nextConfig = {
 	pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
 	images: {
-		domains: ["asadbek.me"],
+		domains: ["asadbek.tech", "asadbek.me"],
 	},
 	experimental: {
 		mdxRs: true,

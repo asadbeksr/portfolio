@@ -11,12 +11,12 @@ import { TopTexture } from '@/components/top-texture';
 export const metadata: Metadata = {
   title: {
     default: 'Asadbek',
-    template: '%s ✦ asadbek.me',
+    template: '%s ✦ asadbek.tech',
   },
   description:
     'Crafting User-Friendly Web Experiences',
     openGraph: {
-      title: 'Asadbek Savronov ✦ asadbek.me',
+      title: 'Asadbek Savronov ✦ asadbek.tech',
       description: `
       Key Expertise:
       ✦ Next.js, React.js, TypeScript
@@ -25,11 +25,11 @@ export const metadata: Metadata = {
       ✦ SEO: Google Tag Manager, Facebook Pixel, Server-Side Tagging (Stape.io)
     
       Crafting User-Friendly Web Experiences`,    
-    url: 'https:/asadbek.me',
-    siteName: 'asadbek.me',
+    url: 'https:/asadbek.tech',
+    siteName: 'asadbek.tech',
     images: [
       {
-        url:  "https://asadbek.me/api/og?title=Asadbek Savronov",
+        url:  "https://asadbek.tech/api/og?title=Asadbek Savronov",
         width: 1920,
         height: 1080,
       },
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
     description:
       "Creating impactful, user-focused web experiences.",
     images: [
-      "https://asadbek.me/api/og?title=Asadbek Savronov",
+      "https://asadbek.tech/api/og?title=Asadbek Savronov",
     ],
   },
   keywords: [
     'Asadbek Savronov',
     'front-end developer',
-    'asadbek.me',
+    'asadbek.tech',
     'top rated freelancer',
     'web development',
     'asadbeksr',

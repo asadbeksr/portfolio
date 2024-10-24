@@ -46,7 +46,7 @@ export default function Home() {
         <p className='text-center max-w-md font-light'>
           Front-end developer based in{' '}
           <Link
-            href='www.asadbek.me'
+            href='www.asadbek.tech'
             target='_blank'
             className='text-black/90 dark:text-white/90'
           >
@@ -62,7 +62,7 @@ export default function Home() {
             className='bg-card border-accent hover:border-ring'
             asChild
           >
-            <Link href='https://go.asadbek.me/cv' target='_blank'>
+            <Link href='https://go.asadbek.tech/cv' target='_blank'>
               Resume
             </Link>
           </Button>
@@ -72,7 +72,7 @@ export default function Home() {
             color={['#1c1c1c', '#727272']}
           >
             <Link
-              href='https://go.asadbek.me/email'
+              href='https://go.asadbek.tech/email'
               target='_blank'
               className='flex items-center'
             >

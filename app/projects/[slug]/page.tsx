@@ -35,12 +35,12 @@ export async function generateMetadata(
 
 	if (!project) {
 		return {
-			title: 'Project Not Found ✦ asadbek.me',
+			title: 'Project Not Found ✦ asadbek.tech',
 			description: 'This project could not be found.',
 			openGraph: {
-				title: 'project Not Found - asadbek.me',
+				title: 'project Not Found - asadbek.tech',
 				description: 'This project could not be found.',
-				url: `https:/asadbek.me/${slug}`,
+				url: `https:/asadbek.tech/${slug}`,
 			},
 		};
 	}
@@ -49,12 +49,12 @@ export async function generateMetadata(
 		title: project?.title,
 		description: project?.description,
 		openGraph: {
-			title: `${project?.title} - asadbek.me`,
+			title: `${project?.title} - asadbek.tech`,
 			description: project?.description,
-			url: `https:/asadbek.me/${project?.slug}`,
+			url: `https:/asadbek.tech/${project?.slug}`,
 			images: [
 				{
-					url: `https://asadbek.me/api/og?title=${encodeURIComponent(project?.title)}`, // Dynamic OG image URL
+					url: `https://asadbek.tech/api/og?title=${encodeURIComponent(project?.title)}`, // Dynamic OG image URL
 					width: 1200,
 					height: 630,
 					alt: `${project?.title} OpenGraph Image`,

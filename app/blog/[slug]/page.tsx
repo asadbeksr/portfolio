@@ -35,12 +35,12 @@ export async function generateMetadata(
 
 	if (!post) {
 		return {
-			title: 'Post Not Found ✦ asadbek.me',
+			title: 'Post Not Found ✦ asadbek.tech',
 			description: 'This post could not be found.',
 			openGraph: {
-				title: 'Post Not Found - asadbek.me',
+				title: 'Post Not Found - asadbek.tech',
 				description: 'This post could not be found.',
-				url: `https:/asadbek.me/${slug}`,
+				url: `https:/asadbek.tech/${slug}`,
 			},
 		};
 	}
@@ -49,12 +49,12 @@ export async function generateMetadata(
 		title: post?.title,
 		description: post?.description,
 		openGraph: {
-			title: `${post?.title} - asadbek.me`,
+			title: `${post?.title} - asadbek.tech`,
 			description: post?.description,
-			url: `https:/asadbek.me/${post?.slug}`,
+			url: `https:/asadbek.tech/${post?.slug}`,
 			images: [
 				{
-					url: `https://asadbek.me/api/og?title=${encodeURIComponent(post?.title)}`, // Dynamic OG image URL
+					url: `https://asadbek.tech/api/og?title=${encodeURIComponent(post?.title)}`, // Dynamic OG image URL
 					width: 1200,
 					height: 630,
 					alt: `${post?.title} OpenGraph Image`,

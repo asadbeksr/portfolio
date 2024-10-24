@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
 
     // Send the welcome email
     const { data: emailData, error: emailError } = await resend.emails.send({
-      from: `Asadbek Savronov - Blog <blog@blog.asadbek.me>`,
+      from: `Asadbek Savronov - Blog <blog@blog.asadbek.tech>`,
       to: email,
       subject: "Asadbek's Blog - Thank You for Subscribing!",
       react: WelcomeEmail({ email }), // Use the custom React component to render email content
