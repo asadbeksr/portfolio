@@ -33,8 +33,8 @@ const VideoCard: React.FC<VideoCardProps> = ({ title, link, linkTitle }) => {
 			<CardContent>
 				<iframe
 					className='rounded-md aspect-video w-full'
-					src='https://www.youtube.com/embed/dQw4w9WgXcQ?si=HuFfapEJLJL7aNRO&amp;controls=0'
-					title='YouTube video player'
+					src="https://www.youtube.com/embed/Vmn5A22XRUQ?si=mhS0nUD6pD_IWDhf"
+					title={title}
 					// @ts-ignore
 					frameborder='0'
 					allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'

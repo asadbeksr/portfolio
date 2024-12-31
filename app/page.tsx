@@ -50,7 +50,8 @@ export default function Home() {
             target='_blank'
             className='text-black/90 dark:text-white/90'
           >
-            Uzbekistan 🇺🇿
+            {/* Uzbekistan 🇺🇿 */}
+            Italy 🇮🇹
           </Link>
           <br />
           Crafting User-Friendly Web Experiences
@@ -121,13 +122,13 @@ export default function Home() {
 
         <BlogPosts />
 
-        {/* <div className='flex gap-4 flex-col w-full '>
+        <div className='flex gap-4 flex-col w-full '>
           <VideoCard
             title='Latest Video'
-            link='https://www.youtube.com/channel/UC06ECXAc_hcCc7ixPCTQc6w'
+            link='https://youtu.be/Vmn5A22XRUQ?si=mhS0nUD6pD_IWDhf'
             linkTitle='YouTube'
           />
-        </div> */}
+        </div>
 
         {/* <Gallery title='Gallery' /> */}
 
